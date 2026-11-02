@@ -29,3 +29,6 @@
 
 /* Product Detail Page (cosmo.html) */
 @import url('components/product-detail.css');
+
+/* SEO subpages & FAQ */
+@import url('components/seo-pages.css');

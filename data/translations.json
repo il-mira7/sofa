@@ -1,0 +1,380 @@
+{
+  "ka": {
+    "langCode": "ka",
+    "langName": "ქართული",
+    "siteTitle": "Farfale — Cool & Comfy | დიზაინერული დივანები შეკვეთით თბილისში | შოურუმი ვაკეში",
+    "siteDesc": "Cool & Comfy. Style, Comfort, Durability. პრემიუმ კლასის დივანები და რბილი ავეჯი შეკვეთით თბილისში (ვაკე, ნ. ბერძენიშვილის ქუჩა 2). 100+ ევროპული ქსოვილი, 5 წლიანი გარანტია, მიწოდება მთელ საქართველოში.",
+    "siteKeywords": "დივანი თბილისში, დივანები შეკვეთით, რბილი ავეჯი თბილისი, საწოლები ვაკე, ავეჯის შოურუმი თბილისი, მოდულური დივანი",
+    "nav": {
+      "catalog": "კოლექციები",
+      "quality": "დივნის ანატომია",
+      "process": "როგორ შევუკვეთოთ",
+      "portfolio": "ინტერიერები",
+      "showroom": "შოურუმი ვაკეში",
+      "delivery": "მიწოდება და აწყობა",
+      "contacts": "კონტაქტები"
+    },
+    "topBar": "შოურუმი ვაკეში: თბილისი, ნ. ბერძენიშვილის 2 • დივანები შეკვეთით 25 დღიდან • მიწოდება მთელ საქართველოში",
+    "hero": {
+      "badge": "COOL & COMFY • ვაკე, თბილისი",
+      "title": "დიზაინერული დივანები<br><span class=\"hero__brand\">შეკვეთით თბილისში</span>",
+      "subtitle": "Style • Comfort • Durability. Custom-Made Sofas Crafted for Your Space.<br>ვამზადებთ დივანებს თქვენი ოთახის ინდივიდუალური ზომებით. 100+ ევროპული ქსოვილის კოლექცია და 5 წლიანი გარანტია.",
+      "ctaModels": "კოლექციის ნახვა",
+      "ctaShowroom": "შოურუმი ვაკეში",
+      "ctaWhatsApp": "გათვლა WhatsApp-ში",
+      "statWarranty": "5 წელი გარანტია",
+      "statTime": "25 დღიდან დამზადება",
+      "statFabrics": "100+ ქსოვილის სახეობა",
+      "statCustom": "ნებისმიერი ზომა"
+    },
+    "quality": {
+      "badge": "უმაღლესი ხარისხი",
+      "title": "Farfale-ს დივნის იდეალური ანატომია",
+      "subtitle": "საკუთარი წარმოება საქართველოში. თითოეული დივანი იქმნება მშრალი არყის ხის კარკასზე, ორთოპედიულ ზამბარებზე და მრავალშრიან მაღალი სიმკვრივის ღრუბელზე.",
+      "schemeCaption": "🔍 შიდა კონსტრუქცია: კარკასი • ზამბარის სისტემა • ორთოპედიული შრეები",
+      "f1Title": "მშრალი მყარი კარკასი (კარკასი)",
+      "f1Desc": "კამერულად გამომშრალი ხის ძელაკი და 15–18 მმ ტენმედეგი არყის ხის ფანერა. არ ჭრაჭუნებს და არ დეფორმირდება წლების განმავლობაში.",
+      "f2Title": "ზამბარის სისტემა დემპფერებით (ზამბარის სისტემა)",
+      "f2Desc": "ნაწრთობი ფოლადის ზამბარა-გველი ხმისჩამხშობი პოლიმერული სამაგრებით. თანაბრად ანაწილებს წონას და იცავს ჩაჯდომისგან.",
+      "f3Title": "მრავალშრიანი ღრუბელი (შრეები)",
+      "f3Desc": "მაღალელასტიური HR 35/35 და Memory Foam-ის კომბინაცია ქმნის სხეულის მსუბუქი ჩაძირვის და სრული რელაქსაციის შეგრძნებას.",
+      "f4Title": "პრემიუმ ევროპული ქსოვილები",
+      "f4Desc": "ბუკლე, ფაქტურული ველვეტი, შენილი და როგოჟკა Martindale-ის 100 000-მდე ციკლის გამძლეობით. დაცულია შინაური ცხოველების ბრჭყალებისგან."
+    },
+    "process": {
+      "badge": "ინდივიდუალური წარმოება",
+      "title": "როგორ შევუკვეთოთ დივანი თქვენი ინტერიერისთვის",
+      "subtitle": "მარტივი და გამჭვირვალე პროცესი იდეიდან თქვენს მისაღებ ოთახამდე",
+      "s1Title": "მოდელის და ფორმის შერჩევა",
+      "s1Desc": "შეარჩიეთ საბაზისო ფორმა (Cloud, Curve, Nordic, Bellini) ან გამოგვიგზავნეთ თქვენი დიზაინ-პროექტი.",
+      "s2Title": "შოურუმი ან ქსოვილების შერჩევა",
+      "s2Desc": "გელოდებით ვაკის შოურუმში (ნ. ბერძენიშვილის 2) ქსოვილების სანახავად და სირბილის შესამოწმებლად.",
+      "s3Title": "3D-გათვლა და დამზადება",
+      "s3Desc": "ვაფიქსირებთ ზომებს სანტიმეტრებში, ვაფორმებთ შეკვეთას და ვიწყებთ დამზადებას (25 სამუშაო დღიდან).",
+      "s4Title": "მიწოდება და აწყობა",
+      "s4Desc": "უსაფრთხო მიწოდება თბილისში, ბათუმსა და მთელ საქართველოში. ჩვენი ოსტატები აიტანენ და ააწყობენ დივანს."
+    },
+    "consult": {
+      "badge": "უფასო კონსულტაცია და გათვლა",
+      "title": "გაიგეთ ღირებულება თქვენი ზომებით",
+      "desc": "დაგვიტოვეთ ნომერი ან მოგვწერეთ პირდაპირ WhatsApp-ში. ჩვენი დიზაინერი დაგეხმარებათ მოდულების შერჩევაში.",
+      "namePlaceholder": "თქვენი სახელი",
+      "phonePlaceholder": "+995 XX XXX XX XX",
+      "msgPlaceholder": "რა მოდელი ან მიახლოებითი ზომები გაინტერესებთ?",
+      "submitBtn": "გათვლის მოთხოვნა",
+      "waDirect": "პირდაპირ WhatsApp-ში მიწერა →"
+    },
+    "faq": {
+      "title": "ხშირად დასმული კითხვები (FAQ)",
+      "subtitle": "პასუხები ყველაზე მნიშვნელოვან კითხვებზე დივნების შეკვეთისა და მიწოდების შესახებ",
+      "items": [
+        {
+          "q": "რა დრო სჭირდება ინდივიდუალური დივნის დამზადებას?",
+          "a": "დამზადების სტანდარტული ვადა შეადგენს 25-დან 35 სამუშაო დღემდე, შერჩეული მოდელის სირთულისა და ქსოვილის ხელმისაწვდომობის მიხედვით."
+        },
+        {
+          "q": "შესაძლებელია თუ არა დივნის შეკვეთა ჩემი ზომებით?",
+          "a": "დიახ! ჩვენი მთავარი სპეციალიზაცია სწორედ ინდივიდუალური წარმოებაა. შეგვიძლია შევცვალოთ სიგრძე, სიღრმე, კუთხის მხარე და მოდულების რაოდენობა 5 სმ-ის სიზუსტით."
+        },
+        {
+          "q": "სად შემიძლია ქსოვილების ნახვა და დივნების მოსინჯვა?",
+          "a": "გელოდებით ჩვენს ფლაგმანურ შოურუმში თბილისში: ვაკე, ნ. ბერძენიშვილის ქუჩა 2. შოურუმი ღიაა ყოველდღე 11:00-დან 20:00 საათამდე."
+        },
+        {
+          "q": "როგორ ხდება მიწოდება თბილისში, ბათუმსა და სხვა ქალაქებში?",
+          "a": "თბილისში მიწოდება და აწყობა ხორციელდება ჩვენი პროფესიონალი გუნდის მიერ. ასევე რეგულარულად ვაწვდით და ვაწყობთ ავეჯს ბათუმში, ქუთაისში, რუსთავსა და მთელ საქართველოში."
+        },
+        {
+          "q": "რა გარანტია ვრცელდება ავეჯზე?",
+          "a": "მზიდ არყის ხის კარკასსა და ზამბარების სისტემაზე მოქმედებს ოფიციალური 5 წლიანი გარანტია."
+        }
+      ]
+    },
+    "showroomPage": {
+      "title": "Farfale-ს შოურუმი ვაკეში, თბილისში",
+      "desc": "გვეწვიეთ ვაკეში (ნ. ბერძენიშვილის 2) რბილი ავეჯის სანახავად, ქსოვილების შესარჩევად და კონსულტაციისთვის.",
+      "h1": "ავეჯის შოურუმი თბილისში",
+      "address": "ვაკე, ნ. ბერძენიშვილის ქუჩა 2, თბილისი",
+      "hours": "ყოველდღე: 11:00 — 20:00 (დასვენების დღეების გარეშე)",
+      "parking": "მოსახერხებელი საპარკინგე ადგილები შოურუმის შესასვლელთან",
+      "metro": "მეტრო დელისი / რუსთაველი (10 წუთი ავტომობილით)",
+      "ctaVisit": "ვიზიტის დაჯავშნა WhatsApp-ში",
+      "ctaMap": "Google Maps-ზე გახსნა"
+    },
+    "deliveryPage": {
+      "title": "მიწოდება და აწყობა საქართველოში | Farfale Living",
+      "desc": "დივნების მიწოდება და პროფესიონალური აწყობა თბილისში, ბათუმში, ქუთაისში და მთელ საქართველოში. სართულზე ატანა და შეფუთვის გატანა.",
+      "h1": "მიწოდების და აწყობის პირობები",
+      "intro": "ჩვენ ვუზრუნველყოფთ ავეჯის სრულ ციკლს: უსაფრთხო ტრანსპორტირებას, სართულზე ატანას, კვალიფიციურ აწყობას და ნარჩენი შეფუთვის გატანას.",
+      "zones": [
+        {
+          "city": "თბილისი და შემოგარენი",
+          "time": "მზადყოფნისთანავე 1-2 დღეში",
+          "details": "მიწოდება, ლიფტით ან კიბით სართულზე ატანა, ოთახში აწყობა და შეფუთვის გატანა."
+        },
+        {
+          "city": "ბათუმი და აჭარა",
+          "time": "კვირაში 2-ჯერ რეგულარული რეისები",
+          "details": "სპეციალიზებული სატრანსპორტო გადაზიდვა ბათუმის, ქობულეთისა და ჩაქვის მიმართულებით."
+        },
+        {
+          "city": "ქუთაისი, რუსთავი და რეგიონები",
+          "time": "შეთანხმებით",
+          "details": "მიწოდება საქართველოს ნებისმიერ წერტილში საიმედო ლოჯისტიკური პარტნიორებით."
+        }
+      ]
+    }
+  },
+  "ru": {
+    "langCode": "ru",
+    "langName": "Русский",
+    "siteTitle": "Farfale — Cool & Comfy | Дизайнерские диваны на заказ в Тбилиси | Шоурум в Ваке",
+    "siteDesc": "Cool & Comfy. Style, Comfort, Durability. Премиальные диваны и мягкая мебель на заказ в Тбилиси (Ваке, ул. Н. Бердзенишвили 2). 100+ европейских тканей, гарантия 5 лет, доставка по всей Грузии.",
+    "siteKeywords": "диваны тбилиси, диваны на заказ тбилиси, купить диван тбилиси, мягкая мебель грузия, салон мебели ваке, модульные диваны",
+    "nav": {
+      "catalog": "Коллекции",
+      "quality": "Анатомия дивана",
+      "process": "Как заказать",
+      "portfolio": "Интерьеры",
+      "showroom": "Шоурум в Ваке",
+      "delivery": "Доставка и сборка",
+      "contacts": "Контакты"
+    },
+    "topBar": "Шоурум в Ваке: Тбилиси, ул. Н. Бердзенишвили 2 • Диваны на заказ от 25 дней • Доставка по всей Грузии",
+    "hero": {
+      "badge": "COOL & COMFY • VAKE, TBILISI",
+      "title": "ДИЗАЙНЕРСКИЕ ДИВАНЫ<br><span class=\"hero__brand\">НА ЗАКАЗ В ТБИЛИСИ</span>",
+      "subtitle": "Style • Comfort • Durability. Custom-Made Sofas Crafted for Your Space.<br>Создаем диваны под индивидуальные габариты вашей комнаты. 100+ коллекций европейских тканей и гарантия 5 лет.",
+      "ctaModels": "Смотреть модели",
+      "ctaShowroom": "Шоурум в Ваке",
+      "ctaWhatsApp": "Рассчитать в WhatsApp",
+      "statWarranty": "5 лет гарантия",
+      "statTime": "от 25 дней срок",
+      "statFabrics": "100+ видов тканей",
+      "statCustom": "Любые размеры"
+    },
+    "quality": {
+      "badge": "БЕСКОМПРОМИССНОЕ КАЧЕСТВО",
+      "title": "Анатомия идеального дивана Farfale",
+      "subtitle": "Собственное производство в Грузии. Каждый диван строится на сухом березовом брусе, ортопедических пружинах и многослойных пенах высокой плотности.",
+      "schemeCaption": "🔍 Внутренняя структура: Каркас • Пружины • Ортопедические слои пены",
+      "f1Title": "Сухой прочный каркас (კარკასი)",
+      "f1Desc": "Основа из калиброванного хвойного бруса камерной сушки и влагостойкой березовой фанеры 15–18 мм. Никаких скрипов и рассыхания со временем. Гарантия 5 лет.",
+      "f2Title": "Пружинная система с демпферами (ზამბარის სისტემა)",
+      "f2Desc": "Стальная змейка из закаленной углеродистой проволоки в полимерных шумопоглощающих клипсах. Равномерно распределяет вес и исключает провисание.",
+      "f3Title": "Многослойный сэндвич пены (შრეები)",
+      "f3Desc": "Комбинация нижнего плотного слоя HR 35/35 и верхнего комфортного слоя Memory Foam. Создает ощущение мягкого «облака» и поддержки тела.",
+      "f4Title": "Премиальные европейские ткани",
+      "f4Desc": "Букле, фактурный вельвет, шенилл и рогожка со стойкостью Martindale до 100 000 циклов. Защита от когтей домашних питомцев и легкая чистка."
+    },
+    "process": {
+      "badge": "ИНДИВИДУАЛЬНОЕ ПРОИЗВОДСТВО",
+      "title": "Как заказать диван под ваше пространство",
+      "subtitle": "Простой и прозрачный путь от первой идеи до готового дивана у вас в гостиной",
+      "s1Title": "Выбор модели и формата",
+      "s1Desc": "Выберите базовую форму из каталога (Cloud, Curve, Nordic, Bellini) или пришлите фото/эскиз дивана вашей мечты.",
+      "s2Title": "Шоурум или подбор тканей",
+      "s2Desc": "Ждем вас в шоуруме в Ваке (ул. Н. Бердзенишвили 2) потрогать 100+ тканей и протестировать мягкость. Либо пришлем образцы на дом.",
+      "s3Title": "3D-расчет и изготовление",
+      "s3Desc": "Фиксируем габариты с точностью до сантиметра, подписываем договор и запускаем диван в работу. Срок — от 25 рабочих дней.",
+      "s4Title": "Доставка и сборка",
+      "s4Desc": "Бережная доставка по Тбилиси, Батуми и всей Грузии. Наши мастера занесут модули, соберут диван и уберут всю упаковку."
+    },
+    "consult": {
+      "badge": "БЕСПЛАТНЫЙ РАСЧЕТ И КОНСУЛЬТАЦИЯ",
+      "title": "Рассчитать стоимость по вашим размерам",
+      "desc": "Оставьте номер телефона или напишите нам в мессенджер. Наш специалист рассчитает стоимость в нужной ткани и ответит на все вопросы.",
+      "namePlaceholder": "Ваше имя",
+      "phonePlaceholder": "+995 XX XXX XX XX",
+      "msgPlaceholder": "Какая модель или примерные размеры?",
+      "submitBtn": "Заказать расчет",
+      "waDirect": "Написать напрямую в WhatsApp →"
+    },
+    "faq": {
+      "title": "Часто задаваемые вопросы (FAQ)",
+      "subtitle": "Ответы на ключевые вопросы о заказе, материалах и доставке дизайнерских диванов в Грузии",
+      "items": [
+        {
+          "q": "Сколько времени занимает изготовление дивана на заказ?",
+          "a": "Стандартный срок производства составляет от 25 до 35 рабочих дней в зависимости от сложности выбранной модульной конфигурации и наличия ткани."
+        },
+        {
+          "q": "Можно ли заказать диван по индивидуальным размерам?",
+          "a": "Да, индивидуальное изготовление — наш ключевой профиль. Мы можем адаптировать длину, глубину посадки, угол оттоманки и количество секций с шагом в 5 см."
+        },
+        {
+          "q": "Где можно посмотреть образцы тканей и протестировать диваны?",
+          "a": "В нашем флагманском шоуруме в Тбилиси: Ваке, ул. Николая Бердзенишвили, 2. Шоурум открыт ежедневно с 11:00 до 20:00."
+        },
+        {
+          "q": "Как осуществляется доставка по Тбилиси, в Батуми и по Грузии?",
+          "a": "По Тбилиси доставка и финальная сборка осуществляются нашей собственной службой. Также 2 раза в неделю мы отправляем мебель в Батуми, Кутаиси, Рустави и другие города Грузии."
+        },
+        {
+          "q": "Какая гарантия предоставляется на диваны Farfale?",
+          "a": "На несущий каркас из березовой фанеры и пружинную систему действует официальная гарантия 5 лет."
+        }
+      ]
+    },
+    "showroomPage": {
+      "title": "Шоурум Farfale в Ваке, Тбилиси | Адрес, часы работы, запись",
+      "desc": "Приглашаем в шоурум дизайнерской мебели Farfale в Тбилиси: Ваке, ул. Н. Бердзенишвили 2. Более 100 образцов тканей, тест-драйв мягкости, удобная парковка.",
+      "h1": "Шоурум дизайнерских диванов в Тбилиси",
+      "address": "Тбилиси, Ваке, ул. Николая Бердзенишвили, 2",
+      "hours": "Ежедневно: 11:00 — 20:00 (без выходных)",
+      "parking": "Удобные парковочные места прямо перед входом в шоурум",
+      "metro": "Метро Делиси / Руставели (10 минут на такси)",
+      "ctaVisit": "Записаться на визит в WhatsApp",
+      "ctaMap": "Открыть на Google Maps"
+    },
+    "deliveryPage": {
+      "title": "Доставка и сборка диванов по Тбилиси и всей Грузии | Farfale",
+      "desc": "Условия и тарифы доставки мягкой мебели Farfale: Тбилиси, Батуми, Кутаиси, Рустави. Подъем на этаж, профессиональная сборка и вывоз упаковки.",
+      "h1": "Доставка и профессиональная сборка по Грузии",
+      "intro": "Мы берем на себя полную заботу о вашем заказе: бережная транспортировка в защитной упаковке, подъем на этаж, сборка и вывоз упаковочных материалов.",
+      "zones": [
+        {
+          "city": "Тбилиси и пригород",
+          "time": "1–2 дня после готовности",
+          "details": "Доставка до квартиры, подъем на лифте или по лестнице, монтаж модулей и вынос мусора."
+        },
+        {
+          "city": "Батуми и Аджария",
+          "time": "Регулярные рейсы 2 раза в неделю",
+          "details": "Прямая междугородняя доставка в Батуми, Кобулети, Чакви и Гонио с заносом и установкой."
+        },
+        {
+          "city": "Кутаиси, Рустави и другие регионы",
+          "time": "По согласованию",
+          "details": "Бережная экспедиторская доставка в любой населенный пункт Грузии."
+        }
+      ]
+    }
+  },
+  "en": {
+    "langCode": "en",
+    "langName": "English",
+    "siteTitle": "Farfale — Cool & Comfy | Custom-Made Designer Sofas in Tbilisi | Vake Showroom",
+    "siteDesc": "Cool & Comfy. Style, Comfort, Durability. Custom-Made Sofas Crafted for Your Space in Tbilisi (Vake, 2 N. Berdzenishvili St). 100+ European fabrics, 5-year warranty, delivery across Georgia.",
+    "siteKeywords": "sofas tbilisi, custom sofa tbilisi, custom furniture georgia, modern furniture vake, modular cloud sofa, luxury couch georgia",
+    "nav": {
+      "catalog": "Collections",
+      "quality": "Sofa Anatomy",
+      "process": "How to Order",
+      "portfolio": "Interiors",
+      "showroom": "Vake Showroom",
+      "delivery": "Delivery & Assembly",
+      "contacts": "Contacts"
+    },
+    "topBar": "Showroom in Vake: Tbilisi, 2 N. Berdzenishvili St • Custom Sofas from 25 Days • Delivery Across Georgia",
+    "hero": {
+      "badge": "COOL & COMFY • VAKE, TBILISI",
+      "title": "DESIGNER SOFAS<br><span class=\"hero__brand\">CUSTOM-MADE IN TBILISI</span>",
+      "subtitle": "Style • Comfort • Durability. Custom-Made Sofas Crafted for Your Space.<br>Tailored precisely to your room dimensions. 100+ European fabric collections and a 5-year frame warranty.",
+      "ctaModels": "Explore Models",
+      "ctaShowroom": "Vake Showroom",
+      "ctaWhatsApp": "Inquire via WhatsApp",
+      "statWarranty": "5-Year Warranty",
+      "statTime": "From 25 Days Lead Time",
+      "statFabrics": "100+ Fabric Choices",
+      "statCustom": "Any Custom Dimensions"
+    },
+    "quality": {
+      "badge": "UNCOMPROMISING CRAFTSMANSHIP",
+      "title": "The Anatomy of a Farfale Sofa",
+      "subtitle": "Crafted locally in Georgia. Built on kiln-dried birch timber, German suspension springs, and multi-layered high-resilience memory foam.",
+      "schemeCaption": "🔍 Internal Construction: Frame • Spring Suspension • Orthopedic Foam Layers",
+      "f1Title": "Kiln-Dried Hardwood Frame (კარკასი)",
+      "f1Desc": "Selected dry solid timber and 15–18 mm moisture-resistant birch plywood. Zero creaks or warping over time. 5-year warranty.",
+      "f2Title": "Damped Spring Suspension (ზამბარის სისტემა)",
+      "f2Desc": "High-tensile carbon steel serpentine springs encased in sound-absorbing polymer clips for optimal weight distribution.",
+      "f3Title": "Multi-Density Cushioning (შრეები)",
+      "f3Desc": "High-resilience HR 35/35 foam paired with a cloud-like Memory Foam topper for superior ergonomic support and softness.",
+      "f4Title": "Premium European Textiles",
+      "f4Desc": "Bouclé, textured corduroy, chenille, and linen-look weaves rated up to 100,000 Martindale cycles with pet-friendly Easy Clean coating."
+    },
+    "process": {
+      "badge": "BESPOKE PRODUCTION",
+      "title": "How to Order a Custom Sofa for Your Space",
+      "subtitle": "A transparent journey from initial concept to installation in your living room",
+      "s1Title": "Choose Model & Configuration",
+      "s1Desc": "Select a base design (Cloud, Curve, Nordic, Bellini) or share your architectural drawings and sketches.",
+      "s2Title": "Visit Showroom or Select Fabrics",
+      "s2Desc": "Visit our Vake showroom (2 N. Berdzenishvili St) to test softness and review 100+ fabric swatches.",
+      "s3Title": "3D Sizing & Manufacturing",
+      "s3Desc": "We lock in dimensions to the exact centimetre, sign the specification, and begin crafting. Lead time from 25 days.",
+      "s4Title": "White-Glove Delivery & Assembly",
+      "s4Desc": "Careful delivery across Tbilisi, Batumi, and Georgia. Our team handles carrying, assembly, and packaging disposal."
+    },
+    "consult": {
+      "badge": "FREE SIZING & CONSULTATION",
+      "title": "Get an Estimate for Your Custom Size",
+      "desc": "Leave your phone number or message us directly on WhatsApp. Our design team will advise on fabrics and configurations.",
+      "namePlaceholder": "Your Name",
+      "phonePlaceholder": "+995 XX XXX XX XX",
+      "msgPlaceholder": "Which model or what dimensions are you looking for?",
+      "submitBtn": "Request an Estimate",
+      "waDirect": "Chat Directly on WhatsApp →"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions (FAQ)",
+      "subtitle": "Everything you need to know about bespoke sofa production and delivery in Georgia",
+      "items": [
+        {
+          "q": "How long does custom sofa manufacturing take?",
+          "a": "Standard production takes between 25 and 35 working days depending on configuration complexity and fabric selection."
+        },
+        {
+          "q": "Can I order custom sizes or modify modules?",
+          "a": "Yes! Custom-made furniture is our primary craft. We can adjust lengths, depths, chaise orientation, and modular sections in 5 cm increments."
+        },
+        {
+          "q": "Where can I see fabric swatches and test the sofas?",
+          "a": "At our flagship showroom in Tbilisi: Vake, 2 Nikoloz Berdzenishvili St. Open daily from 11:00 AM to 8:00 PM."
+        },
+        {
+          "q": "How does delivery work in Tbilisi, Batumi, and other regions?",
+          "a": "In Tbilisi, our in-house white-glove team delivers and assembles the sofa in your room. We also make bi-weekly deliveries to Batumi, Kutaisi, Rustavi, and across Georgia."
+        },
+        {
+          "q": "What warranty is provided on Farfale furniture?",
+          "a": "All solid birch frames and spring suspension systems come with an official 5-year warranty."
+        }
+      ]
+    },
+    "showroomPage": {
+      "title": "Farfale Showroom in Vake, Tbilisi | Address, Hours, Booking",
+      "desc": "Visit Farfale designer furniture showroom in Tbilisi: Vake, 2 N. Berdzenishvili St. 100+ fabric swatches, comfort test, convenient parking.",
+      "h1": "Designer Furniture Showroom in Tbilisi",
+      "address": "2 Nikoloz Berdzenishvili St, Vake, Tbilisi, Georgia",
+      "hours": "Daily: 11:00 AM — 8:00 PM (No days off)",
+      "parking": "Convenient parking slots right outside the showroom entrance",
+      "metro": "Delisi / Rustaveli Metro (10 minutes by car/taxi)",
+      "ctaVisit": "Book an Appointment on WhatsApp",
+      "ctaMap": "Open on Google Maps"
+    },
+    "deliveryPage": {
+      "title": "Delivery & Assembly Across Tbilisi and Georgia | Farfale",
+      "desc": "Delivery terms & rates for Farfale sofas: Tbilisi, Batumi, Kutaisi, Rustavi. White-glove in-room carrying, assembly, and debris removal.",
+      "h1": "Delivery & White-Glove Assembly Across Georgia",
+      "intro": "We take end-to-end care of your order: safe transit in multi-layer protective packaging, floor delivery, assembly, and disposal of all wrapping.",
+      "zones": [
+        {
+          "city": "Tbilisi & Suburbs",
+          "time": "1–2 days after completion",
+          "details": "Delivery to apartment, elevator or stair carry, full assembly, and removal of packaging debris."
+        },
+        {
+          "city": "Batumi & Adjara",
+          "time": "Twice a week scheduled routes",
+          "details": "Direct transit to Batumi, Kobuleti, Chakvi, and Gonio with in-room assembly."
+        },
+        {
+          "city": "Kutaisi, Rustavi & Other Regions",
+          "time": "Upon agreement",
+          "details": "Safe dedicated shipping to any address across Georgia."
+        }
+      ]
+    }
+  }
+}
