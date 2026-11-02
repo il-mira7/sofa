@@ -1,0 +1,142 @@
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.footer {
+  background-color: #0d0d0d;
+  color: #ffffff;
+  padding-top: 80px;
+}
+
+.footer__inner {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 48px;
+  padding-bottom: 60px;
+  border-bottom: 1px solid #222222;
+}
+
+.footer__logo {
+  height: 20px;
+  width: auto;
+  filter: invert(1);
+  margin-bottom: 20px;
+}
+
+.footer__brand-text {
+  font-size: 0.875rem;
+  color: #888888;
+  line-height: 1.6;
+  max-width: 320px;
+  margin-bottom: 24px;
+}
+
+.footer__requisites {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.75rem;
+  color: #666666;
+}
+
+.footer__heading {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer__links a {
+  font-size: 0.875rem;
+  color: #999999;
+  transition: color var(--transition-fast);
+}
+
+.footer__links a:hover {
+  color: #ffffff;
+}
+
+.footer__contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.footer__contact-link {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.footer__contact-link:hover {
+  color: var(--color-accent);
+}
+
+.footer__hours {
+  font-size: 0.85rem;
+  color: #888888;
+}
+
+.footer__socials {
+  display: flex;
+  gap: 12px;
+}
+
+.social-icon-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-full);
+  background-color: #1f1f1f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  transition: background-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.social-icon-btn:hover {
+  background-color: #333333;
+  transform: translateY(-2px);
+}
+
+.footer__bottom {
+  padding: 24px 0;
+  background-color: #070707;
+}
+
+.footer__bottom-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  color: #666666;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer__disclaimer {
+  max-width: 600px;
+}
+
+.footer__legal-links {
+  display: flex;
+  gap: 16px;
+}
+
+.footer__legal-links a {
+  color: #777777;
+}
+
+.footer__legal-links a:hover {
+  color: #ffffff;
+}
+

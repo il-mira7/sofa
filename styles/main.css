@@ -1,0 +1,31 @@
+/* ==========================================================================
+   BOCA ROOM — Main Stylesheet Entrypoint
+   Modular architecture: sub-stylesheets imported in logical order
+   ========================================================================== */
+
+/* Design Tokens & CSS Reset */
+@import url('variables.css');
+@import url('base.css');
+
+/* Components & Sections */
+@import url('components/header.css');
+@import url('components/hero.css');
+@import url('components/catalog.css');
+@import url('components/quality.css');
+@import url('components/portfolio.css');
+@import url('components/consultation.css');
+@import url('components/showrooms.css');
+@import url('components/blog.css');
+@import url('components/footer.css');
+
+/* Interactive Elements */
+@import url('components/modal.css');
+@import url('components/cart.css');
+@import url('components/toast.css');
+
+/* Animations & Responsive */
+@import url('components/animations.css');
+@import url('components/responsive.css');
+
+/* Product Detail Page (cosmo.html) */
+@import url('components/product-detail.css');

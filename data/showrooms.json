@@ -1,0 +1,29 @@
+{
+  "title": "Наш шоурум в Тбилиси",
+  "subtitle": "Приглашаем вас в гости в Ваке протестировать мягкость диванов, почувствовать фактуру тканей и обсудить ваш проект за чашкой кофе",
+  "showrooms": [
+    {
+      "id": "tbilisi-vake",
+      "city": "Тбилиси",
+      "district": "Ваке",
+      "title": "Флагманский шоурум Farfale Living",
+      "address": "ул. Николая Бердзенишвили, 2 (N. Berdzenishvili 2), Ваке, Тбилиси",
+      "addressGe": "ნ. ბერძენიშვილის ქუჩა 2, ვაკე, თბილისი",
+      "phone": "+995 555 12 34 56",
+      "phoneRaw": "+995555123456",
+      "whatsapp": "https://wa.me/995555123456?text=Здравствуйте!%20Хочу%20посетить%20шоурум%20в%20Ваке",
+      "hours": "Ежедневно: 11:00 — 20:00",
+      "hoursGe": "ყოველდღე: 11:00 — 20:00",
+      "metro": "Метро Делиси / Руставели (10 минут на авто)",
+      "parking": "Удобный подъезд и парковочные места рядом со входом",
+      "description": "В шоуруме представлены все популярные формы диванов: трендовый Cloud, изогнутый Curve в букле, классические секции и образцы кровати-кушетки. Вы сможете лично оценить разную плотность наполнителей и выбрать обивку из более чем 100 образцов.",
+      "photos": [
+        "assets/images/showroom/showroom-street.webp",
+        "assets/images/showroom/showroom-comfort.webp",
+        "assets/images/showroom/showroom-interior.webp",
+        "assets/images/showroom/showroom-pov.webp"
+      ],
+      "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2978.8!2d44.7578!3d41.7118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z41HCsDQyJzQyLjUiTiA0NMKwNDUnMjguMSJF!5e0!3m2!1ska!2sge!4v1"
+    }
+  ]
+}

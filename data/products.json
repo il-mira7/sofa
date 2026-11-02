@@ -1,0 +1,394 @@
+{
+  "all": {
+    "name": "Все модели",
+    "products": [
+      {
+        "id": "cloud-modular",
+        "slug": "cloud",
+        "title": "CLOUD LOUNGE",
+        "category": "modular",
+        "categoryName": "Модульные диваны",
+        "badge": "Бестселлер • Vetsak-вайб",
+        "tagline": "Абсолютный комфорт и свобода конфигурации",
+        "price_from_gel": 4200,
+        "price_formatted_gel": "от 4 200 ₾",
+        "lead_time": "от 25 дней",
+        "warranty": "5 лет",
+        "description": "Глубокий модульный лаунж-диван с расслабленной посадкой. Каждый модуль самостоятелен — вы можете легко менять геометрию дивана от компактного прямого до огромного острова для кинопросмотра. Съемные чехлы и премиальный вельвет/шенилл.",
+        "features": [
+          "Свободная модульная система — любые комбинации блоков",
+          "Глубокая лаунж-посадка с эффектом «погружения в облако»",
+          "Съемные чехлы на скрытых молниях",
+          "Усиленный каркас из березовой фанеры высшего сорта"
+        ],
+        "dimensions_standard": "Модули 105×105 см, пуфы 105×80 см. Любые размеры под заказ.",
+        "popular_fabrics": [
+          "Крупный вельвет (Corduroy)",
+          "Премиальный шенилл",
+          "Букле"
+        ],
+        "images": [
+          "assets/images/products/cloud/cloud-01.webp",
+          "assets/images/products/cloud/cloud-02.webp",
+          "assets/images/products/cloud/cloud-03.webp",
+          "assets/images/products/cloud/cloud-04.webp",
+          "assets/images/products/cloud/cloud-05.webp",
+          "assets/images/products/cloud/cloud-06.webp",
+          "assets/images/products/cloud/cloud-07.webp",
+          "assets/images/products/cloud/cloud-08.webp",
+          "assets/images/products/cloud/cloud-09.webp",
+          "assets/images/products/cloud/cloud-10.webp",
+          "assets/images/products/cloud/cloud-11.webp"
+        ]
+      },
+      {
+        "id": "curve-bionic",
+        "slug": "curve",
+        "title": "CURVE ORGANIC",
+        "category": "curved",
+        "categoryName": "Изогнутые диваны",
+        "badge": "Дизайн-тренд • Сканди",
+        "tagline": "Скульптурная бионика и плавные линии уюта",
+        "price_from_gel": 4800,
+        "price_formatted_gel": "от 4 800 ₾",
+        "lead_time": "от 25 дней",
+        "warranty": "5 лет",
+        "description": "Флагманская скульптурная модель с плавными радиусными линиями в эстетике Bolia. Становится главным акцентным центром гостиной. Безупречно раскрывается в объемной тактильной ткани букле или кашемировом велюре.",
+        "features": [
+          "Эргономичная бионическая форма спинки для естественной поддержки спины",
+          "В комплекте: фирменная шаровидная декоративная подушка-пуф",
+          "Бесшовный радиусный крой обивки высокой сложности",
+          "Основание из калиброванного массива дерева"
+        ],
+        "dimensions_standard": "240×115×78 см / 280×120×78 см (или под ваше помещение)",
+        "popular_fabrics": [
+          "Фактурное букле (Bouclé)",
+          "Мягкий шенилл",
+          "Шерстяная рогожка"
+        ],
+        "images": [
+          "assets/images/products/curve/curve-01.webp",
+          "assets/images/products/curve/curve-02.webp",
+          "assets/images/products/curve/curve-03.webp",
+          "assets/images/products/curve/curve-04.webp",
+          "assets/images/products/curve/curve-05.webp",
+          "assets/images/products/curve/curve-06.webp",
+          "assets/images/products/curve/curve-07.webp",
+          "assets/images/products/curve/curve-08.webp",
+          "assets/images/products/curve/curve-09.webp",
+          "assets/images/products/curve/curve-10.webp",
+          "assets/images/products/curve/curve-11.webp"
+        ]
+      },
+      {
+        "id": "nordic-minimal",
+        "slug": "nordic",
+        "title": "NORDIC LINE & CORNER",
+        "category": "nordic",
+        "categoryName": "Прямые и угловые",
+        "badge": "Архитектурный минимализм",
+        "tagline": "Чистые линии, строгие пропорции и премиальный шезлонг",
+        "price_from_gel": 3900,
+        "price_formatted_gel": "от 3 900 ₾",
+        "lead_time": "от 25 дней",
+        "warranty": "5 лет",
+        "description": "Универсальная архитектурная линейка диванов для современных апартаментов. Выпускается в вариантах прямой 2-х и 3-местный, либо угловой L-образный с глубокой оттоманкой. Доступны варианты на скрытом цоколе или ножках из массива дерева.",
+        "features": [
+          "Прямой или угловой L-образный шезлонг под любой угол комнаты",
+          "Широкие комфортные подлокотники, заменяющие столик для ноутбука или книги",
+          "Наполнение HR-пеной высокой плотности с ортопедическим эффектом",
+          "Стойкие к домашним питомцам ткани с защитой Easy Clean"
+        ],
+        "dimensions_standard": "Прямой: 220–260 см; Угловой: 280×175 см (изготовление в любой размер с шагом 5 см)",
+        "popular_fabrics": [
+          "Рогожка меланж",
+          "Шенилл плотного плетения",
+          "Велюр антикоготь"
+        ],
+        "images": [
+          "assets/images/products/nordic/nordic-01.webp",
+          "assets/images/products/nordic/nordic-02.webp",
+          "assets/images/products/nordic/nordic-03.webp",
+          "assets/images/products/nordic/nordic-04.webp",
+          "assets/images/products/nordic/nordic-05.webp",
+          "assets/images/products/nordic/nordic-06.webp",
+          "assets/images/products/nordic/nordic-07.webp",
+          "assets/images/products/nordic/nordic-11.webp",
+          "assets/images/products/nordic/nordic-14.webp",
+          "assets/images/products/nordic/nordic-18.webp",
+          "assets/images/products/nordic/nordic-21.webp"
+        ]
+      },
+      {
+        "id": "bellini-camaleonda",
+        "slug": "bellini",
+        "title": "BELLINI TUFTED",
+        "category": "iconic",
+        "categoryName": "Дизайнерские иконы",
+        "badge": "Культовый дизайн 70-х",
+        "tagline": "Легендарная каретная стяжка и коллекционная эстетика",
+        "price_from_gel": 5200,
+        "price_formatted_gel": "от 5 200 ₾",
+        "lead_time": "от 30 дней",
+        "warranty": "5 лет",
+        "description": "Культовый модульный диван в традициях Марио Беллини (Camaleonda). Модули соединяются хромированными карабинами и стальными кольцами. Фирменная глубокая стяжка капитоне ручной работы в бархатистом велюре или натуральной коже.",
+        "features": [
+          "Ручная капитоне-стяжка с металлическими карабинами",
+          "Абсолютная модульность: каждый элемент функционирует отдельно или в ансамбле",
+          "Премиальный наполнитель многослойной плотности",
+          "Доступен в шоколадном, изумрудном, терракотовом велюре или матовой коже"
+        ],
+        "dimensions_standard": "Модуль со спинкой: 96×96×67 см, Пуф: 96×96×40 см",
+        "popular_fabrics": [
+          "Итальянский велюр",
+          "Натуральная кожа Semi-Aniline",
+          "Букле"
+        ],
+        "images": [
+          "assets/images/products/camaleonda/camaleonda-01.webp",
+          "assets/images/products/camaleonda/camaleonda-02.webp"
+        ]
+      },
+      {
+        "id": "daybed-sleep",
+        "slug": "daybed",
+        "title": "DAYBED SLUMBER",
+        "category": "beds",
+        "categoryName": "Кровати и кушетки",
+        "badge": "2-в-1: Диван и кровать",
+        "tagline": "Мягкая кушетка с выкатным вторым спальным местом",
+        "price_from_gel": 3600,
+        "price_formatted_gel": "от 3 600 ₾",
+        "lead_time": "от 25 дней",
+        "warranty": "5 лет",
+        "description": "Элегантная мягкая кушетка с вертикальной объемной стяжкой и ортопедическим основанием на ламелях. Оснащена плавным выкатным механизмом, который трансформирует компактную кушетку в полноценное второе спальное место.",
+        "features": [
+          "Выкатной механизм: дополнительное полноразмерное спальное место",
+          "Ортопедическая решетка из березовых ламелей для здорового сна",
+          "Мягкие боковины и спинка с защитой от соприкосновения с холодной стеной",
+          "Идеально для гостевой комнаты, кабинета или детской"
+        ],
+        "dimensions_standard": "Спальное место 90×200 см + выкатное 90×190 см (или любые размеры)",
+        "popular_fabrics": [
+          "Мягкая экокожа",
+          "Велюр Soft Touch",
+          "Шенилл"
+        ],
+        "images": [
+          "assets/images/products/daybed/daybed-01.webp",
+          "assets/images/products/daybed/daybed-02.webp",
+          "assets/images/products/daybed/daybed-03.webp"
+        ]
+      }
+    ],
+    "total": 5
+  },
+  "modular": {
+    "name": "Модульные Cloud",
+    "products": [
+      {
+        "id": "cloud-modular",
+        "slug": "cloud",
+        "title": "CLOUD LOUNGE",
+        "category": "modular",
+        "categoryName": "Модульные диваны",
+        "badge": "Бестселлер • Vetsak-вайб",
+        "tagline": "Абсолютный комфорт и свобода конфигурации",
+        "price_from_gel": 4200,
+        "price_formatted_gel": "от 4 200 ₾",
+        "lead_time": "от 25 дней",
+        "warranty": "5 лет",
+        "description": "Глубокий модульный лаунж-диван с расслабленной посадкой. Каждый модуль самостоятелен — вы можете легко менять геометрию дивана от компактного прямого до огромного острова для кинопросмотра. Съемные чехлы и премиальный вельвет/шенилл.",
+        "features": [
+          "Свободная модульная система — любые комбинации блоков",
+          "Глубокая лаунж-посадка с эффектом «погружения в облако»",
+          "Съемные чехлы на скрытых молниях",
+          "Усиленный каркас из березовой фанеры высшего сорта"
+        ],
+        "dimensions_standard": "Модули 105×105 см, пуфы 105×80 см. Любые размеры под заказ.",
+        "popular_fabrics": [
+          "Крупный вельвет (Corduroy)",
+          "Премиальный шенилл",
+          "Букле"
+        ],
+        "images": [
+          "assets/images/products/cloud/cloud-01.webp",
+          "assets/images/products/cloud/cloud-02.webp",
+          "assets/images/products/cloud/cloud-03.webp",
+          "assets/images/products/cloud/cloud-04.webp",
+          "assets/images/products/cloud/cloud-05.webp",
+          "assets/images/products/cloud/cloud-06.webp",
+          "assets/images/products/cloud/cloud-07.webp",
+          "assets/images/products/cloud/cloud-08.webp",
+          "assets/images/products/cloud/cloud-09.webp",
+          "assets/images/products/cloud/cloud-10.webp",
+          "assets/images/products/cloud/cloud-11.webp"
+        ]
+      }
+    ],
+    "total": 1
+  },
+  "curved": {
+    "name": "Изогнутые Curve",
+    "products": [
+      {
+        "id": "curve-bionic",
+        "slug": "curve",
+        "title": "CURVE ORGANIC",
+        "category": "curved",
+        "categoryName": "Изогнутые диваны",
+        "badge": "Дизайн-тренд • Сканди",
+        "tagline": "Скульптурная бионика и плавные линии уюта",
+        "price_from_gel": 4800,
+        "price_formatted_gel": "от 4 800 ₾",
+        "lead_time": "от 25 дней",
+        "warranty": "5 лет",
+        "description": "Флагманская скульптурная модель с плавными радиусными линиями в эстетике Bolia. Становится главным акцентным центром гостиной. Безупречно раскрывается в объемной тактильной ткани букле или кашемировом велюре.",
+        "features": [
+          "Эргономичная бионическая форма спинки для естественной поддержки спины",
+          "В комплекте: фирменная шаровидная декоративная подушка-пуф",
+          "Бесшовный радиусный крой обивки высокой сложности",
+          "Основание из калиброванного массива дерева"
+        ],
+        "dimensions_standard": "240×115×78 см / 280×120×78 см (или под ваше помещение)",
+        "popular_fabrics": [
+          "Фактурное букле (Bouclé)",
+          "Мягкий шенилл",
+          "Шерстяная рогожка"
+        ],
+        "images": [
+          "assets/images/products/curve/curve-01.webp",
+          "assets/images/products/curve/curve-02.webp",
+          "assets/images/products/curve/curve-03.webp",
+          "assets/images/products/curve/curve-04.webp",
+          "assets/images/products/curve/curve-05.webp",
+          "assets/images/products/curve/curve-06.webp",
+          "assets/images/products/curve/curve-07.webp",
+          "assets/images/products/curve/curve-08.webp",
+          "assets/images/products/curve/curve-09.webp",
+          "assets/images/products/curve/curve-10.webp",
+          "assets/images/products/curve/curve-11.webp"
+        ]
+      }
+    ],
+    "total": 1
+  },
+  "nordic": {
+    "name": "Прямые и угловые",
+    "products": [
+      {
+        "id": "nordic-minimal",
+        "slug": "nordic",
+        "title": "NORDIC LINE & CORNER",
+        "category": "nordic",
+        "categoryName": "Прямые и угловые",
+        "badge": "Архитектурный минимализм",
+        "tagline": "Чистые линии, строгие пропорции и премиальный шезлонг",
+        "price_from_gel": 3900,
+        "price_formatted_gel": "от 3 900 ₾",
+        "lead_time": "от 25 дней",
+        "warranty": "5 лет",
+        "description": "Универсальная архитектурная линейка диванов для современных апартаментов. Выпускается в вариантах прямой 2-х и 3-местный, либо угловой L-образный с глубокой оттоманкой. Доступны варианты на скрытом цоколе или ножках из массива дерева.",
+        "features": [
+          "Прямой или угловой L-образный шезлонг под любой угол комнаты",
+          "Широкие комфортные подлокотники, заменяющие столик для ноутбука или книги",
+          "Наполнение HR-пеной высокой плотности с ортопедическим эффектом",
+          "Стойкие к домашним питомцам ткани с защитой Easy Clean"
+        ],
+        "dimensions_standard": "Прямой: 220–260 см; Угловой: 280×175 см (изготовление в любой размер с шагом 5 см)",
+        "popular_fabrics": [
+          "Рогожка меланж",
+          "Шенилл плотного плетения",
+          "Велюр антикоготь"
+        ],
+        "images": [
+          "assets/images/products/nordic/nordic-01.webp",
+          "assets/images/products/nordic/nordic-02.webp",
+          "assets/images/products/nordic/nordic-03.webp",
+          "assets/images/products/nordic/nordic-04.webp",
+          "assets/images/products/nordic/nordic-05.webp",
+          "assets/images/products/nordic/nordic-06.webp",
+          "assets/images/products/nordic/nordic-07.webp",
+          "assets/images/products/nordic/nordic-11.webp",
+          "assets/images/products/nordic/nordic-14.webp",
+          "assets/images/products/nordic/nordic-18.webp",
+          "assets/images/products/nordic/nordic-21.webp"
+        ]
+      }
+    ],
+    "total": 1
+  },
+  "iconic": {
+    "name": "Иконы Bellini",
+    "products": [
+      {
+        "id": "bellini-camaleonda",
+        "slug": "bellini",
+        "title": "BELLINI TUFTED",
+        "category": "iconic",
+        "categoryName": "Дизайнерские иконы",
+        "badge": "Культовый дизайн 70-х",
+        "tagline": "Легендарная каретная стяжка и коллекционная эстетика",
+        "price_from_gel": 5200,
+        "price_formatted_gel": "от 5 200 ₾",
+        "lead_time": "от 30 дней",
+        "warranty": "5 лет",
+        "description": "Культовый модульный диван в традициях Марио Беллини (Camaleonda). Модули соединяются хромированными карабинами и стальными кольцами. Фирменная глубокая стяжка капитоне ручной работы в бархатистом велюре или натуральной коже.",
+        "features": [
+          "Ручная капитоне-стяжка с металлическими карабинами",
+          "Абсолютная модульность: каждый элемент функционирует отдельно или в ансамбле",
+          "Премиальный наполнитель многослойной плотности",
+          "Доступен в шоколадном, изумрудном, терракотовом велюре или матовой коже"
+        ],
+        "dimensions_standard": "Модуль со спинкой: 96×96×67 см, Пуф: 96×96×40 см",
+        "popular_fabrics": [
+          "Итальянский велюр",
+          "Натуральная кожа Semi-Aniline",
+          "Букле"
+        ],
+        "images": [
+          "assets/images/products/camaleonda/camaleonda-01.webp",
+          "assets/images/products/camaleonda/camaleonda-02.webp"
+        ]
+      }
+    ],
+    "total": 1
+  },
+  "beds": {
+    "name": "Кровати и кушетки",
+    "products": [
+      {
+        "id": "daybed-sleep",
+        "slug": "daybed",
+        "title": "DAYBED SLUMBER",
+        "category": "beds",
+        "categoryName": "Кровати и кушетки",
+        "badge": "2-в-1: Диван и кровать",
+        "tagline": "Мягкая кушетка с выкатным вторым спальным местом",
+        "price_from_gel": 3600,
+        "price_formatted_gel": "от 3 600 ₾",
+        "lead_time": "от 25 дней",
+        "warranty": "5 лет",
+        "description": "Элегантная мягкая кушетка с вертикальной объемной стяжкой и ортопедическим основанием на ламелях. Оснащена плавным выкатным механизмом, который трансформирует компактную кушетку в полноценное второе спальное место.",
+        "features": [
+          "Выкатной механизм: дополнительное полноразмерное спальное место",
+          "Ортопедическая решетка из березовых ламелей для здорового сна",
+          "Мягкие боковины и спинка с защитой от соприкосновения с холодной стеной",
+          "Идеально для гостевой комнаты, кабинета или детской"
+        ],
+        "dimensions_standard": "Спальное место 90×200 см + выкатное 90×190 см (или любые размеры)",
+        "popular_fabrics": [
+          "Мягкая экокожа",
+          "Велюр Soft Touch",
+          "Шенилл"
+        ],
+        "images": [
+          "assets/images/products/daybed/daybed-01.webp",
+          "assets/images/products/daybed/daybed-02.webp",
+          "assets/images/products/daybed/daybed-03.webp"
+        ]
+      }
+    ],
+    "total": 1
+  }
+}

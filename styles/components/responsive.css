@@ -1,0 +1,147 @@
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+
+@media (max-width: 1200px) {
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer__inner {
+    grid-template-columns: 1.5fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 992px) {
+  :root {
+    --header-height: 64px;
+    --container-padding: 20px;
+  }
+
+  .top-bar {
+    display: none;
+  }
+
+  .nav-desktop {
+    display: none;
+  }
+
+  .header__phone {
+    display: none;
+  }
+
+  .burger-btn {
+    display: flex;
+  }
+
+  .header__inner {
+    grid-template-columns: auto 1fr auto;
+  }
+
+  .logo {
+    justify-content: center;
+  }
+
+  .consult-section__inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .consult-img {
+    height: 360px;
+  }
+
+  .showroom-card {
+    grid-template-columns: 1fr;
+    padding: 24px;
+  }
+
+  .showroom-gallery__main {
+    height: 300px;
+  }
+
+  .modal__grid {
+    grid-template-columns: 1fr;
+    padding: 24px;
+  }
+
+  .modal__main-img {
+    height: 320px;
+  }
+
+  .footer__inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .btn--submit {
+    width: 100%;
+  }
+
+  .showroom-details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero__title {
+    font-size: 1.85rem;
+  }
+
+  .hero__actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero__actions .btn {
+    width: 100%;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .product-card__title {
+    font-size: 0.9rem;
+  }
+
+  .product-card__price {
+    font-size: 0.85rem;
+  }
+}
+
+

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://farfale.ge/sitemap.xml

@@ -1,0 +1,50 @@
+{
+  "title": "Farfale в реальных интерьерах",
+  "subtitle": "Живые фотографии из квартир и домов наших клиентов в Тбилиси и Батуми. Следите за новыми проектами в нашем Instagram",
+  "instagramLink": "https://www.instagram.com/farfale.ge",
+  "instagramHandle": "@farfale.ge",
+  "projects": [
+    {
+      "id": "project-01",
+      "title": "Солнечная гостиная в Ваке",
+      "model": "Cloud Lounge в микровельвете",
+      "location": "Тбилиси, Ваке",
+      "image": "assets/images/portfolio/interior-01.webp"
+    },
+    {
+      "id": "project-02",
+      "title": "Бохо-апартаменты с растениями",
+      "model": "Модульная зона отдыха Cloud",
+      "location": "Тбилиси, Мтацминда",
+      "image": "assets/images/portfolio/interior-02.webp"
+    },
+    {
+      "id": "project-03",
+      "title": "Залитая солнцем студия",
+      "model": "Cloud 3 модуля + пуф",
+      "location": "Тбилиси, Сабуртало",
+      "image": "assets/images/portfolio/interior-03.webp"
+    },
+    {
+      "id": "project-04",
+      "title": "Уютный лаунж с библиотекой",
+      "model": "Модульный диван в ткани Sand",
+      "location": "Тбилиси, Вера",
+      "image": "assets/images/portfolio/interior-04.webp"
+    },
+    {
+      "id": "project-05",
+      "title": "Современная гостиная с паркетом",
+      "model": "Угловой Nordic Corner",
+      "location": "Батуми, Новый бульвар",
+      "image": "assets/images/portfolio/interior-08.webp"
+    },
+    {
+      "id": "project-06",
+      "title": "Изумрудный акцент в светлом пространстве",
+      "model": "Nordic Line в бархате",
+      "location": "Тбилиси, Дигоми",
+      "image": "assets/images/portfolio/interior-09.webp"
+    }
+  ]
+}

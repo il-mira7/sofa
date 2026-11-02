@@ -1,0 +1,130 @@
+/* ==========================================================================
+   Layout Containers
+   ========================================================================== */
+
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+
+.section {
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
+.section-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.section-title {
+  font-size: 2.25rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.section-desc {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  font-weight: 300;
+  max-width: 580px;
+}
+
+.section-count {
+  display: inline-block;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ==========================================================================
+   Buttons & Links
+   ========================================================================== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.btn--primary {
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+
+.btn--primary:hover {
+  background-color: var(--color-primary-hover);
+  transform: translateY(-1px);
+}
+
+.btn--hero {
+  background-color: #ffffff;
+  color: #0a0a0a;
+  padding: 16px 36px;
+  font-weight: 600;
+}
+
+.btn--hero:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  transform: translateY(-2px);
+}
+
+.btn--outline-hero {
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  color: #ffffff;
+  padding: 16px 36px;
+  backdrop-filter: blur(4px);
+}
+
+.btn--outline-hero:hover {
+  border-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.btn--full {
+  width: 100%;
+}
+
+.link-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+}
+
+.link-arrow:hover {
+  opacity: 0.7;
+}
+
+.link-arrow span {
+  transition: transform var(--transition-fast);
+}
+
+.link-arrow:hover span {
+  transform: translateX(4px);
+}
+
