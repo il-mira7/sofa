@@ -18,7 +18,7 @@
 {
   "@context": "https://schema.org",
   "@type": "FurnitureStore",
-  "name": "Farfale Living Showroom — Шоурум дизайнерских диванов в Тбилиси",
+  "name": "Farfale Living Showroom — Флагманский шоурум в Ваке",
   "image": "https://farfale.ge/assets/images/showroom/showroom-street.webp",
   "telephone": "+995555123456",
   "url": "https://farfale.ge/ru/tbilisi-showroom.html",
@@ -52,7 +52,7 @@
     {
       "@type": "ListItem",
       "position": 2,
-      "name": "Шоурум дизайнерских диванов в Тбилиси",
+      "name": "Флагманский шоурум в Ваке",
       "item": "https://farfale.ge/ru/tbilisi-showroom.html"
     }
   ]
@@ -87,6 +87,7 @@
             <a href="../ru/index.html#catalog" class="nav-link">Коллекции</a>
             <a href="../ru/index.html#quality" class="nav-link">Анатомия дивана</a>
             <a href="../ru/index.html#process" class="nav-link">Как заказать</a>
+            <a href="../ru/index.html#portfolio" class="nav-link">Интерьеры</a>
             <a href="../ru/tbilisi-showroom.html" class="nav-link">Шоурум в Ваке</a>
             <a href="../ru/delivery-georgia.html" class="nav-link">Доставка и сборка</a>
             <a href="../ru/index.html#contacts" class="nav-link">Контакты</a>
@@ -109,7 +110,6 @@
   </header>
 
 
-  <!-- Breadcrumbs -->
   <nav class="breadcrumbs" aria-label="Breadcrumb">
     <div class="container">
       <ol class="breadcrumbs__list">
@@ -137,11 +137,9 @@
           </div>
           <div class="showroom-flagship__info">
             <span class="showroom-badge">Vake • Tbilisi</span>
-            <h1 class="showroom-title">Шоурум дизайнерских диванов в Тбилиси</h1>
+            <h1 class="showroom-title">Флагманский шоурум в Ваке</h1>
             <div class="showroom-address-box">
-              <div>
-                <strong>Тбилиси, Ваке, ул. Николая Бердзенишвили, 2</strong>
-              </div>
+              <div><strong>Тбилиси, Ваке, ул. Николая Бердзенишвили, 2</strong></div>
             </div>
             <p class="showroom-desc">Приглашаем в шоурум дизайнерской мебели Farfale в Тбилиси: Ваке, ул. Н. Бердзенишвили 2. Более 100 образцов тканей, тест-драйв мягкости, удобная парковка.</p>
             <div class="showroom-details-list">
@@ -184,11 +182,11 @@
       <div class="footer__col">
         <h4 class="footer__heading">Коллекции</h4>
         <ul class="footer__links">
-          <li><a href="../ru/products/cloud.html">Cloud Lounge</a></li>
-          <li><a href="../ru/products/curve.html">Curve Organic</a></li>
-          <li><a href="../ru/products/nordic.html">Nordic Minimal</a></li>
-          <li><a href="../ru/products/bellini.html">Bellini Tufted</a></li>
-          <li><a href="../ru/products/daybed.html">Daybed Slumber</a></li>
+          <li><a href="../ru/products/cloud.html" if depth > 0 else "ru/products/cloud.html">Cloud Lounge</a></li>
+          <li><a href="../ru/products/curve.html" if depth > 0 else "ru/products/curve.html">Curve Organic</a></li>
+          <li><a href="../ru/products/nordic.html" if depth > 0 else "ru/products/nordic.html">Nordic Minimal</a></li>
+          <li><a href="../ru/products/bellini.html" if depth > 0 else "ru/products/bellini.html">Bellini Tufted</a></li>
+          <li><a href="../ru/products/daybed.html" if depth > 0 else "ru/products/daybed.html">Daybed Slumber</a></li>
         </ul>
       </div>
 
@@ -198,6 +196,7 @@
           <li><a href="../ru/tbilisi-showroom.html">Шоурум в Ваке</a></li>
           <li><a href="../ru/delivery-georgia.html">Доставка и сборка</a></li>
           <li><a href="../ru/index.html#quality">Анатомия дивана</a></li>
+          <li><a href="../ru/index.html#portfolio">Интерьеры</a></li>
           <li><a href="../ru/index.html#process">Как заказать</a></li>
         </ul>
       </div>

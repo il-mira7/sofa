@@ -2,12 +2,18 @@
 """
 Farfale Living Georgia — Multi-language Static Site Generator (SEO Optimized)
 Generates physical HTML files for KA (Georgian), RU (Russian), and EN (English).
-Includes:
-- Schema.org (FurnitureStore, LocalBusiness, Product + Offer, FAQPage, BreadcrumbList)
-- Clean URLs and <link rel="alternate" hreflang="..."> tags
-- Standalone landing pages: /tbilisi-showroom.html and /delivery-georgia.html
-- Dedicated product pages: /products/{slug}.html
-- XML Sitemap with xhtml:link alternates
+Includes ALL visual, atmospheric sections:
+1. Hero with background video and trust badges
+2. Sticky Categories bar & Catalog grid
+3. Quality & Sofa Anatomy (3D exploded view with Georgian annotations)
+4. Tactile Macro Gallery (seams, bouclé, corduroy close-ups)
+5. Bespoke 4-Step Order Process
+6. Real Customer Interiors / Instagram Showcase
+7. Flagship Vake Showroom Showcase
+8. FAQ Accordion with Schema.org FAQPage
+9. Consultation & WhatsApp lead form
+10. Product Quick-View Modal with photo gallery
+11. Dedicated SEO Subpages: /tbilisi-showroom.html, /delivery-georgia.html, /products/*.html
 """
 
 import os
@@ -32,15 +38,10 @@ with open(os.path.join(BASE_DIR, 'data/portfolio.json'), encoding='utf-8') as f:
 with open(os.path.join(BASE_DIR, 'data/translations.json'), encoding='utf-8') as f:
     translations = json.load(f)
 
-# Unique list of products from 'all'
 products = products_raw['all']['products']
-
 LANGS = ['ka', 'ru', 'en']
 
 def get_hreflang_tags(page_path):
-    """
-    page_path: e.g. '', 'tbilisi-showroom.html', 'delivery-georgia.html', 'products/cloud.html'
-    """
     lines = []
     for l in LANGS:
         url = f"{DOMAIN}/{l}/{page_path}" if page_path else f"{DOMAIN}/{l}/"
@@ -51,11 +52,14 @@ def get_hreflang_tags(page_path):
 
 def get_header(lang, current_page="", depth=0):
     t = translations[lang]
-    prefix = "../" * depth
-    home_url = f"{prefix}{lang}/index.html"
+    prefix = "../" * depth if depth > 0 else ""
+    home_url = f"{prefix}{lang}/index.html" if depth > 0 else f"{lang}/index.html"
+    if depth == 0 and lang == "ru":
+        home_url = "index.html"
     
-    # Language switcher links
     def get_lang_url(target_lang):
+        if depth == 0:
+            return f"{target_lang}/index.html"
         return f"{prefix}{target_lang}/{current_page}" if current_page else f"{prefix}{target_lang}/index.html"
 
     lang_links = []
@@ -70,15 +74,18 @@ def get_header(lang, current_page="", depth=0):
     wa_phone = site_data['contacts']['phoneRaw']
     wa_text = "გამარჯობა! დივნის შეკვეთა მინდა" if lang == 'ka' else ("Hello! I would like to inquire about a custom sofa" if lang == 'en' else "Здравствуйте! Хочу получить консультацию по диванам")
 
+    showroom_url = f"{prefix}{lang}/tbilisi-showroom.html" if depth > 0 else f"{lang}/tbilisi-showroom.html"
+    delivery_url = f"{prefix}{lang}/delivery-georgia.html" if depth > 0 else f"{lang}/delivery-georgia.html"
+
     return f"""
   <!-- Top Announcement Bar -->
   <div class="top-bar">
     <div class="container top-bar__inner">
       <span class="top-bar__text">{t['topBar']}</span>
       <div class="top-bar__links">
-        <a href="{prefix}{lang}/tbilisi-showroom.html" class="top-bar__link">{t['nav']['showroom']}</a>
+        <a href="{showroom_url}" class="top-bar__link">{t['nav']['showroom']}</a>
         <span class="top-bar__sep">•</span>
-        <a href="{prefix}{lang}/delivery-georgia.html" class="top-bar__link">{t['nav']['delivery']}</a>
+        <a href="{delivery_url}" class="top-bar__link">{t['nav']['delivery']}</a>
         <span class="top-bar__sep">•</span>
         <a href="https://wa.me/{wa_phone}?text={wa_text}" target="_blank" rel="noopener" class="top-bar__link">WhatsApp</a>
       </div>
@@ -97,8 +104,9 @@ def get_header(lang, current_page="", depth=0):
             <a href="{home_url}#catalog" class="nav-link">{t['nav']['catalog']}</a>
             <a href="{home_url}#quality" class="nav-link">{t['nav']['quality']}</a>
             <a href="{home_url}#process" class="nav-link">{t['nav']['process']}</a>
-            <a href="{prefix}{lang}/tbilisi-showroom.html" class="nav-link">{t['nav']['showroom']}</a>
-            <a href="{prefix}{lang}/delivery-georgia.html" class="nav-link">{t['nav']['delivery']}</a>
+            <a href="{home_url}#portfolio" class="nav-link">{t['nav']['portfolio']}</a>
+            <a href="{showroom_url}" class="nav-link">{t['nav']['showroom']}</a>
+            <a href="{delivery_url}" class="nav-link">{t['nav']['delivery']}</a>
             <a href="{home_url}#contacts" class="nav-link">{t['nav']['contacts']}</a>
           </nav>
         </div>
@@ -121,8 +129,11 @@ def get_header(lang, current_page="", depth=0):
 
 def get_footer(lang, depth=0):
     t = translations[lang]
-    prefix = "../" * depth
-    home_url = f"{prefix}{lang}/index.html"
+    prefix = "../" * depth if depth > 0 else ""
+    home_url = f"{prefix}{lang}/index.html" if depth > 0 else f"{lang}/index.html"
+    showroom_url = f"{prefix}{lang}/tbilisi-showroom.html" if depth > 0 else f"{lang}/tbilisi-showroom.html"
+    delivery_url = f"{prefix}{lang}/delivery-georgia.html" if depth > 0 else f"{lang}/delivery-georgia.html"
+
     return f"""
   <!-- Footer -->
   <footer class="footer" id="contacts">
@@ -144,20 +155,21 @@ def get_footer(lang, depth=0):
       <div class="footer__col">
         <h4 class="footer__heading">{t['nav']['catalog']}</h4>
         <ul class="footer__links">
-          <li><a href="{prefix}{lang}/products/cloud.html">Cloud Lounge</a></li>
-          <li><a href="{prefix}{lang}/products/curve.html">Curve Organic</a></li>
-          <li><a href="{prefix}{lang}/products/nordic.html">Nordic Minimal</a></li>
-          <li><a href="{prefix}{lang}/products/bellini.html">Bellini Tufted</a></li>
-          <li><a href="{prefix}{lang}/products/daybed.html">Daybed Slumber</a></li>
+          <li><a href="{prefix}{lang}/products/cloud.html" if depth > 0 else "{lang}/products/cloud.html">Cloud Lounge</a></li>
+          <li><a href="{prefix}{lang}/products/curve.html" if depth > 0 else "{lang}/products/curve.html">Curve Organic</a></li>
+          <li><a href="{prefix}{lang}/products/nordic.html" if depth > 0 else "{lang}/products/nordic.html">Nordic Minimal</a></li>
+          <li><a href="{prefix}{lang}/products/bellini.html" if depth > 0 else "{lang}/products/bellini.html">Bellini Tufted</a></li>
+          <li><a href="{prefix}{lang}/products/daybed.html" if depth > 0 else "{lang}/products/daybed.html">Daybed Slumber</a></li>
         </ul>
       </div>
 
       <div class="footer__col">
         <h4 class="footer__heading">{t['nav']['showroom']} & SEO</h4>
         <ul class="footer__links">
-          <li><a href="{prefix}{lang}/tbilisi-showroom.html">{t['nav']['showroom']}</a></li>
-          <li><a href="{prefix}{lang}/delivery-georgia.html">{t['nav']['delivery']}</a></li>
+          <li><a href="{showroom_url}">{t['nav']['showroom']}</a></li>
+          <li><a href="{delivery_url}">{t['nav']['delivery']}</a></li>
           <li><a href="{home_url}#quality">{t['nav']['quality']}</a></li>
+          <li><a href="{home_url}#portfolio">{t['nav']['portfolio']}</a></li>
           <li><a href="{home_url}#process">{t['nav']['process']}</a></li>
         </ul>
       </div>
@@ -185,11 +197,12 @@ def get_footer(lang, depth=0):
   </footer>
 """
 
-def generate_homepage(lang):
+def generate_homepage(lang, depth=1):
     t = translations[lang]
-    curr_url = f"{DOMAIN}/{lang}/"
+    prefix = "../" * depth if depth > 0 else ""
+    curr_url = f"{DOMAIN}/{lang}/" if depth > 0 else f"{DOMAIN}/"
     hreflangs = get_hreflang_tags("")
-    
+
     # FAQ Schema
     faq_schema = {
         "@context": "https://schema.org",
@@ -238,14 +251,14 @@ def generate_homepage(lang):
         ]
     }
 
-    # Products cards
+    # Product cards
     cards_html = []
     for p in products:
-        p_url = f"products/{p['slug']}.html"
+        p_url = f"{prefix}{lang}/products/{p['slug']}.html" if depth > 0 else f"{lang}/products/{p['slug']}.html"
         cards_html.append(f"""
         <a href="{p_url}" class="product-card">
           <div class="product-card__img-box">
-            <img src="../{p['images'][0]}" alt="{p['title']}" class="product-card__img" loading="lazy">
+            <img src="{prefix}{p['images'][0]}" alt="{p['title']}" class="product-card__img" loading="lazy">
             <span class="product-card__tag-badge">{p['badge']}</span>
             <span class="product-card__quick-btn">
               {t['hero']['ctaModels']} →
@@ -265,6 +278,20 @@ def generate_homepage(lang):
         </a>
         """)
 
+    # Portfolio cards (Real interiors)
+    portfolio_cards_html = []
+    for proj in portfolio_data['projects']:
+        portfolio_cards_html.append(f"""
+        <div class="portfolio-card">
+          <img src="{prefix}{proj['image']}" alt="{proj['title']} — {proj['model']}" loading="lazy">
+          <div class="portfolio-card__overlay">
+            <span class="portfolio-card__tag">{proj['location']}</span>
+            <h3 class="portfolio-card__title">{proj['title']}</h3>
+            <p class="portfolio-card__meta">{proj['model']}</p>
+          </div>
+        </div>
+        """)
+
     # FAQ HTML
     faq_items_html = []
     for item in t["faq"]["items"]:
@@ -279,6 +306,8 @@ def generate_homepage(lang):
             </div>
           </div>
         """)
+
+    showroom_url = f"{prefix}{lang}/tbilisi-showroom.html" if depth > 0 else f"{lang}/tbilisi-showroom.html"
 
     html = f"""<!DOCTYPE html>
 <html lang="{lang}">
@@ -296,12 +325,12 @@ def generate_homepage(lang):
   <meta property="og:type" content="website">
   <meta property="og:title" content="{t['siteTitle']}">
   <meta property="og:description" content="{t['siteDesc']}">
-  <meta property="og:image" content="../assets/images/hero/hero-poster.webp">
+  <meta property="og:image" content="{prefix}assets/images/hero/hero-poster.webp">
   <meta property="og:url" content="{curr_url}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../styles/main.css">
+  <link rel="stylesheet" href="{prefix}styles/main.css">
   <script type="application/ld+json">
 {json.dumps(local_schema, ensure_ascii=False, indent=2)}
   </script>
@@ -310,13 +339,13 @@ def generate_homepage(lang):
   </script>
 </head>
 <body>
-{get_header(lang, "", depth=1)}
+{get_header(lang, "", depth=depth)}
 
-  <!-- Hero Section -->
+  <!-- 1. Hero Section -->
   <section class="hero" id="hero">
     <div class="hero__video-wrapper">
-      <video class="hero__video" autoplay loop muted playsinline poster="../assets/images/hero/hero-poster.webp">
-        <source src="../assets/images/hero/hero-video.mp4" type="video/mp4">
+      <video class="hero__video" autoplay loop muted playsinline poster="{prefix}assets/images/hero/hero-poster.webp">
+        <source src="{prefix}assets/images/hero/hero-video.mp4" type="video/mp4">
       </video>
       <div class="hero__overlay"></div>
     </div>
@@ -326,7 +355,7 @@ def generate_homepage(lang):
       <p class="hero__subtitle">{t['hero']['subtitle']}</p>
       <div class="hero__actions">
         <a href="#catalog" class="btn btn--hero">{t['hero']['ctaModels']}</a>
-        <a href="tbilisi-showroom.html" class="btn btn--outline-hero">{t['hero']['ctaShowroom']}</a>
+        <a href="{showroom_url}" class="btn btn--outline-hero">{t['hero']['ctaShowroom']}</a>
         <a href="https://wa.me/{site_data['contacts']['phoneRaw']}?text={t['hero']['ctaWhatsApp']}" target="_blank" rel="noopener" class="btn btn--whatsapp-hero">
           {t['hero']['ctaWhatsApp']}
         </a>
@@ -352,7 +381,7 @@ def generate_homepage(lang):
     </div>
   </section>
 
-  <!-- Catalog Section -->
+  <!-- 2. Catalog Section -->
   <section class="section catalog-section" id="catalog">
     <div class="container">
       <div class="section-header">
@@ -370,7 +399,7 @@ def generate_homepage(lang):
     </div>
   </section>
 
-  <!-- Quality / Anatomy Section -->
+  <!-- 3. Quality & Sofa Anatomy Section -->
   <section class="quality-section" id="quality">
     <div class="container">
       <div class="section-header" style="text-align: center; margin-bottom: 56px;">
@@ -383,7 +412,7 @@ def generate_homepage(lang):
 
       <div class="quality-grid">
         <div class="quality-scheme__box">
-          <img src="../assets/images/quality/anatomy-sofa-ge.webp" alt="{t['quality']['title']}" class="quality-scheme__img" loading="lazy">
+          <img src="{prefix}assets/images/quality/anatomy-sofa-ge.webp" alt="{t['quality']['title']}" class="quality-scheme__img" loading="lazy">
           <div class="quality-scheme__caption">
             <span>{t['quality']['schemeCaption']}</span>
           </div>
@@ -420,10 +449,35 @@ def generate_homepage(lang):
           </div>
         </div>
       </div>
+
+      <!-- 4. Tactile Macro Gallery (Close-ups of textures & seams) -->
+      <div class="tactile-heading">
+        <h3>{t['tactile']['title']}</h3>
+        <p>{t['tactile']['subtitle']}</p>
+      </div>
+      <div class="tactile-grid">
+        <div class="tactile-item">
+          <img src="{prefix}assets/images/quality/texture-touch-01.webp" alt="{t['tactile']['t1']}" loading="lazy">
+          <span class="tactile-label">{t['tactile']['t1']}</span>
+        </div>
+        <div class="tactile-item">
+          <img src="{prefix}assets/images/quality/texture-touch-02.webp" alt="{t['tactile']['t2']}" loading="lazy">
+          <span class="tactile-label">{t['tactile']['t2']}</span>
+        </div>
+        <div class="tactile-item">
+          <img src="{prefix}assets/images/quality/texture-craft-01.webp" alt="{t['tactile']['t3']}" loading="lazy">
+          <span class="tactile-label">{t['tactile']['t3']}</span>
+        </div>
+        <div class="tactile-item">
+          <img src="{prefix}assets/images/quality/texture-craft-04.webp" alt="{t['tactile']['t4']}" loading="lazy">
+          <span class="tactile-label">{t['tactile']['t4']}</span>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <!-- How to Order Process -->
+  <!-- 5. How to Order Process -->
   <section class="process-section" id="process">
     <div class="container">
       <div class="section-header" style="text-align: center;">
@@ -456,7 +510,79 @@ def generate_homepage(lang):
     </div>
   </section>
 
-  <!-- FAQ Section with Schema.org -->
+  <!-- 6. Real Customer Interiors / Instagram Showcase -->
+  <section class="portfolio-section" id="portfolio">
+    <div class="container">
+      <div class="portfolio-header">
+        <div>
+          <span class="consult-tag">{t['portfolio']['badge']}</span>
+          <h2 class="section-title">{t['portfolio']['title']}</h2>
+          <p class="section-subtitle" style="color: var(--color-text-muted);">
+            {t['portfolio']['subtitle']}
+          </p>
+        </div>
+        <a href="https://www.instagram.com/farfale.ge" target="_blank" rel="noopener" class="portfolio-insta-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          {t['portfolio']['btn']}
+        </a>
+      </div>
+      <div class="portfolio-grid">
+        {"".join(portfolio_cards_html)}
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Flagship Showroom Showcase on Homepage -->
+  <section class="section showrooms-section" id="showrooms">
+    <div class="container">
+      <div class="section-header" style="text-align: center; margin-bottom: 40px;">
+        <span class="consult-tag" style="margin: 0 auto 12px auto;">{t['showroomPage']['h1']}</span>
+        <h2 class="section-title">{t['showroomPage']['title']}</h2>
+        <p class="section-subtitle" style="color: var(--color-text-muted);">
+          {t['showroomPage']['address']} • {t['showroomPage']['hours']}
+        </p>
+      </div>
+
+      <div class="showroom-flagship">
+        <div class="showroom-flagship__grid">
+          <div class="showroom-flagship__gallery">
+            <div class="showroom-main-photo">
+              <img src="{prefix}assets/images/showroom/showroom-street.webp" alt="Showroom Farfale Vake" id="homeShImg">
+            </div>
+            <div class="showroom-thumbs">
+              <div class="showroom-thumb-box active" onclick="document.getElementById('homeShImg').src='{prefix}assets/images/showroom/showroom-street.webp'"><img src="{prefix}assets/images/showroom/showroom-street.webp"></div>
+              <div class="showroom-thumb-box" onclick="document.getElementById('homeShImg').src='{prefix}assets/images/showroom/showroom-comfort.webp'"><img src="{prefix}assets/images/showroom/showroom-comfort.webp"></div>
+              <div class="showroom-thumb-box" onclick="document.getElementById('homeShImg').src='{prefix}assets/images/showroom/showroom-interior.webp'"><img src="{prefix}assets/images/showroom/showroom-interior.webp"></div>
+              <div class="showroom-thumb-box" onclick="document.getElementById('homeShImg').src='{prefix}assets/images/showroom/showroom-pov.webp'"><img src="{prefix}assets/images/showroom/showroom-pov.webp"></div>
+            </div>
+          </div>
+          <div class="showroom-flagship__info">
+            <span class="showroom-badge">Vake • Tbilisi</span>
+            <h3 class="showroom-title">{t['showroomPage']['h1']}</h3>
+            <div class="showroom-address-box">
+              <div><strong>{t['showroomPage']['address']}</strong></div>
+            </div>
+            <p class="showroom-desc">{t['showroomPage']['desc']}</p>
+            <div class="showroom-details-list">
+              <div class="detail-row"><span>🕒</span> <div>{t['showroomPage']['hours']}</div></div>
+              <div class="detail-row"><span>🚗</span> <div>{t['showroomPage']['parking']}</div></div>
+              <div class="detail-row"><span>🚇</span> <div>{t['showroomPage']['metro']}</div></div>
+            </div>
+            <div class="showroom-actions">
+              <a href="https://wa.me/{site_data['contacts']['phoneRaw']}?text={t['showroomPage']['ctaVisit']}" target="_blank" rel="noopener" class="btn btn--whatsapp">
+                {t['showroomPage']['ctaVisit']}
+              </a>
+              <a href="{showroom_url}" class="btn btn--outline">
+                {t['nav']['showroom']} →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. FAQ Section with Schema.org -->
   <section class="faq-section" id="faq">
     <div class="container">
       <div class="section-header" style="text-align: center;">
@@ -470,7 +596,7 @@ def generate_homepage(lang):
     </div>
   </section>
 
-  <!-- Consultation Form -->
+  <!-- 9. Consultation Form -->
   <section class="consult-section" id="consultation">
     <div class="container consult-section__inner">
       <div class="consult-content">
@@ -491,12 +617,12 @@ def generate_homepage(lang):
         </form>
       </div>
       <div class="consult-image-box">
-        <img src="../assets/images/portfolio/interior-01.webp" alt="Farfale Sofa" class="consult-img" loading="lazy">
+        <img src="{prefix}assets/images/portfolio/interior-01.webp" alt="Farfale Sofa" class="consult-img" loading="lazy">
       </div>
     </div>
   </section>
 
-{get_footer(lang, depth=1)}
+{get_footer(lang, depth=depth)}
 
   <script>
     document.querySelectorAll('.faq-question').forEach(btn => {{
@@ -517,7 +643,6 @@ def generate_showroom_page(lang):
     curr_url = f"{DOMAIN}/{lang}/tbilisi-showroom.html"
     hreflangs = get_hreflang_tags("tbilisi-showroom.html")
 
-    # LocalBusiness Schema
     local_schema = {
         "@context": "https://schema.org",
         "@type": "FurnitureStore",
@@ -583,7 +708,6 @@ def generate_showroom_page(lang):
 <body>
 {get_header(lang, "tbilisi-showroom.html", depth=1)}
 
-  <!-- Breadcrumbs -->
   <nav class="breadcrumbs" aria-label="Breadcrumb">
     <div class="container">
       <ol class="breadcrumbs__list">
@@ -613,9 +737,7 @@ def generate_showroom_page(lang):
             <span class="showroom-badge">Vake • Tbilisi</span>
             <h1 class="showroom-title">{sp['h1']}</h1>
             <div class="showroom-address-box">
-              <div>
-                <strong>{sp['address']}</strong>
-              </div>
+              <div><strong>{sp['address']}</strong></div>
             </div>
             <p class="showroom-desc">{sp['desc']}</p>
             <div class="showroom-details-list">
@@ -885,44 +1007,7 @@ def generate_product_page(lang, product):
 """
     return html
 
-def generate_root_index():
-    """Generates root index.html with language detection and fallbacks"""
-    return f"""<!DOCTYPE html>
-<html lang="ka">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Farfale — Cool & Comfy | დიზაინერული დივანები შეკვეთით თბილისში</title>
-  <link rel="canonical" href="{DOMAIN}/ka/">
-{get_hreflang_tags("")}
-  <script>
-    // Intelligent language redirect based on user agent / browser preference
-    (function() {{
-      var saved = localStorage.getItem('farfale_lang');
-      if (saved && (saved === 'ru' || saved === 'en' || saved === 'ka')) {{
-        window.location.replace(saved + '/');
-        return;
-      }}
-      var userLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
-      if (userLang.startsWith('ru') || userLang.startsWith('be') || userLang.startsWith('uk')) {{
-        window.location.replace('ru/');
-      }} else if (userLang.startsWith('en')) {{
-        window.location.replace('en/');
-      }} else {{
-        window.location.replace('ka/');
-      }}
-    }})();
-  </script>
-  <meta http-equiv="refresh" content="0; url=ka/">
-</head>
-<body>
-  <p>Redirecting to <a href="ka/">ქართული</a> | <a href="ru/">Русский</a> | <a href="en/">English</a>...</p>
-</body>
-</html>
-"""
-
 def generate_sitemap(all_urls):
-    """Generates standard Google sitemap.xml with xhtml:link alternates"""
     xml = ['<?xml version="1.0" encoding="UTF-8"?>']
     xml.append('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">')
     
@@ -944,45 +1029,44 @@ def generate_sitemap(all_urls):
     return "\n".join(xml)
 
 def main():
-    print("Building multi-language static site for Google SEO...")
+    print("Rebuilding full multi-language static site with all atmospheric sections...")
     
-    # Track paths for sitemap
     sitemap_paths = ["", "tbilisi-showroom.html", "delivery-georgia.html"]
     for p in products:
         sitemap_paths.append(f"products/{p['slug']}.html")
 
-    # Generate pages for each language
+    # Generate each language
     for lang in LANGS:
         lang_dir = os.path.join(BASE_DIR, lang)
         prod_dir = os.path.join(lang_dir, "products")
         os.makedirs(prod_dir, exist_ok=True)
 
-        # 1. Homepage
+        # 1. Homepage with ALL sections
         with open(os.path.join(lang_dir, "index.html"), "w", encoding="utf-8") as f:
-            f.write(generate_homepage(lang))
+            f.write(generate_homepage(lang, depth=1))
 
-        # 2. Showroom
+        # 2. Showroom page
         with open(os.path.join(lang_dir, "tbilisi-showroom.html"), "w", encoding="utf-8") as f:
             f.write(generate_showroom_page(lang))
 
-        # 3. Delivery
+        # 3. Delivery page
         with open(os.path.join(lang_dir, "delivery-georgia.html"), "w", encoding="utf-8") as f:
             f.write(generate_delivery_page(lang))
 
-        # 4. Products
+        # 4. Product pages
         for p in products:
             with open(os.path.join(prod_dir, f"{p['slug']}.html"), "w", encoding="utf-8") as f:
                 f.write(generate_product_page(lang, p))
 
-    # Root index
+    # Root index.html: full rich homepage (Russian or default with language switcher and all sections)
     with open(os.path.join(BASE_DIR, "index.html"), "w", encoding="utf-8") as f:
-        f.write(generate_root_index())
+        f.write(generate_homepage("ru", depth=0))
 
     # Sitemap
     with open(os.path.join(BASE_DIR, "sitemap.xml"), "w", encoding="utf-8") as f:
         f.write(generate_sitemap(sitemap_paths))
 
-    print(f"Successfully generated all pages across 3 languages ({len(LANGS) * len(sitemap_paths)} pages) + sitemap.xml!")
+    print("Successfully built all pages with full visual sections restored!")
 
 if __name__ == "__main__":
     main()

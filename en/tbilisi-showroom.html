@@ -18,7 +18,7 @@
 {
   "@context": "https://schema.org",
   "@type": "FurnitureStore",
-  "name": "Farfale Living Showroom — Designer Furniture Showroom in Tbilisi",
+  "name": "Farfale Living Showroom — Flagship Showroom in Vake",
   "image": "https://farfale.ge/assets/images/showroom/showroom-street.webp",
   "telephone": "+995555123456",
   "url": "https://farfale.ge/en/tbilisi-showroom.html",
@@ -52,7 +52,7 @@
     {
       "@type": "ListItem",
       "position": 2,
-      "name": "Designer Furniture Showroom in Tbilisi",
+      "name": "Flagship Showroom in Vake",
       "item": "https://farfale.ge/en/tbilisi-showroom.html"
     }
   ]
@@ -87,6 +87,7 @@
             <a href="../en/index.html#catalog" class="nav-link">Collections</a>
             <a href="../en/index.html#quality" class="nav-link">Sofa Anatomy</a>
             <a href="../en/index.html#process" class="nav-link">How to Order</a>
+            <a href="../en/index.html#portfolio" class="nav-link">Interiors</a>
             <a href="../en/tbilisi-showroom.html" class="nav-link">Vake Showroom</a>
             <a href="../en/delivery-georgia.html" class="nav-link">Delivery & Assembly</a>
             <a href="../en/index.html#contacts" class="nav-link">Contacts</a>
@@ -109,7 +110,6 @@
   </header>
 
 
-  <!-- Breadcrumbs -->
   <nav class="breadcrumbs" aria-label="Breadcrumb">
     <div class="container">
       <ol class="breadcrumbs__list">
@@ -137,11 +137,9 @@
           </div>
           <div class="showroom-flagship__info">
             <span class="showroom-badge">Vake • Tbilisi</span>
-            <h1 class="showroom-title">Designer Furniture Showroom in Tbilisi</h1>
+            <h1 class="showroom-title">Flagship Showroom in Vake</h1>
             <div class="showroom-address-box">
-              <div>
-                <strong>2 Nikoloz Berdzenishvili St, Vake, Tbilisi, Georgia</strong>
-              </div>
+              <div><strong>2 Nikoloz Berdzenishvili St, Vake, Tbilisi, Georgia</strong></div>
             </div>
             <p class="showroom-desc">Visit Farfale designer furniture showroom in Tbilisi: Vake, 2 N. Berdzenishvili St. 100+ fabric swatches, comfort test, convenient parking.</p>
             <div class="showroom-details-list">
@@ -184,11 +182,11 @@
       <div class="footer__col">
         <h4 class="footer__heading">Collections</h4>
         <ul class="footer__links">
-          <li><a href="../en/products/cloud.html">Cloud Lounge</a></li>
-          <li><a href="../en/products/curve.html">Curve Organic</a></li>
-          <li><a href="../en/products/nordic.html">Nordic Minimal</a></li>
-          <li><a href="../en/products/bellini.html">Bellini Tufted</a></li>
-          <li><a href="../en/products/daybed.html">Daybed Slumber</a></li>
+          <li><a href="../en/products/cloud.html" if depth > 0 else "en/products/cloud.html">Cloud Lounge</a></li>
+          <li><a href="../en/products/curve.html" if depth > 0 else "en/products/curve.html">Curve Organic</a></li>
+          <li><a href="../en/products/nordic.html" if depth > 0 else "en/products/nordic.html">Nordic Minimal</a></li>
+          <li><a href="../en/products/bellini.html" if depth > 0 else "en/products/bellini.html">Bellini Tufted</a></li>
+          <li><a href="../en/products/daybed.html" if depth > 0 else "en/products/daybed.html">Daybed Slumber</a></li>
         </ul>
       </div>
 
@@ -198,6 +196,7 @@
           <li><a href="../en/tbilisi-showroom.html">Vake Showroom</a></li>
           <li><a href="../en/delivery-georgia.html">Delivery & Assembly</a></li>
           <li><a href="../en/index.html#quality">Sofa Anatomy</a></li>
+          <li><a href="../en/index.html#portfolio">Interiors</a></li>
           <li><a href="../en/index.html#process">How to Order</a></li>
         </ul>
       </div>

@@ -41,6 +41,20 @@
       "f4Title": "პრემიუმ ევროპული ქსოვილები",
       "f4Desc": "ბუკლე, ფაქტურული ველვეტი, შენილი და როგოჟკა Martindale-ის 100 000-მდე ციკლის გამძლეობით. დაცულია შინაური ცხოველების ბრჭყალებისგან."
     },
+    "tactile": {
+      "title": "ტაქტილურობა, ნაკერები და დეტალები",
+      "subtitle": "იდეალურად სწორი რადიუსული ნაკერი, აკურატული კანტები და სასიამოვნო ფაქტურები",
+      "t1": "ფაქტურული მიკროველვეტი",
+      "t2": "მოცულობითი ბუკლე (Bouclé)",
+      "t3": "პრეციზიული ნაკერი",
+      "t4": "უმკერო რადიუსი"
+    },
+    "portfolio": {
+      "badge": "INSTAGRAM @FARFALE.GE",
+      "title": "Farfale რეალურ ინტერიერებში",
+      "subtitle": "ცოცხალი ფოტოები ჩვენი მომხმარებლების ბინებიდან თბილისსა და ბათუმში",
+      "btn": "მთელი Instagram-ის ნახვა"
+    },
     "process": {
       "badge": "ინდივიდუალური წარმოება",
       "title": "როგორ შევუკვეთოთ დივანი თქვენი ინტერიერისთვის",
@@ -91,9 +105,9 @@
       ]
     },
     "showroomPage": {
-      "title": "Farfale-ს შოურუმი ვაკეში, თბილისში",
+      "title": "Farfale-ს შოურუმი ვაკეში, თბილისში | მისამართი და ვიზიტი",
       "desc": "გვეწვიეთ ვაკეში (ნ. ბერძენიშვილის 2) რბილი ავეჯის სანახავად, ქსოვილების შესარჩევად და კონსულტაციისთვის.",
-      "h1": "ავეჯის შოურუმი თბილისში",
+      "h1": "ფლაგმანური შოურუმი ვაკეში",
       "address": "ვაკე, ნ. ბერძენიშვილის ქუჩა 2, თბილისი",
       "hours": "ყოველდღე: 11:00 — 20:00 (დასვენების დღეების გარეშე)",
       "parking": "მოსახერხებელი საპარკინგე ადგილები შოურუმის შესასვლელთან",
@@ -167,6 +181,20 @@
       "f4Title": "Премиальные европейские ткани",
       "f4Desc": "Букле, фактурный вельвет, шенилл и рогожка со стойкостью Martindale до 100 000 циклов. Защита от когтей домашних питомцев и легкая чистка."
     },
+    "tactile": {
+      "title": "Тактильность, швы и детали",
+      "subtitle": "Идеально ровная радиусная строчка, аккуратные канты и приятные на ощупь фактуры",
+      "t1": "Фактурный микровельвет",
+      "t2": "Объемное букле (Bouclé)",
+      "t3": "Прецизионный шов",
+      "t4": "Бесшовный радиус"
+    },
+    "portfolio": {
+      "badge": "INSTAGRAM @FARFALE.GE",
+      "title": "Farfale в реальных интерьерах",
+      "subtitle": "Живые фотографии из квартир и домов наших клиентов в Тбилиси и Батуми",
+      "btn": "Смотреть весь Instagram"
+    },
     "process": {
       "badge": "ИНДИВИДУАЛЬНОЕ ПРОИЗВОДСТВО",
       "title": "Как заказать диван под ваше пространство",
@@ -219,7 +247,7 @@
     "showroomPage": {
       "title": "Шоурум Farfale в Ваке, Тбилиси | Адрес, часы работы, запись",
       "desc": "Приглашаем в шоурум дизайнерской мебели Farfale в Тбилиси: Ваке, ул. Н. Бердзенишвили 2. Более 100 образцов тканей, тест-драйв мягкости, удобная парковка.",
-      "h1": "Шоурум дизайнерских диванов в Тбилиси",
+      "h1": "Флагманский шоурум в Ваке",
       "address": "Тбилиси, Ваке, ул. Николая Бердзенишвили, 2",
       "hours": "Ежедневно: 11:00 — 20:00 (без выходных)",
       "parking": "Удобные парковочные места прямо перед входом в шоурум",
@@ -293,6 +321,20 @@
       "f4Title": "Premium European Textiles",
       "f4Desc": "Bouclé, textured corduroy, chenille, and linen-look weaves rated up to 100,000 Martindale cycles with pet-friendly Easy Clean coating."
     },
+    "tactile": {
+      "title": "Tactility, Seams & Craft Details",
+      "subtitle": "Precision curved stitching, refined piping, and rich tactile textures",
+      "t1": "Textured Micro-Corduroy",
+      "t2": "High-Density Bouclé",
+      "t3": "Precision Stitching",
+      "t4": "Seamless Radius"
+    },
+    "portfolio": {
+      "badge": "INSTAGRAM @FARFALE.GE",
+      "title": "Farfale in Real Living Spaces",
+      "subtitle": "Real photographs from our clients' homes in Tbilisi and Batumi",
+      "btn": "Explore our Instagram"
+    },
     "process": {
       "badge": "BESPOKE PRODUCTION",
       "title": "How to Order a Custom Sofa for Your Space",
@@ -345,7 +387,7 @@
     "showroomPage": {
       "title": "Farfale Showroom in Vake, Tbilisi | Address, Hours, Booking",
       "desc": "Visit Farfale designer furniture showroom in Tbilisi: Vake, 2 N. Berdzenishvili St. 100+ fabric swatches, comfort test, convenient parking.",
-      "h1": "Designer Furniture Showroom in Tbilisi",
+      "h1": "Flagship Showroom in Vake",
       "address": "2 Nikoloz Berdzenishvili St, Vake, Tbilisi, Georgia",
       "hours": "Daily: 11:00 AM — 8:00 PM (No days off)",
       "parking": "Convenient parking slots right outside the showroom entrance",
