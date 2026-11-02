@@ -1,49 +1,129 @@
 {
-  "title": "Farfale в реальных интерьерах",
-  "subtitle": "Живые фотографии из квартир и домов наших клиентов в Тбилиси и Батуми. Следите за новыми проектами в нашем Instagram",
+  "title": {
+    "ru": "Farfale в реальных интерьерах",
+    "ka": "Farfale რეალურ ინტერიერებში",
+    "en": "Farfale in Real Living Spaces"
+  },
+  "subtitle": {
+    "ru": "Живые фотографии из квартир и домов наших клиентов в Тбилиси и Батуми. Следите за новыми проектами в нашем Instagram",
+    "ka": "ცოცხალი ფოტოები ჩვენი მომხმარებლების ბინებიდან თბილისსა და ბათუმში. თვალი ადევნეთ ახალ პროექტებს ჩვენს Instagram-ზე",
+    "en": "Authentic photographs from our clients' residences in Tbilisi and Batumi. Follow our latest custom installations on Instagram"
+  },
   "instagramLink": "https://www.instagram.com/farfale.ge",
   "instagramHandle": "@farfale.ge",
   "projects": [
     {
       "id": "project-01",
-      "title": "Солнечная гостиная в Ваке",
-      "model": "Cloud Lounge в микровельвете",
-      "location": "Тбилиси, Ваке",
+      "title": {
+        "ru": "Солнечная гостиная в Ваке",
+        "ka": "მზიანი მისაღები ვაკეში",
+        "en": "Sunlit Living Room in Vake"
+      },
+      "model": {
+        "ru": "Cloud Lounge в микровельвете",
+        "ka": "Cloud Lounge მიკროველვეტში",
+        "en": "Cloud Lounge in micro-corduroy"
+      },
+      "location": {
+        "ru": "Тбилиси, Ваке",
+        "ka": "თბილისი, ვაკე",
+        "en": "Tbilisi, Vake"
+      },
       "image": "assets/images/portfolio/interior-01.webp"
     },
     {
       "id": "project-02",
-      "title": "Бохо-апартаменты с растениями",
-      "model": "Модульная зона отдыха Cloud",
-      "location": "Тбилиси, Мтацминда",
+      "title": {
+        "ru": "Бохо-апартаменты с растениями",
+        "ka": "ბოჰო-აპარტამენტი მცენარეებით",
+        "en": "Boho Apartment with Greenery"
+      },
+      "model": {
+        "ru": "Модульная зона отдыха Cloud",
+        "ka": "მოდულური მოსასვენებელი Cloud",
+        "en": "Cloud Modular Lounge Zone"
+      },
+      "location": {
+        "ru": "Тбилиси, Мтацминда",
+        "ka": "თბილისი, მთაწმინდა",
+        "en": "Tbilisi, Mtatsminda"
+      },
       "image": "assets/images/portfolio/interior-02.webp"
     },
     {
       "id": "project-03",
-      "title": "Залитая солнцем студия",
-      "model": "Cloud 3 модуля + пуф",
-      "location": "Тбилиси, Сабуртало",
+      "title": {
+        "ru": "Залитая солнцем студия",
+        "ka": "მზით განათებული სტუდია",
+        "en": "Light-Filled Studio Apartment"
+      },
+      "model": {
+        "ru": "Cloud 3 модуля + пуф",
+        "ka": "Cloud 3 მოდული + პუფი",
+        "en": "Cloud 3 Modules + Ottoman"
+      },
+      "location": {
+        "ru": "Тбилиси, Сабуртало",
+        "ka": "თბილისი, საბურთალო",
+        "en": "Tbilisi, Saburtalo"
+      },
       "image": "assets/images/portfolio/interior-03.webp"
     },
     {
       "id": "project-04",
-      "title": "Уютный лаунж с библиотекой",
-      "model": "Модульный диван в ткани Sand",
-      "location": "Тбилиси, Вера",
+      "title": {
+        "ru": "Уютный лаунж с библиотекой",
+        "ka": "მყუდრო ლაუნჯი ბიბლიოთეკით",
+        "en": "Cozy Library Lounge"
+      },
+      "model": {
+        "ru": "Модульный диван в ткани Sand",
+        "ka": "მოდულური დივანი Sand ქსოვილში",
+        "en": "Modular Sofa in Sand Weave"
+      },
+      "location": {
+        "ru": "Тбилиси, Вера",
+        "ka": "თბილისი, ვერა",
+        "en": "Tbilisi, Vera"
+      },
       "image": "assets/images/portfolio/interior-04.webp"
     },
     {
       "id": "project-05",
-      "title": "Современная гостиная с паркетом",
-      "model": "Угловой Nordic Corner",
-      "location": "Батуми, Новый бульвар",
+      "title": {
+        "ru": "Современная гостиная с паркетом",
+        "ka": "თანამედროვე მისაღები პარკეტით",
+        "en": "Modern Residence with Parquet"
+      },
+      "model": {
+        "ru": "Угловой Nordic Corner",
+        "ka": "კუთხის Nordic Corner",
+        "en": "Nordic Corner Sectional"
+      },
+      "location": {
+        "ru": "Батуми, Новый бульвар",
+        "ka": "ბათუმი, ახალი ბულვარი",
+        "en": "Batumi, New Boulevard"
+      },
       "image": "assets/images/portfolio/interior-08.webp"
     },
     {
       "id": "project-06",
-      "title": "Изумрудный акцент в светлом пространстве",
-      "model": "Nordic Line в бархате",
-      "location": "Тбилиси, Дигоми",
+      "title": {
+        "ru": "Изумрудный акцент в светлом пространстве",
+        "ka": "ზურმუხტისფერი აქცენტი ნათელ სივრცეში",
+        "en": "Emerald Statement in Bright Interior"
+      },
+      "model": {
+        "ru": "Nordic Line в бархате",
+        "ka": "Nordic Line ხავერდში",
+        "en": "Nordic Line in Velvet"
+      },
+      "location": {
+        "ru": "Тбилиси, Дигоми",
+        "ka": "თბილისი, დიღომი",
+        "en": "Tbilisi, Dighomi"
+      },
       "image": "assets/images/portfolio/interior-09.webp"
     }
   ]

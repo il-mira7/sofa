@@ -137,6 +137,22 @@
           "details": "მიწოდება საქართველოს ნებისმიერ წერტილში საიმედო ლოჯისტიკური პარტნიორებით."
         }
       ]
+    },
+    "productPage": {
+      "specDimensions": "ზომები:",
+      "specWarranty": "გარანტია:",
+      "specShowroom": "შოურუმი:",
+      "fabricsLabel": "პოპულარული ქსოვილები:",
+      "brandTag": "FARFALE LIVING • საქართველო",
+      "warrantyVal": "5 წელი ოფიციალური გარანტია",
+      "showroomVal": "ვაკე, ნ. ბერძენიშვილის ქუჩა 2",
+      "ctaWhatsApp": "ფასის გათვლა WhatsApp-ში",
+      "ctaShowroom": "შოურუმის ნახვა",
+      "customNotice": "ნებისმიერი ზომა თქვენი პროექტისთვის"
+    },
+    "footerAddress": {
+      "main": "ვაკე, თბილისი, ნ. ბერძენიშვილის ქუჩა 2",
+      "sub": "Vake, Tbilisi, N. Berdzenishvili St 2"
     }
   },
   "ru": {
@@ -277,6 +293,22 @@
           "details": "Бережная экспедиторская доставка в любой населенный пункт Грузии."
         }
       ]
+    },
+    "productPage": {
+      "specDimensions": "Размеры:",
+      "specWarranty": "Гарантия:",
+      "specShowroom": "Шоурум:",
+      "fabricsLabel": "Популярные ткани:",
+      "brandTag": "FARFALE LIVING • GEORGIA",
+      "warrantyVal": "5 лет официальная гарантия",
+      "showroomVal": "Ваке, ул. Н. Бердзенишвили 2",
+      "ctaWhatsApp": "Рассчитать в WhatsApp",
+      "ctaShowroom": "Шоурум в Ваке",
+      "customNotice": "Любые размеры под ваш проект"
+    },
+    "footerAddress": {
+      "main": "Тбилиси, Ваке, ул. Н. Бердзенишвили 2",
+      "sub": "ვაკე, თბილისი, ნ. ბერძენიშვილის ქუჩა 2"
     }
   },
   "en": {
@@ -417,6 +449,22 @@
           "details": "Safe dedicated shipping to any address across Georgia."
         }
       ]
+    },
+    "productPage": {
+      "specDimensions": "Dimensions:",
+      "specWarranty": "Warranty:",
+      "specShowroom": "Showroom:",
+      "fabricsLabel": "Popular Fabrics:",
+      "brandTag": "FARFALE LIVING • GEORGIA",
+      "warrantyVal": "5-year manufacturer warranty",
+      "showroomVal": "Vake, 2 N. Berdzenishvili St",
+      "ctaWhatsApp": "Calculate via WhatsApp",
+      "ctaShowroom": "Vake Showroom",
+      "customNotice": "Bespoke sizing tailored to your space"
+    },
+    "footerAddress": {
+      "main": "Vake, Tbilisi, 2 N. Berdzenishvili St",
+      "sub": "ვაკე, თბილისი, ნ. ბერძენიშვილის ქუჩა 2"
     }
   }
 }

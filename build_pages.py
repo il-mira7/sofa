@@ -41,6 +41,11 @@ with open(os.path.join(BASE_DIR, 'data/translations.json'), encoding='utf-8') as
 products = products_raw['all']['products']
 LANGS = ['ka', 'ru', 'en']
 
+def get_i18n(val, lang, default=""):
+    if isinstance(val, dict):
+        return val.get(lang, val.get("ru", default))
+    return val if val is not None else default
+
 def get_hreflang_tags(page_path):
     lines = []
     for l in LANGS:
@@ -121,10 +126,71 @@ def get_header(lang, current_page="", depth=0):
             </svg>
             <span>WhatsApp</span>
           </a>
+          <button class="burger-btn" id="mobileDrawerBtn" aria-label="Open menu" type="button">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+          </button>
         </div>
       </div>
     </div>
   </header>
+
+  <!-- Mobile Menu Drawer -->
+  <div class="mobile-menu" id="mobileDrawer">
+    <div class="mobile-menu__backdrop" id="closeDrawerBackdrop"></div>
+    <div class="mobile-menu__content">
+      <div class="mobile-menu__top">
+        <a href="{home_url}" class="logo" aria-label="Farfale">
+          <span class="logo__brand-title">farfale</span>
+        </a>
+        <button class="close-btn" id="closeDrawerBtn" aria-label="Close menu">&times;</button>
+      </div>
+
+      <div class="lang-switch" style="margin-bottom: 24px; font-size: 0.95rem;">
+        {lang_switcher}
+      </div>
+
+      <nav class="mobile-menu__nav">
+        <a href="{home_url}#catalog" class="mobile-nav-link">{t['nav']['catalog']}</a>
+        <a href="{home_url}#quality" class="mobile-nav-link">{t['nav']['quality']}</a>
+        <a href="{home_url}#process" class="mobile-nav-link">{t['nav']['process']}</a>
+        <a href="{home_url}#portfolio" class="mobile-nav-link">{t['nav']['portfolio']}</a>
+        <a href="{showroom_url}" class="mobile-nav-link" style="color: #bda27e; font-weight: 600;">{t['nav']['showroom']}</a>
+        <a href="{delivery_url}" class="mobile-nav-link">{t['nav']['delivery']}</a>
+        <a href="{home_url}#contacts" class="mobile-nav-link">{t['nav']['contacts']}</a>
+      </nav>
+
+      <div class="mobile-menu__footer">
+        <div style="font-size: 0.85rem; color: #666; margin-bottom: 12px; line-height: 1.4;">
+          <strong>{t.get('footerAddress', {}).get('main', 'ვაკე, თბილისი, ნ. ბერძენიშვილის ქუჩა 2')}</strong><br>
+          <span style="color: #999;">{t.get('footerAddress', {}).get('sub', 'Vake, Tbilisi N. Berdzenishvili 2')}</span>
+        </div>
+        <a href="https://wa.me/{wa_phone}?text={wa_text}" target="_blank" rel="noopener" class="btn btn--whatsapp btn--full" style="text-align: center; justify-content: center;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+          </svg>
+          WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function() {{
+      const b = document.getElementById('mobileDrawerBtn');
+      const d = document.getElementById('mobileDrawer');
+      const c = document.getElementById('closeDrawerBtn');
+      const bk = document.getElementById('closeDrawerBackdrop');
+      if (b && d) {{
+        b.onclick = () => {{ d.classList.add('open'); document.body.style.overflow = 'hidden'; }};
+        if (c) c.onclick = () => {{ d.classList.remove('open'); document.body.style.overflow = ''; }};
+        if (bk) bk.onclick = () => {{ d.classList.remove('open'); document.body.style.overflow = ''; }};
+        d.querySelectorAll('.mobile-nav-link').forEach(l => {{
+          l.onclick = () => {{ d.classList.remove('open'); document.body.style.overflow = ''; }};
+        }});
+      }}
+    }})();
+  </script>
 """
 
 def get_footer(lang, depth=0):
@@ -133,6 +199,10 @@ def get_footer(lang, depth=0):
     home_url = f"{prefix}{lang}/index.html" if depth > 0 else f"{lang}/index.html"
     showroom_url = f"{prefix}{lang}/tbilisi-showroom.html" if depth > 0 else f"{lang}/tbilisi-showroom.html"
     delivery_url = f"{prefix}{lang}/delivery-georgia.html" if depth > 0 else f"{lang}/delivery-georgia.html"
+    prod_prefix = f"{prefix}{lang}/products" if depth > 0 else f"{lang}/products"
+    
+    addr_main = t.get('footerAddress', {}).get('main', 'Тбилиси, Ваке, ул. Н. Бердзенишвили 2')
+    addr_sub = t.get('footerAddress', {}).get('sub', 'ვაკე, თბილისი, ნ. ბერძენიშვილის ქუჩა 2')
 
     return f"""
   <!-- Footer -->
@@ -142,8 +212,8 @@ def get_footer(lang, depth=0):
         <span class="footer__brand-title">farfale</span>
         <p class="footer__slogan">Cool & Comfy. Style Comfort Durability.<br>Custom-Made Sofas Crafted for Your Space.</p>
         <div class="footer__address-line">
-          <strong>Тбилиси, Ваке, ул. Н. Бердзенишвили 2</strong><br>
-          <span style="font-size: 0.85rem; color: #888;">ვაკე, თბილისი, ნ. ბერძენიშვილის ქუჩა 2</span>
+          <strong>{addr_main}</strong><br>
+          <span style="font-size: 0.85rem; color: #888;">{addr_sub}</span>
         </div>
         <div class="footer__socials">
           <a href="https://www.instagram.com/farfale.ge" target="_blank" rel="noopener" class="footer__soc-link">Instagram</a>
@@ -155,11 +225,11 @@ def get_footer(lang, depth=0):
       <div class="footer__col">
         <h4 class="footer__heading">{t['nav']['catalog']}</h4>
         <ul class="footer__links">
-          <li><a href="{prefix}{lang}/products/cloud.html" if depth > 0 else "{lang}/products/cloud.html">Cloud Lounge</a></li>
-          <li><a href="{prefix}{lang}/products/curve.html" if depth > 0 else "{lang}/products/curve.html">Curve Organic</a></li>
-          <li><a href="{prefix}{lang}/products/nordic.html" if depth > 0 else "{lang}/products/nordic.html">Nordic Minimal</a></li>
-          <li><a href="{prefix}{lang}/products/bellini.html" if depth > 0 else "{lang}/products/bellini.html">Bellini Tufted</a></li>
-          <li><a href="{prefix}{lang}/products/daybed.html" if depth > 0 else "{lang}/products/daybed.html">Daybed Slumber</a></li>
+          <li><a href="{prod_prefix}/cloud.html">Cloud Lounge</a></li>
+          <li><a href="{prod_prefix}/curve.html">Curve Organic</a></li>
+          <li><a href="{prod_prefix}/nordic.html">Nordic Minimal</a></li>
+          <li><a href="{prod_prefix}/bellini.html">Bellini Tufted</a></li>
+          <li><a href="{prod_prefix}/daybed.html">Daybed Slumber</a></li>
         </ul>
       </div>
 
@@ -255,11 +325,16 @@ def generate_homepage(lang, depth=1):
     cards_html = []
     for p in products:
         p_url = f"{prefix}{lang}/products/{p['slug']}.html" if depth > 0 else f"{lang}/products/{p['slug']}.html"
+        cat_name = get_i18n(p['categoryName'], lang)
+        badge = get_i18n(p['badge'], lang)
+        tagline = get_i18n(p['tagline'], lang)
+        price_gel = get_i18n(p['price_formatted_gel'], lang)
+        lead_time = get_i18n(p['lead_time'], lang)
         cards_html.append(f"""
         <a href="{p_url}" class="product-card">
           <div class="product-card__img-box">
             <img src="{prefix}{p['images'][0]}" alt="{p['title']}" class="product-card__img" loading="lazy">
-            <span class="product-card__tag-badge">{p['badge']}</span>
+            <span class="product-card__tag-badge">{badge}</span>
             <span class="product-card__quick-btn">
               {t['hero']['ctaModels']} →
             </span>
@@ -267,12 +342,12 @@ def generate_homepage(lang, depth=1):
           <div class="product-card__info">
             <div class="product-card__header-line">
               <h3 class="product-card__title">{p['title']}</h3>
-              <span class="product-card__cat-label">{p['categoryName']}</span>
+              <span class="product-card__cat-label">{cat_name}</span>
             </div>
-            <p class="product-card__tagline-short">{p['tagline']}</p>
+            <p class="product-card__tagline-short">{tagline}</p>
             <div class="product-card__meta">
-              <span class="product-card__price">{p['price_formatted_gel']}</span>
-              <span class="product-card__badge">{p['lead_time']}</span>
+              <span class="product-card__price">{price_gel}</span>
+              <span class="product-card__badge">{lead_time}</span>
             </div>
           </div>
         </a>
@@ -281,13 +356,16 @@ def generate_homepage(lang, depth=1):
     # Portfolio cards (Real interiors)
     portfolio_cards_html = []
     for proj in portfolio_data['projects']:
+        proj_title = get_i18n(proj['title'], lang)
+        proj_model = get_i18n(proj['model'], lang)
+        proj_loc = get_i18n(proj['location'], lang)
         portfolio_cards_html.append(f"""
         <div class="portfolio-card">
-          <img src="{prefix}{proj['image']}" alt="{proj['title']} — {proj['model']}" loading="lazy">
+          <img src="{prefix}{proj['image']}" alt="{proj_title} — {proj_model}" loading="lazy">
           <div class="portfolio-card__overlay">
-            <span class="portfolio-card__tag">{proj['location']}</span>
-            <h3 class="portfolio-card__title">{proj['title']}</h3>
-            <p class="portfolio-card__meta">{proj['model']}</p>
+            <span class="portfolio-card__tag">{proj_loc}</span>
+            <h3 class="portfolio-card__title">{proj_title}</h3>
+            <p class="portfolio-card__meta">{proj_model}</p>
           </div>
         </div>
         """)
@@ -550,10 +628,10 @@ def generate_homepage(lang, depth=1):
               <img src="{prefix}assets/images/showroom/showroom-street.webp" alt="Showroom Farfale Vake" id="homeShImg">
             </div>
             <div class="showroom-thumbs">
-              <div class="showroom-thumb-box active" onclick="document.getElementById('homeShImg').src='{prefix}assets/images/showroom/showroom-street.webp'"><img src="{prefix}assets/images/showroom/showroom-street.webp"></div>
-              <div class="showroom-thumb-box" onclick="document.getElementById('homeShImg').src='{prefix}assets/images/showroom/showroom-comfort.webp'"><img src="{prefix}assets/images/showroom/showroom-comfort.webp"></div>
-              <div class="showroom-thumb-box" onclick="document.getElementById('homeShImg').src='{prefix}assets/images/showroom/showroom-interior.webp'"><img src="{prefix}assets/images/showroom/showroom-interior.webp"></div>
-              <div class="showroom-thumb-box" onclick="document.getElementById('homeShImg').src='{prefix}assets/images/showroom/showroom-pov.webp'"><img src="{prefix}assets/images/showroom/showroom-pov.webp"></div>
+              <div class="showroom-thumb-box active" onclick="switchHomeShImg(this, '{prefix}assets/images/showroom/showroom-street.webp')"><img src="{prefix}assets/images/showroom/showroom-street.webp" alt="Showroom exterior"></div>
+              <div class="showroom-thumb-box" onclick="switchHomeShImg(this, '{prefix}assets/images/showroom/showroom-comfort.webp')"><img src="{prefix}assets/images/showroom/showroom-comfort.webp" alt="Showroom comfort"></div>
+              <div class="showroom-thumb-box" onclick="switchHomeShImg(this, '{prefix}assets/images/showroom/showroom-interior.webp')"><img src="{prefix}assets/images/showroom/showroom-interior.webp" alt="Showroom interior"></div>
+              <div class="showroom-thumb-box" onclick="switchHomeShImg(this, '{prefix}assets/images/showroom/showroom-pov.webp')"><img src="{prefix}assets/images/showroom/showroom-pov.webp" alt="Showroom POV"></div>
             </div>
           </div>
           <div class="showroom-flagship__info">
@@ -631,6 +709,12 @@ def generate_homepage(lang, depth=1):
         item.classList.toggle('open');
       }});
     }});
+
+    function switchHomeShImg(box, src) {{
+      document.getElementById('homeShImg').src = src;
+      box.parentElement.querySelectorAll('.showroom-thumb-box').forEach(b => b.classList.remove('active'));
+      box.classList.add('active');
+    }}
   </script>
 </body>
 </html>
@@ -727,10 +811,10 @@ def generate_showroom_page(lang):
               <img src="../assets/images/showroom/showroom-street.webp" alt="Showroom Farfale Vake" id="shMainImg">
             </div>
             <div class="showroom-thumbs">
-              <div class="showroom-thumb-box active" onclick="document.getElementById('shMainImg').src='../assets/images/showroom/showroom-street.webp'"><img src="../assets/images/showroom/showroom-street.webp"></div>
-              <div class="showroom-thumb-box" onclick="document.getElementById('shMainImg').src='../assets/images/showroom/showroom-comfort.webp'"><img src="../assets/images/showroom/showroom-comfort.webp"></div>
-              <div class="showroom-thumb-box" onclick="document.getElementById('shMainImg').src='../assets/images/showroom/showroom-interior.webp'"><img src="../assets/images/showroom/showroom-interior.webp"></div>
-              <div class="showroom-thumb-box" onclick="document.getElementById('shMainImg').src='../assets/images/showroom/showroom-pov.webp'"><img src="../assets/images/showroom/showroom-pov.webp"></div>
+              <div class="showroom-thumb-box active" onclick="switchPageShImg(this, '../assets/images/showroom/showroom-street.webp')"><img src="../assets/images/showroom/showroom-street.webp" alt="Showroom exterior"></div>
+              <div class="showroom-thumb-box" onclick="switchPageShImg(this, '../assets/images/showroom/showroom-comfort.webp')"><img src="../assets/images/showroom/showroom-comfort.webp" alt="Showroom comfort"></div>
+              <div class="showroom-thumb-box" onclick="switchPageShImg(this, '../assets/images/showroom/showroom-interior.webp')"><img src="../assets/images/showroom/showroom-interior.webp" alt="Showroom interior"></div>
+              <div class="showroom-thumb-box" onclick="switchPageShImg(this, '../assets/images/showroom/showroom-pov.webp')"><img src="../assets/images/showroom/showroom-pov.webp" alt="Showroom POV"></div>
             </div>
           </div>
           <div class="showroom-flagship__info">
@@ -760,6 +844,14 @@ def generate_showroom_page(lang):
   </section>
 
 {get_footer(lang, depth=1)}
+
+  <script>
+    function switchPageShImg(box, src) {{
+      document.getElementById('shMainImg').src = src;
+      box.parentElement.querySelectorAll('.showroom-thumb-box').forEach(b => b.classList.remove('active'));
+      box.classList.add('active');
+    }}
+  </script>
 </body>
 </html>
 """
@@ -866,12 +958,32 @@ def generate_product_page(lang, product):
     curr_url = f"{DOMAIN}/{lang}/products/{slug}.html"
     hreflangs = get_hreflang_tags(f"products/{slug}.html")
 
+    cat_name = get_i18n(product['categoryName'], lang)
+    badge = get_i18n(product['badge'], lang)
+    tagline = get_i18n(product['tagline'], lang)
+    price_gel = get_i18n(product['price_formatted_gel'], lang)
+    lead_time = get_i18n(product['lead_time'], lang)
+    warranty = get_i18n(product['warranty'], lang)
+    desc = get_i18n(product['description'], lang)
+    features = get_i18n(product['features'], lang)
+    dimensions = get_i18n(product['dimensions_standard'], lang)
+    fabrics = get_i18n(product['popular_fabrics'], lang)
+
+    prod_t = t.get('productPage', {})
+    spec_dim_label = prod_t.get('specDimensions', 'Размеры:')
+    spec_warr_label = prod_t.get('specWarranty', 'Гарантия:')
+    spec_sh_label = prod_t.get('specShowroom', 'Шоурум:')
+    brand_tag = prod_t.get('brandTag', 'FARFALE LIVING • GEORGIA')
+    warr_val = prod_t.get('warrantyVal', f'{warranty} официальная гарантия')
+    sh_val = prod_t.get('showroomVal', 'Vake, N. Berdzenishvili 2')
+    fabrics_label = prod_t.get('fabricsLabel', 'Популярные ткани:')
+
     product_schema = {
         "@context": "https://schema.org/",
         "@type": "Product",
         "name": f"Farfale {product['title']}",
         "image": [f"{DOMAIN}/{img}" for img in product['images'][:3]],
-        "description": product['description'],
+        "description": desc,
         "brand": {
             "@type": "Brand",
             "name": "Farfale"
@@ -914,8 +1026,9 @@ def generate_product_page(lang, product):
 
     thumbs_html = []
     for i, img in enumerate(product['images']):
+        active_cls = " active" if i == 0 else ""
         thumbs_html.append(f"""
-          <img src="../../{img}" alt="{product['title']} {i+1}" class="modal__thumb {'active' if i==0 else ''}" onclick="document.getElementById('pMainImg').src='../../{img}'">
+          <img src="../../{img}" alt="{product['title']} {i+1}" class="modal__thumb{active_cls}" onclick="switchProdImg(this, '../../{img}')">
         """)
 
     wa_msg = f"გამარჯობა! მაინტერესებს დივანი {product['title']} ჩემი ზომებით" if lang == 'ka' else (f"Hello! I am interested in {product['title']} sofa custom sizes" if lang == 'en' else f"Здравствуйте! Хочу рассчитать стоимость дивана {product['title']} под мои размеры")
@@ -926,11 +1039,11 @@ def generate_product_page(lang, product):
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{product['title']} — {t['siteTitle']}</title>
-  <meta name="description" content="{product['description'][:160]}">
+  <meta name="description" content="{desc[:160]}">
   <link rel="canonical" href="{curr_url}">
 {hreflangs}
   <meta property="og:title" content="{product['title']} | Farfale Living">
-  <meta property="og:description" content="{product['description'][:160]}">
+  <meta property="og:description" content="{desc[:160]}">
   <meta property="og:image" content="../../{product['images'][0]}">
   <link rel="stylesheet" href="../../styles/main.css">
   <script type="application/ld+json">
@@ -961,7 +1074,7 @@ def generate_product_page(lang, product):
         <div class="modal__gallery">
           <div class="modal__main-box">
             <img src="../../{product['images'][0]}" alt="{product['title']}" class="modal__main-img" id="pMainImg">
-            <span class="modal__badge-tag">{product['badge']}</span>
+            <span class="modal__badge-tag">{badge}</span>
           </div>
           <div class="modal__thumbs" style="margin-top: 16px;">
             {"".join(thumbs_html)}
@@ -969,24 +1082,24 @@ def generate_product_page(lang, product):
         </div>
 
         <div class="modal__details">
-          <span class="modal__brand">FARFALE LIVING • GEORGIA</span>
+          <span class="modal__brand">{brand_tag}</span>
           <h1 class="modal__title" style="font-size: 2.2rem;">{product['title']}</h1>
-          <p class="modal__tagline">{product['tagline']}</p>
+          <p class="modal__tagline">{tagline}</p>
           <div class="modal__price-wrap">
-            <span class="modal__price">{product['price_formatted_gel']}</span>
-            <span class="modal__production-time">{product['lead_time']}</span>
+            <span class="modal__price">{price_gel}</span>
+            <span class="modal__production-time">{lead_time}</span>
           </div>
-          <p class="modal__desc">{product['description']}</p>
+          <p class="modal__desc">{desc}</p>
           <ul class="modal__features">
-            {''.join([f'<li><span class="feat-bullet">✓</span> {feat}</li>' for feat in product['features']])}
+            {''.join([f'<li><span class="feat-bullet">✓</span> {feat}</li>' for feat in features])}
           </ul>
           <div class="modal__fabrics-tag">
-            <strong>{t['hero']['statFabrics']}:</strong> {', '.join(product.get('popular_fabrics', []))}
+            <strong>{fabrics_label}</strong> {', '.join(fabrics)}
           </div>
           <div class="modal__specs">
-            <div class="spec-item"><span class="spec-label">Размеры:</span> <span class="spec-val">{product['dimensions_standard']}</span></div>
-            <div class="spec-item"><span class="spec-label">Гарантия:</span> <span class="spec-val">5 лет</span></div>
-            <div class="spec-item"><span class="spec-label">Шоурум:</span> <span class="spec-val">Vake, N. Berdzenishvili 2</span></div>
+            <div class="spec-item"><span class="spec-label">{spec_dim_label}</span> <span class="spec-val">{dimensions}</span></div>
+            <div class="spec-item"><span class="spec-label">{spec_warr_label}</span> <span class="spec-val">{warr_val}</span></div>
+            <div class="spec-item"><span class="spec-label">{spec_sh_label}</span> <span class="spec-val">{sh_val}</span></div>
           </div>
           <div class="modal__actions">
             <a href="https://wa.me/{site_data['contacts']['phoneRaw']}?text={wa_msg}" target="_blank" rel="noopener" class="btn btn--whatsapp btn--full">
@@ -1002,6 +1115,14 @@ def generate_product_page(lang, product):
   </section>
 
 {get_footer(lang, depth=2)}
+
+  <script>
+    function switchProdImg(thumb, src) {{
+      document.getElementById('pMainImg').src = src;
+      document.querySelectorAll('.modal__thumb').forEach(t => t.classList.remove('active'));
+      thumb.classList.add('active');
+    }}
+  </script>
 </body>
 </html>
 """

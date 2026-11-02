@@ -157,10 +157,71 @@
             </svg>
             <span>WhatsApp</span>
           </a>
+          <button class="burger-btn" id="mobileDrawerBtn" aria-label="Open menu" type="button">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+          </button>
         </div>
       </div>
     </div>
   </header>
+
+  <!-- Mobile Menu Drawer -->
+  <div class="mobile-menu" id="mobileDrawer">
+    <div class="mobile-menu__backdrop" id="closeDrawerBackdrop"></div>
+    <div class="mobile-menu__content">
+      <div class="mobile-menu__top">
+        <a href="../ka/index.html" class="logo" aria-label="Farfale">
+          <span class="logo__brand-title">farfale</span>
+        </a>
+        <button class="close-btn" id="closeDrawerBtn" aria-label="Close menu">&times;</button>
+      </div>
+
+      <div class="lang-switch" style="margin-bottom: 24px; font-size: 0.95rem;">
+        <span class="lang-opt active">KA</span><span class="lang-sep">/</span><a href="../ru/index.html" class="lang-opt">RU</a><span class="lang-sep">/</span><a href="../en/index.html" class="lang-opt">EN</a>
+      </div>
+
+      <nav class="mobile-menu__nav">
+        <a href="../ka/index.html#catalog" class="mobile-nav-link">კოლექციები</a>
+        <a href="../ka/index.html#quality" class="mobile-nav-link">დივნის ანატომია</a>
+        <a href="../ka/index.html#process" class="mobile-nav-link">როგორ შევუკვეთოთ</a>
+        <a href="../ka/index.html#portfolio" class="mobile-nav-link">ინტერიერები</a>
+        <a href="../ka/tbilisi-showroom.html" class="mobile-nav-link" style="color: #bda27e; font-weight: 600;">შოურუმი ვაკეში</a>
+        <a href="../ka/delivery-georgia.html" class="mobile-nav-link">მიწოდება და აწყობა</a>
+        <a href="../ka/index.html#contacts" class="mobile-nav-link">კონტაქტები</a>
+      </nav>
+
+      <div class="mobile-menu__footer">
+        <div style="font-size: 0.85rem; color: #666; margin-bottom: 12px; line-height: 1.4;">
+          <strong>ვაკე, თბილისი, ნ. ბერძენიშვილის ქუჩა 2</strong><br>
+          <span style="color: #999;">Vake, Tbilisi, N. Berdzenishvili St 2</span>
+        </div>
+        <a href="https://wa.me/+995555123456?text=გამარჯობა! დივნის შეკვეთა მინდა" target="_blank" rel="noopener" class="btn btn--whatsapp btn--full" style="text-align: center; justify-content: center;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+          </svg>
+          WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function() {
+      const b = document.getElementById('mobileDrawerBtn');
+      const d = document.getElementById('mobileDrawer');
+      const c = document.getElementById('closeDrawerBtn');
+      const bk = document.getElementById('closeDrawerBackdrop');
+      if (b && d) {
+        b.onclick = () => { d.classList.add('open'); document.body.style.overflow = 'hidden'; };
+        if (c) c.onclick = () => { d.classList.remove('open'); document.body.style.overflow = ''; };
+        if (bk) bk.onclick = () => { d.classList.remove('open'); document.body.style.overflow = ''; };
+        d.querySelectorAll('.mobile-nav-link').forEach(l => {
+          l.onclick = () => { d.classList.remove('open'); document.body.style.overflow = ''; };
+        });
+      }
+    })();
+  </script>
 
 
   <!-- 1. Hero Section -->
@@ -220,7 +281,7 @@
         <a href="../ka/products/cloud.html" class="product-card">
           <div class="product-card__img-box">
             <img src="../assets/images/products/cloud/cloud-01.webp" alt="CLOUD LOUNGE" class="product-card__img" loading="lazy">
-            <span class="product-card__tag-badge">Бестселлер • Vetsak-вайб</span>
+            <span class="product-card__tag-badge">ბესტსელერი • Vetsak-ვაიბი</span>
             <span class="product-card__quick-btn">
               კოლექციის ნახვა →
             </span>
@@ -228,12 +289,12 @@
           <div class="product-card__info">
             <div class="product-card__header-line">
               <h3 class="product-card__title">CLOUD LOUNGE</h3>
-              <span class="product-card__cat-label">Модульные диваны</span>
+              <span class="product-card__cat-label">მოდულური დივნები</span>
             </div>
-            <p class="product-card__tagline-short">Абсолютный комфорт и свобода конфигурации</p>
+            <p class="product-card__tagline-short">აბსოლუტური კომფორტი და მოდულების სრული თავისუფლება</p>
             <div class="product-card__meta">
-              <span class="product-card__price">от 4 200 ₾</span>
-              <span class="product-card__badge">от 25 дней</span>
+              <span class="product-card__price">4 200 ₾-დან</span>
+              <span class="product-card__badge">25 დღიდან</span>
             </div>
           </div>
         </a>
@@ -241,7 +302,7 @@
         <a href="../ka/products/curve.html" class="product-card">
           <div class="product-card__img-box">
             <img src="../assets/images/products/curve/curve-01.webp" alt="CURVE ORGANIC" class="product-card__img" loading="lazy">
-            <span class="product-card__tag-badge">Дизайн-тренд • Сканди</span>
+            <span class="product-card__tag-badge">დიზაინ-ტრენდი • სკანდი</span>
             <span class="product-card__quick-btn">
               კოლექციის ნახვა →
             </span>
@@ -249,12 +310,12 @@
           <div class="product-card__info">
             <div class="product-card__header-line">
               <h3 class="product-card__title">CURVE ORGANIC</h3>
-              <span class="product-card__cat-label">Изогнутые диваны</span>
+              <span class="product-card__cat-label">რკალისებრი დივნები</span>
             </div>
-            <p class="product-card__tagline-short">Скульптурная бионика и плавные линии уюта</p>
+            <p class="product-card__tagline-short">სკულპტურული ბიონიკა და სიმყუდროვის რბილი ხაზები</p>
             <div class="product-card__meta">
-              <span class="product-card__price">от 4 800 ₾</span>
-              <span class="product-card__badge">от 25 дней</span>
+              <span class="product-card__price">4 800 ₾-დან</span>
+              <span class="product-card__badge">25 დღიდან</span>
             </div>
           </div>
         </a>
@@ -262,7 +323,7 @@
         <a href="../ka/products/nordic.html" class="product-card">
           <div class="product-card__img-box">
             <img src="../assets/images/products/nordic/nordic-01.webp" alt="NORDIC LINE & CORNER" class="product-card__img" loading="lazy">
-            <span class="product-card__tag-badge">Архитектурный минимализм</span>
+            <span class="product-card__tag-badge">არქიტექტურული მინიმალიზმი</span>
             <span class="product-card__quick-btn">
               კოლექციის ნახვა →
             </span>
@@ -270,12 +331,12 @@
           <div class="product-card__info">
             <div class="product-card__header-line">
               <h3 class="product-card__title">NORDIC LINE & CORNER</h3>
-              <span class="product-card__cat-label">Прямые и угловые</span>
+              <span class="product-card__cat-label">სწორი და კუთხის</span>
             </div>
-            <p class="product-card__tagline-short">Чистые линии, строгие пропорции и премиальный шезлонг</p>
+            <p class="product-card__tagline-short">სუფთა ხაზები, მკაცრი პროპორციები და პრემიუმ შეზლონგი</p>
             <div class="product-card__meta">
-              <span class="product-card__price">от 3 900 ₾</span>
-              <span class="product-card__badge">от 25 дней</span>
+              <span class="product-card__price">3 900 ₾-დან</span>
+              <span class="product-card__badge">25 დღიდან</span>
             </div>
           </div>
         </a>
@@ -283,7 +344,7 @@
         <a href="../ka/products/bellini.html" class="product-card">
           <div class="product-card__img-box">
             <img src="../assets/images/products/camaleonda/camaleonda-01.webp" alt="BELLINI TUFTED" class="product-card__img" loading="lazy">
-            <span class="product-card__tag-badge">Культовый дизайн 70-х</span>
+            <span class="product-card__tag-badge">საკულტო დიზაინი • 70s</span>
             <span class="product-card__quick-btn">
               კოლექციის ნახვა →
             </span>
@@ -291,12 +352,12 @@
           <div class="product-card__info">
             <div class="product-card__header-line">
               <h3 class="product-card__title">BELLINI TUFTED</h3>
-              <span class="product-card__cat-label">Дизайнерские иконы</span>
+              <span class="product-card__cat-label">დიზაინერული აიკონიკი</span>
             </div>
-            <p class="product-card__tagline-short">Легендарная каретная стяжка и коллекционная эстетика</p>
+            <p class="product-card__tagline-short">ლეგენდარული კაპიტონე და საკოლექციო ესთეტიკა</p>
             <div class="product-card__meta">
-              <span class="product-card__price">от 5 200 ₾</span>
-              <span class="product-card__badge">от 30 дней</span>
+              <span class="product-card__price">5 200 ₾-დან</span>
+              <span class="product-card__badge">30 დღიდან</span>
             </div>
           </div>
         </a>
@@ -304,7 +365,7 @@
         <a href="../ka/products/daybed.html" class="product-card">
           <div class="product-card__img-box">
             <img src="../assets/images/products/daybed/daybed-01.webp" alt="DAYBED SLUMBER" class="product-card__img" loading="lazy">
-            <span class="product-card__tag-badge">2-в-1: Диван и кровать</span>
+            <span class="product-card__tag-badge">2-1-ში: დივანი და საწოლი</span>
             <span class="product-card__quick-btn">
               კოლექციის ნახვა →
             </span>
@@ -312,12 +373,12 @@
           <div class="product-card__info">
             <div class="product-card__header-line">
               <h3 class="product-card__title">DAYBED SLUMBER</h3>
-              <span class="product-card__cat-label">Кровати и кушетки</span>
+              <span class="product-card__cat-label">საწოლები და კუშეტკები</span>
             </div>
-            <p class="product-card__tagline-short">Мягкая кушетка с выкатным вторым спальным местом</p>
+            <p class="product-card__tagline-short">რბილი კუშეტკა გამოსაგორებელი მეორე საძილე ადგილით</p>
             <div class="product-card__meta">
-              <span class="product-card__price">от 3 600 ₾</span>
-              <span class="product-card__badge">от 25 дней</span>
+              <span class="product-card__price">3 600 ₾-დან</span>
+              <span class="product-card__badge">25 დღიდან</span>
             </div>
           </div>
         </a>
@@ -456,56 +517,56 @@
       <div class="portfolio-grid">
         
         <div class="portfolio-card">
-          <img src="../assets/images/portfolio/interior-01.webp" alt="Солнечная гостиная в Ваке — Cloud Lounge в микровельвете" loading="lazy">
+          <img src="../assets/images/portfolio/interior-01.webp" alt="მზიანი მისაღები ვაკეში — Cloud Lounge მიკროველვეტში" loading="lazy">
           <div class="portfolio-card__overlay">
-            <span class="portfolio-card__tag">Тбилиси, Ваке</span>
-            <h3 class="portfolio-card__title">Солнечная гостиная в Ваке</h3>
-            <p class="portfolio-card__meta">Cloud Lounge в микровельвете</p>
+            <span class="portfolio-card__tag">თბილისი, ვაკე</span>
+            <h3 class="portfolio-card__title">მზიანი მისაღები ვაკეში</h3>
+            <p class="portfolio-card__meta">Cloud Lounge მიკროველვეტში</p>
           </div>
         </div>
         
         <div class="portfolio-card">
-          <img src="../assets/images/portfolio/interior-02.webp" alt="Бохо-апартаменты с растениями — Модульная зона отдыха Cloud" loading="lazy">
+          <img src="../assets/images/portfolio/interior-02.webp" alt="ბოჰო-აპარტამენტი მცენარეებით — მოდულური მოსასვენებელი Cloud" loading="lazy">
           <div class="portfolio-card__overlay">
-            <span class="portfolio-card__tag">Тбилиси, Мтацминда</span>
-            <h3 class="portfolio-card__title">Бохо-апартаменты с растениями</h3>
-            <p class="portfolio-card__meta">Модульная зона отдыха Cloud</p>
+            <span class="portfolio-card__tag">თბილისი, მთაწმინდა</span>
+            <h3 class="portfolio-card__title">ბოჰო-აპარტამენტი მცენარეებით</h3>
+            <p class="portfolio-card__meta">მოდულური მოსასვენებელი Cloud</p>
           </div>
         </div>
         
         <div class="portfolio-card">
-          <img src="../assets/images/portfolio/interior-03.webp" alt="Залитая солнцем студия — Cloud 3 модуля + пуф" loading="lazy">
+          <img src="../assets/images/portfolio/interior-03.webp" alt="მზით განათებული სტუდია — Cloud 3 მოდული + პუფი" loading="lazy">
           <div class="portfolio-card__overlay">
-            <span class="portfolio-card__tag">Тбилиси, Сабуртало</span>
-            <h3 class="portfolio-card__title">Залитая солнцем студия</h3>
-            <p class="portfolio-card__meta">Cloud 3 модуля + пуф</p>
+            <span class="portfolio-card__tag">თბილისი, საბურთალო</span>
+            <h3 class="portfolio-card__title">მზით განათებული სტუდია</h3>
+            <p class="portfolio-card__meta">Cloud 3 მოდული + პუფი</p>
           </div>
         </div>
         
         <div class="portfolio-card">
-          <img src="../assets/images/portfolio/interior-04.webp" alt="Уютный лаунж с библиотекой — Модульный диван в ткани Sand" loading="lazy">
+          <img src="../assets/images/portfolio/interior-04.webp" alt="მყუდრო ლაუნჯი ბიბლიოთეკით — მოდულური დივანი Sand ქსოვილში" loading="lazy">
           <div class="portfolio-card__overlay">
-            <span class="portfolio-card__tag">Тбилиси, Вера</span>
-            <h3 class="portfolio-card__title">Уютный лаунж с библиотекой</h3>
-            <p class="portfolio-card__meta">Модульный диван в ткани Sand</p>
+            <span class="portfolio-card__tag">თბილისი, ვერა</span>
+            <h3 class="portfolio-card__title">მყუდრო ლაუნჯი ბიბლიოთეკით</h3>
+            <p class="portfolio-card__meta">მოდულური დივანი Sand ქსოვილში</p>
           </div>
         </div>
         
         <div class="portfolio-card">
-          <img src="../assets/images/portfolio/interior-08.webp" alt="Современная гостиная с паркетом — Угловой Nordic Corner" loading="lazy">
+          <img src="../assets/images/portfolio/interior-08.webp" alt="თანამედროვე მისაღები პარკეტით — კუთხის Nordic Corner" loading="lazy">
           <div class="portfolio-card__overlay">
-            <span class="portfolio-card__tag">Батуми, Новый бульвар</span>
-            <h3 class="portfolio-card__title">Современная гостиная с паркетом</h3>
-            <p class="portfolio-card__meta">Угловой Nordic Corner</p>
+            <span class="portfolio-card__tag">ბათუმი, ახალი ბულვარი</span>
+            <h3 class="portfolio-card__title">თანამედროვე მისაღები პარკეტით</h3>
+            <p class="portfolio-card__meta">კუთხის Nordic Corner</p>
           </div>
         </div>
         
         <div class="portfolio-card">
-          <img src="../assets/images/portfolio/interior-09.webp" alt="Изумрудный акцент в светлом пространстве — Nordic Line в бархате" loading="lazy">
+          <img src="../assets/images/portfolio/interior-09.webp" alt="ზურმუხტისფერი აქცენტი ნათელ სივრცეში — Nordic Line ხავერდში" loading="lazy">
           <div class="portfolio-card__overlay">
-            <span class="portfolio-card__tag">Тбилиси, Дигоми</span>
-            <h3 class="portfolio-card__title">Изумрудный акцент в светлом пространстве</h3>
-            <p class="portfolio-card__meta">Nordic Line в бархате</p>
+            <span class="portfolio-card__tag">თბილისი, დიღომი</span>
+            <h3 class="portfolio-card__title">ზურმუხტისფერი აქცენტი ნათელ სივრცეში</h3>
+            <p class="portfolio-card__meta">Nordic Line ხავერდში</p>
           </div>
         </div>
         
@@ -531,10 +592,10 @@
               <img src="../assets/images/showroom/showroom-street.webp" alt="Showroom Farfale Vake" id="homeShImg">
             </div>
             <div class="showroom-thumbs">
-              <div class="showroom-thumb-box active" onclick="document.getElementById('homeShImg').src='../assets/images/showroom/showroom-street.webp'"><img src="../assets/images/showroom/showroom-street.webp"></div>
-              <div class="showroom-thumb-box" onclick="document.getElementById('homeShImg').src='../assets/images/showroom/showroom-comfort.webp'"><img src="../assets/images/showroom/showroom-comfort.webp"></div>
-              <div class="showroom-thumb-box" onclick="document.getElementById('homeShImg').src='../assets/images/showroom/showroom-interior.webp'"><img src="../assets/images/showroom/showroom-interior.webp"></div>
-              <div class="showroom-thumb-box" onclick="document.getElementById('homeShImg').src='../assets/images/showroom/showroom-pov.webp'"><img src="../assets/images/showroom/showroom-pov.webp"></div>
+              <div class="showroom-thumb-box active" onclick="switchHomeShImg(this, '../assets/images/showroom/showroom-street.webp')"><img src="../assets/images/showroom/showroom-street.webp" alt="Showroom exterior"></div>
+              <div class="showroom-thumb-box" onclick="switchHomeShImg(this, '../assets/images/showroom/showroom-comfort.webp')"><img src="../assets/images/showroom/showroom-comfort.webp" alt="Showroom comfort"></div>
+              <div class="showroom-thumb-box" onclick="switchHomeShImg(this, '../assets/images/showroom/showroom-interior.webp')"><img src="../assets/images/showroom/showroom-interior.webp" alt="Showroom interior"></div>
+              <div class="showroom-thumb-box" onclick="switchHomeShImg(this, '../assets/images/showroom/showroom-pov.webp')"><img src="../assets/images/showroom/showroom-pov.webp" alt="Showroom POV"></div>
             </div>
           </div>
           <div class="showroom-flagship__info">
@@ -661,8 +722,8 @@
         <span class="footer__brand-title">farfale</span>
         <p class="footer__slogan">Cool & Comfy. Style Comfort Durability.<br>Custom-Made Sofas Crafted for Your Space.</p>
         <div class="footer__address-line">
-          <strong>Тбилиси, Ваке, ул. Н. Бердзенишвили 2</strong><br>
-          <span style="font-size: 0.85rem; color: #888;">ვაკე, თბილისი, ნ. ბერძენიშვილის ქუჩა 2</span>
+          <strong>ვაკე, თბილისი, ნ. ბერძენიშვილის ქუჩა 2</strong><br>
+          <span style="font-size: 0.85rem; color: #888;">Vake, Tbilisi, N. Berdzenishvili St 2</span>
         </div>
         <div class="footer__socials">
           <a href="https://www.instagram.com/farfale.ge" target="_blank" rel="noopener" class="footer__soc-link">Instagram</a>
@@ -674,11 +735,11 @@
       <div class="footer__col">
         <h4 class="footer__heading">კოლექციები</h4>
         <ul class="footer__links">
-          <li><a href="../ka/products/cloud.html" if depth > 0 else "ka/products/cloud.html">Cloud Lounge</a></li>
-          <li><a href="../ka/products/curve.html" if depth > 0 else "ka/products/curve.html">Curve Organic</a></li>
-          <li><a href="../ka/products/nordic.html" if depth > 0 else "ka/products/nordic.html">Nordic Minimal</a></li>
-          <li><a href="../ka/products/bellini.html" if depth > 0 else "ka/products/bellini.html">Bellini Tufted</a></li>
-          <li><a href="../ka/products/daybed.html" if depth > 0 else "ka/products/daybed.html">Daybed Slumber</a></li>
+          <li><a href="../ka/products/cloud.html">Cloud Lounge</a></li>
+          <li><a href="../ka/products/curve.html">Curve Organic</a></li>
+          <li><a href="../ka/products/nordic.html">Nordic Minimal</a></li>
+          <li><a href="../ka/products/bellini.html">Bellini Tufted</a></li>
+          <li><a href="../ka/products/daybed.html">Daybed Slumber</a></li>
         </ul>
       </div>
 
@@ -723,6 +784,12 @@
         item.classList.toggle('open');
       });
     });
+
+    function switchHomeShImg(box, src) {
+      document.getElementById('homeShImg').src = src;
+      box.parentElement.querySelectorAll('.showroom-thumb-box').forEach(b => b.classList.remove('active'));
+      box.classList.add('active');
+    }
   </script>
 </body>
 </html>
