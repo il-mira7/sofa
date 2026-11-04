@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — Farfale | farfale.ge</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="assets/icons/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="assets/icons/favicon-48.png" type="image/png" sizes="48x48">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body style="margin: 0; font-family: 'Montserrat', sans-serif; background: #f4f1ec; color: #3d3833; text-align: center;">
+  <div style="max-width: 640px; margin: 0 auto; padding: 18vh 24px 0;">
+    <img src="/assets/icons/favicon-192.png" data-farfale-icon alt="Farfale" style="width: 72px; height: 72px; border-radius: 16px;">
+    <h1 style="font-size: 4rem; margin: 24px 0 8px; color: #bda27e; font-weight: 300;">404</h1>
+    <p style="font-size: 1.05rem; margin: 0 0 8px;">გვერდი ვერ მოიძებნა / Page not found / Страница не найдена</p>
+    <p style="font-size: 0.9rem; color: #8a8378; margin: 0 0 40px;">farfale.ge — Cool &amp; Comfy • Vake, Tbilisi</p>
+    <nav>
+      <a href="/ka/" data-lang-link="ka" style="display: inline-block; margin: 0 14px; padding: 14px 34px; border: 1px solid #bda27e; border-radius: 999px; color: #6d5c43; text-decoration: none; font-size: 0.95rem; letter-spacing: 1px;">ქართული</a>
+      <a href="/ru/" data-lang-link="ru" style="display: inline-block; margin: 0 14px; padding: 14px 34px; border: 1px solid #bda27e; border-radius: 999px; color: #6d5c43; text-decoration: none; font-size: 0.95rem; letter-spacing: 1px;">Русский</a>
+      <a href="/en/" data-lang-link="en" style="display: inline-block; margin: 0 14px; padding: 14px 34px; border: 1px solid #bda27e; border-radius: 999px; color: #6d5c43; text-decoration: none; font-size: 0.95rem; letter-spacing: 1px;">English</a>
+    </nav>
+  </div>
+  <script>
+    // The custom 404 is served for any URL: rebase language links and the icon
+    // onto the deploy subpath (e.g. /sofa/ on GitHub Pages project sites).
+    (function() {
+      var seg = location.pathname.split('/').filter(Boolean);
+      var base = seg.length > 1 ? '/' + seg[0] : '';
+      document.querySelectorAll('[data-lang-link]').forEach(function(a) {
+        a.setAttribute('href', base + '/' + a.getAttribute('data-lang-link') + '/');
+      });
+      var icon = document.querySelector('[data-farfale-icon]');
+      if (icon) icon.src = base + '/assets/icons/favicon-192.png';
+    })();
+  </script>
+</body>
+</html>

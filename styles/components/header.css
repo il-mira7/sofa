@@ -660,12 +660,20 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 28px;
 }
 
 .header__left {
   display: flex;
   align-items: center;
   gap: 36px;
+}
+
+.logo__img {
+  height: 38px;
+  width: auto;
+  max-width: none;
+  display: block;
 }
 
 .logo__brand-title {
@@ -693,6 +701,7 @@
   text-decoration: none;
   padding: 6px 0;
   position: relative;
+  white-space: nowrap;
 }
 
 .header__desktop-menu .nav-link::after {
@@ -749,7 +758,7 @@
   color: #555555;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1365px) {
   .header__desktop-menu {
     display: none;
   }

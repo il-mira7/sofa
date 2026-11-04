@@ -18,9 +18,11 @@ Includes ALL visual, atmospheric sections:
 
 import os
 import json
+from datetime import date
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DOMAIN = "https://farfale.ge"
+LASTMOD = date.today().isoformat()
 
 # Load data
 with open(os.path.join(BASE_DIR, 'data/site.json'), encoding='utf-8') as f:
@@ -38,8 +40,48 @@ with open(os.path.join(BASE_DIR, 'data/portfolio.json'), encoding='utf-8') as f:
 with open(os.path.join(BASE_DIR, 'data/translations.json'), encoding='utf-8') as f:
     translations = json.load(f)
 
+with open(os.path.join(BASE_DIR, 'data/blog.json'), encoding='utf-8') as f:
+    blog_data = json.load(f)
+
 products = products_raw['all']['products']
 LANGS = ['ka', 'ru', 'en']
+
+OG_LOCALES = {"ka": "ka_GE", "ru": "ru_RU", "en": "en_US"}
+
+def favicon_links(depth=0):
+    p = "../" * depth if depth > 0 else ""
+    return (
+        f'  <link rel="icon" href="{p}assets/icons/favicon-96.png" type="image/png" sizes="96x96">\n'
+        f'  <link rel="icon" href="{p}assets/icons/favicon-48.png" type="image/png" sizes="48x48">\n'
+        f'  <link rel="apple-touch-icon" href="{p}assets/icons/apple-touch-icon.png">'
+    )
+
+def social_meta(lang, title, desc, image_url, page_url):
+    alts = "".join(
+        f'\n  <meta property="og:locale:alternate" content="{OG_LOCALES[l]}">'
+        for l in LANGS if l != lang
+    )
+    return (
+        f'  <meta property="og:image" content="{image_url}">\n'
+        f'  <meta property="og:url" content="{page_url}">\n'
+        f'  <meta property="og:locale" content="{OG_LOCALES[lang]}">{alts}\n'
+        f'  <meta name="twitter:card" content="summary_large_image">\n'
+        f'  <meta name="twitter:title" content="{title}">\n'
+        f'  <meta name="twitter:description" content="{desc}">\n'
+        f'  <meta name="twitter:image" content="{image_url}">'
+    )
+
+def format_date(iso, lang):
+    months = {
+        "ka": ["იან", "თებ", "მარ", "აპრ", "მაი", "ივნ", "ივლ", "აგვ", "სექ", "ოქტ", "ნოე", "დეკ"],
+        "ru": ["января", "февраля", "марта", "апреля", "мая", "июня", "июля", "августа", "сентября", "октября", "ноября", "декабря"],
+        "en": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+    }
+    y, m, d = iso.split("-")
+    m = int(m)
+    if lang == "en":
+        return f"{months[lang][m-1]} {int(d)}, {y}"
+    return f"{int(d)} {months[lang][m-1]} {y}"
 
 def get_i18n(val, lang, default=""):
     if isinstance(val, dict):
@@ -103,7 +145,7 @@ def get_header(lang, current_page="", depth=0):
       <div class="container header__inner">
         <div class="header__left">
           <a href="{home_url}" class="logo" aria-label="Farfale">
-            <span class="logo__brand-title">farfale</span>
+            <img src="{prefix}assets/images/logo/farfale-logo.jpg" alt="Farfale" class="logo__img">
           </a>
           <nav class="header__desktop-menu" aria-label="Navigation">
             <a href="{home_url}#catalog" class="nav-link">{t['nav']['catalog']}</a>
@@ -142,7 +184,7 @@ def get_header(lang, current_page="", depth=0):
     <div class="mobile-menu__content">
       <div class="mobile-menu__top">
         <a href="{home_url}" class="logo" aria-label="Farfale">
-          <span class="logo__brand-title">farfale</span>
+          <img src="{prefix}assets/images/logo/farfale-logo.jpg" alt="Farfale" class="logo__img">
         </a>
         <button class="close-btn" id="closeDrawerBtn" aria-label="Close menu">&times;</button>
       </div>
@@ -250,6 +292,9 @@ def get_footer(lang, depth=0):
           <strong>{site_data['contacts']['phone']}</strong>
         </p>
         <p class="footer__contact-item">
+          <a href="mailto:{site_data['contacts']['email']}" style="color: inherit;">{site_data['contacts']['email']}</a>
+        </p>
+        <p class="footer__contact-item">
           {site_data['contacts']['hoursWeekdays']}
         </p>
         <p class="footer__contact-item">
@@ -295,9 +340,17 @@ def generate_homepage(lang, depth=1):
         "@type": "FurnitureStore",
         "name": "Farfale Living Georgia",
         "image": f"{DOMAIN}/assets/images/hero/hero-poster.webp",
+        "logo": f"{DOMAIN}/assets/icons/favicon-512.png",
         "telephone": site_data['contacts']['phoneRaw'],
+        "email": site_data['contacts']['email'],
         "url": curr_url,
         "priceRange": "3600 - 15000 GEL",
+        "currenciesAccepted": "GEL",
+        "sameAs": [
+            site_data['contacts']['instagram'],
+            site_data['contacts']['telegram'],
+            site_data['contacts']['whatsapp']
+        ],
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "N. Berdzenishvili 2",
@@ -370,6 +423,22 @@ def generate_homepage(lang, depth=1):
         </div>
         """)
 
+    # Journal cards (own news, cases & guides — GEO content)
+    journal_cards_html = []
+    for item in blog_data[:6]:
+        j_title = get_i18n(item['title'], lang)
+        j_descr = get_i18n(item['descr'], lang)
+        journal_cards_html.append(f"""
+        <article style="background: #ffffff; border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden;">
+          <img src="{prefix}{item['image']}" alt="{j_title}" style="width: 100%; height: 200px; object-fit: cover; display: block;" loading="lazy">
+          <div style="padding: 20px 22px;">
+            <time datetime="{item['date']}" style="font-size: 0.78rem; letter-spacing: 0.6px; text-transform: uppercase; color: var(--color-text-muted);">{format_date(item['date'], lang)}</time>
+            <h3 style="margin: 10px 0; font-size: 1.05rem; line-height: 1.35;">{j_title}</h3>
+            <p style="font-size: 0.9rem; line-height: 1.6; color: var(--color-text-muted); margin: 0;">{j_descr}</p>
+          </div>
+        </article>
+        """)
+
     # FAQ HTML
     faq_items_html = []
     for item in t["faq"]["items"]:
@@ -403,8 +472,9 @@ def generate_homepage(lang, depth=1):
   <meta property="og:type" content="website">
   <meta property="og:title" content="{t['siteTitle']}">
   <meta property="og:description" content="{t['siteDesc']}">
-  <meta property="og:image" content="{prefix}assets/images/hero/hero-poster.webp">
-  <meta property="og:url" content="{curr_url}">
+{social_meta(lang, t['siteTitle'], t['siteDesc'], f"{DOMAIN}/assets/images/hero/hero-poster.webp", curr_url)}
+{favicon_links(depth)}
+  <link rel="preload" as="image" href="{prefix}assets/images/hero/hero-poster.webp" fetchpriority="high">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
@@ -422,7 +492,7 @@ def generate_homepage(lang, depth=1):
   <!-- 1. Hero Section -->
   <section class="hero" id="hero">
     <div class="hero__video-wrapper">
-      <video class="hero__video" autoplay loop muted playsinline poster="{prefix}assets/images/hero/hero-poster.webp">
+      <video class="hero__video" autoplay loop muted playsinline preload="metadata" poster="{prefix}assets/images/hero/hero-poster.webp">
         <source src="{prefix}assets/images/hero/hero-video.mp4" type="video/mp4">
       </video>
       <div class="hero__overlay"></div>
@@ -610,6 +680,20 @@ def generate_homepage(lang, depth=1):
     </div>
   </section>
 
+  <!-- 6.5 Journal: own news, cases & guides (GEO content) -->
+  <section class="section" id="journal">
+    <div class="container">
+      <div class="section-header" style="text-align: center; margin-bottom: 40px;">
+        <span class="consult-tag" style="margin: 0 auto 12px auto;">{t['journal']['badge']}</span>
+        <h2 class="section-title">{t['journal']['title']}</h2>
+        <p class="section-subtitle" style="color: var(--color-text-muted);">{t['journal']['subtitle']}</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+        {"".join(journal_cards_html)}
+      </div>
+    </div>
+  </section>
+
   <!-- 7. Flagship Showroom Showcase on Homepage -->
   <section class="section showrooms-section" id="showrooms">
     <div class="container">
@@ -732,8 +816,16 @@ def generate_showroom_page(lang):
         "@type": "FurnitureStore",
         "name": f"Farfale Living Showroom — {sp['h1']}",
         "image": f"{DOMAIN}/assets/images/showroom/showroom-street.webp",
+        "logo": f"{DOMAIN}/assets/icons/favicon-512.png",
         "telephone": site_data['contacts']['phoneRaw'],
+        "email": site_data['contacts']['email'],
         "url": curr_url,
+        "sameAs": [
+            site_data['contacts']['instagram'],
+            site_data['contacts']['telegram'],
+            site_data['contacts']['whatsapp']
+        ],
+        "hasMap": site_data['contacts']['mapUrl'],
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "N. Berdzenishvili 2",
@@ -780,7 +872,8 @@ def generate_showroom_page(lang):
 {hreflangs}
   <meta property="og:title" content="{sp['title']}">
   <meta property="og:description" content="{sp['desc']}">
-  <meta property="og:image" content="../assets/images/showroom/showroom-street.webp">
+{social_meta(lang, sp['title'], sp['desc'], f"{DOMAIN}/assets/images/showroom/showroom-street.webp", curr_url)}
+{favicon_links(1)}
   <link rel="stylesheet" href="../styles/main.css">
   <script type="application/ld+json">
 {json.dumps(local_schema, ensure_ascii=False, indent=2)}
@@ -839,6 +932,10 @@ def generate_showroom_page(lang):
             </div>
           </div>
         </div>
+      </div>
+
+      <div style="margin-top: 48px; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--color-border);">
+        <iframe src="https://www.google.com/maps?q=N.%20Berdzenishvili%202%2C%20Tbilisi%2C%20Georgia&z=16&output=embed" width="100%" height="380" style="border: 0; display: block;" loading="lazy" title="Farfale — {sp['address']}" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
       </div>
     </div>
   </section>
@@ -903,7 +1000,8 @@ def generate_delivery_page(lang):
 {hreflangs}
   <meta property="og:title" content="{dp['title']}">
   <meta property="og:description" content="{dp['desc']}">
-  <meta property="og:image" content="../assets/images/hero/hero-poster.webp">
+{social_meta(lang, dp['title'], dp['desc'], f"{DOMAIN}/assets/images/hero/hero-poster.webp", curr_url)}
+{favicon_links(1)}
   <link rel="stylesheet" href="../styles/main.css">
   <script type="application/ld+json">
 {json.dumps(breadcrumb_schema, ensure_ascii=False, indent=2)}
@@ -982,6 +1080,7 @@ def generate_product_page(lang, product):
         "@context": "https://schema.org/",
         "@type": "Product",
         "name": f"Farfale {product['title']}",
+        "sku": f"FARF-{slug.upper()}",
         "image": [f"{DOMAIN}/{img}" for img in product['images'][:3]],
         "description": desc,
         "brand": {
@@ -993,9 +1092,19 @@ def generate_product_page(lang, product):
             "priceCurrency": "GEL",
             "lowPrice": product['price_from_gel'],
             "highPrice": int(product['price_from_gel'] * 2.2),
-            "offerCount": "10",
-            "price": product['price_from_gel'],
-            "availability": "https://schema.org/PreOrder"
+            "offerCount": 10,
+            "offers": {
+                "@type": "Offer",
+                "url": curr_url,
+                "price": product['price_from_gel'],
+                "priceCurrency": "GEL",
+                "availability": "https://schema.org/PreOrder",
+                "itemCondition": "https://schema.org/NewCondition",
+                "seller": {
+                    "@type": "Organization",
+                    "name": "Farfale Living Georgia"
+                }
+            }
         }
     }
 
@@ -1044,7 +1153,8 @@ def generate_product_page(lang, product):
 {hreflangs}
   <meta property="og:title" content="{product['title']} | Farfale Living">
   <meta property="og:description" content="{desc[:160]}">
-  <meta property="og:image" content="../../{product['images'][0]}">
+{social_meta(lang, product['title'], desc[:160], f"{DOMAIN}/{product['images'][0]}", curr_url)}
+{favicon_links(2)}
   <link rel="stylesheet" href="../../styles/main.css">
   <script type="application/ld+json">
 {json.dumps(product_schema, ensure_ascii=False, indent=2)}
@@ -1128,6 +1238,78 @@ def generate_product_page(lang, product):
 """
     return html
 
+def generate_root_redirect():
+    return f"""<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farfale — Cool &amp; Comfy | farfale.ge</title>
+  <link rel="canonical" href="{DOMAIN}/ka/">
+  <link rel="alternate" hreflang="ka" href="{DOMAIN}/ka/">
+  <link rel="alternate" hreflang="ru" href="{DOMAIN}/ru/">
+  <link rel="alternate" hreflang="en" href="{DOMAIN}/en/">
+  <link rel="alternate" hreflang="x-default" href="{DOMAIN}/ka/">
+  <meta http-equiv="refresh" content="0; url=ka/">
+{favicon_links(0)}
+</head>
+<body>
+  <p style="font-family: sans-serif; text-align: center; margin-top: 20vh;">
+    <a href="ka/">Farfale — farfale.ge</a>
+  </p>
+  <script>
+    window.location.replace('ka/');
+  </script>
+</body>
+</html>
+"""
+
+def generate_404():
+    links = "\n".join(
+        f'      <a href="/{l}/" data-lang-link="{l}" style="display: inline-block; margin: 0 14px; padding: 14px 34px; '
+        f'border: 1px solid #bda27e; border-radius: 999px; color: #6d5c43; text-decoration: none; '
+        f'font-size: 0.95rem; letter-spacing: 1px;">{name}</a>'
+        for l, name in [("ka", "ქართული"), ("ru", "Русский"), ("en", "English")]
+    )
+    return f"""<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — Farfale | farfale.ge</title>
+  <meta name="robots" content="noindex">
+{favicon_links(0)}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body style="margin: 0; font-family: 'Montserrat', sans-serif; background: #f4f1ec; color: #3d3833; text-align: center;">
+  <div style="max-width: 640px; margin: 0 auto; padding: 18vh 24px 0;">
+    <img src="/assets/icons/favicon-192.png" data-farfale-icon alt="Farfale" style="width: 72px; height: 72px; border-radius: 16px;">
+    <h1 style="font-size: 4rem; margin: 24px 0 8px; color: #bda27e; font-weight: 300;">404</h1>
+    <p style="font-size: 1.05rem; margin: 0 0 8px;">გვერდი ვერ მოიძებნა / Page not found / Страница не найдена</p>
+    <p style="font-size: 0.9rem; color: #8a8378; margin: 0 0 40px;">farfale.ge — Cool &amp; Comfy • Vake, Tbilisi</p>
+    <nav>
+{links}
+    </nav>
+  </div>
+  <script>
+    // The custom 404 is served for any URL: rebase language links and the icon
+    // onto the deploy subpath (e.g. /sofa/ on GitHub Pages project sites).
+    (function() {{
+      var seg = location.pathname.split('/').filter(Boolean);
+      var base = seg.length > 1 ? '/' + seg[0] : '';
+      document.querySelectorAll('[data-lang-link]').forEach(function(a) {{
+        a.setAttribute('href', base + '/' + a.getAttribute('data-lang-link') + '/');
+      }});
+      var icon = document.querySelector('[data-farfale-icon]');
+      if (icon) icon.src = base + '/assets/icons/favicon-192.png';
+    }})();
+  </script>
+</body>
+</html>
+"""
+
 def generate_sitemap(all_urls):
     xml = ['<?xml version="1.0" encoding="UTF-8"?>']
     xml.append('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">')
@@ -1137,7 +1319,7 @@ def generate_sitemap(all_urls):
             loc = f"{DOMAIN}/{lang}/{path}" if path else f"{DOMAIN}/{lang}/"
             xml.append('  <url>')
             xml.append(f'    <loc>{loc}</loc>')
-            xml.append('    <lastmod>2026-11-02</lastmod>')
+            xml.append(f'    <lastmod>{LASTMOD}</lastmod>')
             xml.append('    <changefreq>weekly</changefreq>')
             xml.append('    <priority>0.9</priority>' if path else '    <priority>1.0</priority>')
             for alt_lang in LANGS:
@@ -1179,9 +1361,13 @@ def main():
             with open(os.path.join(prod_dir, f"{p['slug']}.html"), "w", encoding="utf-8") as f:
                 f.write(generate_product_page(lang, p))
 
-    # Root index.html: full rich homepage (Russian or default with language switcher and all sections)
+    # Root index.html: instant redirect to the Georgian homepage (default language)
     with open(os.path.join(BASE_DIR, "index.html"), "w", encoding="utf-8") as f:
-        f.write(generate_homepage("ru", depth=0))
+        f.write(generate_root_redirect())
+
+    # 404 page
+    with open(os.path.join(BASE_DIR, "404.html"), "w", encoding="utf-8") as f:
+        f.write(generate_404())
 
     # Sitemap
     with open(os.path.join(BASE_DIR, "sitemap.xml"), "w", encoding="utf-8") as f:

@@ -142,6 +142,11 @@
   .product-card__price {
     font-size: 0.85rem;
   }
+
+  /* Header WhatsApp pill duplicates the drawer CTA and overflows narrow screens */
+  .header__actions .btn--wa-head {
+    display: none;
+  }
 }
 
 

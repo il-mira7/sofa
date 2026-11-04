@@ -55,6 +55,11 @@
       "subtitle": "ცოცხალი ფოტოები ჩვენი მომხმარებლების ბინებიდან თბილისსა და ბათუმში",
       "btn": "მთელი Instagram-ის ნახვა"
     },
+    "journal": {
+      "badge": "FARFALE-ს ჟურნალი",
+      "title": "ჟურნალი: სიახლეები, ქეისები და გაიდები",
+      "subtitle": "წარმოება, ქსოვილები და რეალური პროექტები — ფაქტები და ციფრები Farfale-ს სახელოსნოდან"
+    },
     "process": {
       "badge": "ინდივიდუალური წარმოება",
       "title": "როგორ შევუკვეთოთ დივანი თქვენი ინტერიერისთვის",
@@ -211,6 +216,11 @@
       "subtitle": "Живые фотографии из квартир и домов наших клиентов в Тбилиси и Батуми",
       "btn": "Смотреть весь Instagram"
     },
+    "journal": {
+      "badge": "ЖУРНАЛ FARFALE",
+      "title": "Журнал: новости, кейсы и гайды",
+      "subtitle": "Производство, ткани и реальные проекты — факты и цифры из мастерской Farfale"
+    },
     "process": {
       "badge": "ИНДИВИДУАЛЬНОЕ ПРОИЗВОДСТВО",
       "title": "Как заказать диван под ваше пространство",
@@ -366,6 +376,11 @@
       "title": "Farfale in Real Living Spaces",
       "subtitle": "Real photographs from our clients' homes in Tbilisi and Batumi",
       "btn": "Explore our Instagram"
+    },
+    "journal": {
+      "badge": "FARFALE JOURNAL",
+      "title": "Journal: news, cases and guides",
+      "subtitle": "Production, fabrics and real projects — facts and figures from the Farfale workshop"
     },
     "process": {
       "badge": "BESPOKE PRODUCTION",

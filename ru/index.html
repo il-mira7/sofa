@@ -17,8 +17,19 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Farfale — Cool & Comfy | Дизайнерские диваны на заказ в Тбилиси | Шоурум в Ваке">
   <meta property="og:description" content="Cool & Comfy. Style, Comfort, Durability. Премиальные диваны и мягкая мебель на заказ в Тбилиси (Ваке, ул. Н. Бердзенишвили 2). 100+ европейских тканей, гарантия 5 лет, доставка по всей Грузии.">
-  <meta property="og:image" content="../assets/images/hero/hero-poster.webp">
+  <meta property="og:image" content="https://farfale.ge/assets/images/hero/hero-poster.webp">
   <meta property="og:url" content="https://farfale.ge/ru/">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:locale:alternate" content="ka_GE">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Farfale — Cool & Comfy | Дизайнерские диваны на заказ в Тбилиси | Шоурум в Ваке">
+  <meta name="twitter:description" content="Cool & Comfy. Style, Comfort, Durability. Премиальные диваны и мягкая мебель на заказ в Тбилиси (Ваке, ул. Н. Бердзенишвили 2). 100+ европейских тканей, гарантия 5 лет, доставка по всей Грузии.">
+  <meta name="twitter:image" content="https://farfale.ge/assets/images/hero/hero-poster.webp">
+  <link rel="icon" href="../assets/icons/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="../assets/icons/favicon-48.png" type="image/png" sizes="48x48">
+  <link rel="apple-touch-icon" href="../assets/icons/apple-touch-icon.png">
+  <link rel="preload" as="image" href="../assets/images/hero/hero-poster.webp" fetchpriority="high">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
@@ -29,9 +40,17 @@
   "@type": "FurnitureStore",
   "name": "Farfale Living Georgia",
   "image": "https://farfale.ge/assets/images/hero/hero-poster.webp",
+  "logo": "https://farfale.ge/assets/icons/favicon-512.png",
   "telephone": "+995555123456",
+  "email": "hello@farfale.ge",
   "url": "https://farfale.ge/ru/",
   "priceRange": "3600 - 15000 GEL",
+  "currenciesAccepted": "GEL",
+  "sameAs": [
+    "https://www.instagram.com/farfale.ge",
+    "https://t.me/farfale_ge",
+    "https://wa.me/995555123456"
+  ],
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "N. Berdzenishvili 2",
@@ -134,7 +153,7 @@
       <div class="container header__inner">
         <div class="header__left">
           <a href="../ru/index.html" class="logo" aria-label="Farfale">
-            <span class="logo__brand-title">farfale</span>
+            <img src="../assets/images/logo/farfale-logo.jpg" alt="Farfale" class="logo__img">
           </a>
           <nav class="header__desktop-menu" aria-label="Navigation">
             <a href="../ru/index.html#catalog" class="nav-link">Коллекции</a>
@@ -173,7 +192,7 @@
     <div class="mobile-menu__content">
       <div class="mobile-menu__top">
         <a href="../ru/index.html" class="logo" aria-label="Farfale">
-          <span class="logo__brand-title">farfale</span>
+          <img src="../assets/images/logo/farfale-logo.jpg" alt="Farfale" class="logo__img">
         </a>
         <button class="close-btn" id="closeDrawerBtn" aria-label="Close menu">&times;</button>
       </div>
@@ -227,7 +246,7 @@
   <!-- 1. Hero Section -->
   <section class="hero" id="hero">
     <div class="hero__video-wrapper">
-      <video class="hero__video" autoplay loop muted playsinline poster="../assets/images/hero/hero-poster.webp">
+      <video class="hero__video" autoplay loop muted playsinline preload="metadata" poster="../assets/images/hero/hero-poster.webp">
         <source src="../assets/images/hero/hero-video.mp4" type="video/mp4">
       </video>
       <div class="hero__overlay"></div>
@@ -574,6 +593,65 @@
     </div>
   </section>
 
+  <!-- 6.5 Journal: own news, cases & guides (GEO content) -->
+  <section class="section" id="journal">
+    <div class="container">
+      <div class="section-header" style="text-align: center; margin-bottom: 40px;">
+        <span class="consult-tag" style="margin: 0 auto 12px auto;">ЖУРНАЛ FARFALE</span>
+        <h2 class="section-title">Журнал: новости, кейсы и гайды</h2>
+        <p class="section-subtitle" style="color: var(--color-text-muted);">Производство, ткани и реальные проекты — факты и цифры из мастерской Farfale</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+        
+        <article style="background: #ffffff; border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden;">
+          <img src="../assets/images/showroom/showroom-interior.webp" alt="В шоурум в Ваке приехала новая партия европейских тканей" style="width: 100%; height: 200px; object-fit: cover; display: block;" loading="lazy">
+          <div style="padding: 20px 22px;">
+            <time datetime="2026-11-01" style="font-size: 0.78rem; letter-spacing: 0.6px; text-transform: uppercase; color: var(--color-text-muted);">1 ноября 2026</time>
+            <h3 style="margin: 10px 0; font-size: 1.05rem; line-height: 1.35;">В шоурум в Ваке приехала новая партия европейских тканей</h3>
+            <p style="font-size: 0.9rem; line-height: 1.6; color: var(--color-text-muted); margin: 0;">Более 100 фактур — велюр, букле, микрокорду и шенилл. Каждый образец можно потрогать и сравнить вживую в шоуруме на ул. Бердзенишвили, 2, ежедневно с 11:00 до 20:00.</p>
+          </div>
+        </article>
+        
+        <article style="background: #ffffff; border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden;">
+          <img src="../assets/images/products/cloud/cloud-01.webp" alt="CLOUD LOUNGE в пентхаусе в Ваке: гостиная 18 м²" style="width: 100%; height: 200px; object-fit: cover; display: block;" loading="lazy">
+          <div style="padding: 20px 22px;">
+            <time datetime="2026-10-18" style="font-size: 0.78rem; letter-spacing: 0.6px; text-transform: uppercase; color: var(--color-text-muted);">18 октября 2026</time>
+            <h3 style="margin: 10px 0; font-size: 1.05rem; line-height: 1.35;">CLOUD LOUNGE в пентхаусе в Ваке: гостиная 18 м²</h3>
+            <p style="font-size: 0.9rem; line-height: 1.6; color: var(--color-text-muted); margin: 0;">Модульная конфигурация из пяти секций в букле — производство заняло 28 рабочих дней. Каждый модуль самостоятельный, поэтому планировку можно менять в любой момент.</p>
+          </div>
+        </article>
+        
+        <article style="background: #ffffff; border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden;">
+          <img src="../assets/images/quality/anatomy-sofa-ge.webp" alt="Анатомия дивана Farfale: почему каркас из берёзовой фанеры служит годами" style="width: 100%; height: 200px; object-fit: cover; display: block;" loading="lazy">
+          <div style="padding: 20px 22px;">
+            <time datetime="2026-10-05" style="font-size: 0.78rem; letter-spacing: 0.6px; text-transform: uppercase; color: var(--color-text-muted);">5 октября 2026</time>
+            <h3 style="margin: 10px 0; font-size: 1.05rem; line-height: 1.35;">Анатомия дивана Farfale: почему каркас из берёзовой фанеры служит годами</h3>
+            <p style="font-size: 0.9rem; line-height: 1.6; color: var(--color-text-muted); margin: 0;">Несущий каркас из берёзовой фанеры и блок независимых пружин — именно поэтому мы даём на каркас официальную гарантию 5 лет.</p>
+          </div>
+        </article>
+        
+        <article style="background: #ffffff; border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden;">
+          <img src="../assets/images/products/nordic/nordic-01.webp" alt="Доставка в Батуми и Кутаиси — два раза в неделю" style="width: 100%; height: 200px; object-fit: cover; display: block;" loading="lazy">
+          <div style="padding: 20px 22px;">
+            <time datetime="2026-09-21" style="font-size: 0.78rem; letter-spacing: 0.6px; text-transform: uppercase; color: var(--color-text-muted);">21 сентября 2026</time>
+            <h3 style="margin: 10px 0; font-size: 1.05rem; line-height: 1.35;">Доставка в Батуми и Кутаиси — два раза в неделю</h3>
+            <p style="font-size: 0.9rem; line-height: 1.6; color: var(--color-text-muted); margin: 0;">Собственная служба доставки дважды в неделю отправляется в Батуми, Кутаиси и Рустави. Перевозка и сборка на месте включены в стоимость.</p>
+          </div>
+        </article>
+        
+        <article style="background: #ffffff; border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden;">
+          <img src="../assets/images/showroom/showroom-street.webp" alt="Как выбрать диван за один визит в шоурум" style="width: 100%; height: 200px; object-fit: cover; display: block;" loading="lazy">
+          <div style="padding: 20px 22px;">
+            <time datetime="2026-09-02" style="font-size: 0.78rem; letter-spacing: 0.6px; text-transform: uppercase; color: var(--color-text-muted);">2 сентября 2026</time>
+            <h3 style="margin: 10px 0; font-size: 1.05rem; line-height: 1.35;">Как выбрать диван за один визит в шоурум</h3>
+            <p style="font-size: 0.9rem; line-height: 1.6; color: var(--color-text-muted); margin: 0;">Замерьте комнату, примерьте три-четыре модели и сравните образцы тканей — консультант поможет принять решение за один визит.</p>
+          </div>
+        </article>
+        
+      </div>
+    </div>
+  </section>
+
   <!-- 7. Flagship Showroom Showcase on Homepage -->
   <section class="section showrooms-section" id="showrooms">
     <div class="container">
@@ -758,6 +836,9 @@
         <h4 class="footer__heading">Контакты</h4>
         <p class="footer__contact-item">
           <strong>+995 555 12 34 56</strong>
+        </p>
+        <p class="footer__contact-item">
+          <a href="mailto:hello@farfale.ge" style="color: inherit;">hello@farfale.ge</a>
         </p>
         <p class="footer__contact-item">
           11:00 — 20:00

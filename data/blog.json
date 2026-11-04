@@ -1,58 +1,72 @@
 [
   {
-    "title": "Открытие нового пространства BOCA ROOM x FIT-OUT BOUTIQUE (ФИТ-АУТ БУТИК)",
-    "descr": "",
-    "date": "2026-03-04",
-    "image": "https://static.tildacdn.com/tild3134-6532-4434-a333-316661633033/Frame_692.webp",
-    "url": "https://boca.su/news/showroom_dubai"
+    "date": "2026-11-01",
+    "image": "assets/images/showroom/showroom-interior.webp",
+    "title": {
+      "ka": "ვაკის შოურუმში ევროპული ქსოვილების ახალი ნიმუშები ჩამოვიდა",
+      "ru": "В шоурум в Ваке приехала новая партия европейских тканей",
+      "en": "New European fabric samples have arrived at our Vake showroom"
+    },
+    "descr": {
+      "ka": "100-ზე მეტი ფაქტურა — ხავერდი, ბუკლე, მიკრო-კორდი და შენილი. ყველა ნიმუშს შეგიძლიათ შეეხოთ და შეადაროთ შოურუმში, ბერძენიშვილის ქუჩა 2-ში, ყოველდღე 11:00–20:00.",
+      "ru": "Более 100 фактур — велюр, букле, микрокорду и шенилл. Каждый образец можно потрогать и сравнить вживую в шоуруме на ул. Бердзенишвили, 2, ежедневно с 11:00 до 20:00.",
+      "en": "Over 100 textures — velvet, bouclé, micro-corduroy and chenille. Touch and compare every sample in person at our Berdzenishvili 2 showroom, open daily 11:00–20:00."
+    }
   },
   {
-    "title": "BOCA ROOM в Hideout Residence",
-    "descr": "",
-    "date": "2026-02-25",
-    "image": "https://static.tildacdn.com/tild3832-3638-4237-b866-353462373037/1111.webp",
-    "url": "https://boca.su/news/tommy_hideout"
+    "date": "2026-10-18",
+    "image": "assets/images/products/cloud/cloud-01.webp",
+    "title": {
+      "ka": "CLOUD LOUNGE ვაკის პენტჰაუსში: 18 მ² სალონის ქეისი",
+      "ru": "CLOUD LOUNGE в пентхаусе в Ваке: гостиная 18 м²",
+      "en": "CLOUD LOUNGE in a Vake penthouse: an 18 m² living room case"
+    },
+    "descr": {
+      "ka": "მოდულური კონფიგურაცია ხუთი სექციით ბუკლეს ქსოვილში — წარმოებას 28 სამუშაო დღე დასჭირდა. თითოეული მოდული დამოუკიდებელია, ამიტომ განლაგება ნებისმიერ დროს შეიძლება შეიცვალოს.",
+      "ru": "Модульная конфигурация из пяти секций в букле — производство заняло 28 рабочих дней. Каждый модуль самостоятельный, поэтому планировку можно менять в любой момент.",
+      "en": "A five-module configuration in bouclé, produced in 28 working days. Every module is freestanding, so the layout can be rearranged at any time."
+    }
   },
   {
-    "title": "Презентация DOVLET HOUSE с гастрономическим мастер-классом",
-    "descr": "",
-    "date": "2025-11-20",
-    "image": "https://static.tildacdn.com/tild6632-6333-4230-a133-656363373534/IMG_4384_cr.jpg",
-    "url": "https://boca.su/news/dovlet_house_20_11_25"
+    "date": "2026-10-05",
+    "image": "assets/images/quality/anatomy-sofa-ge.webp",
+    "title": {
+      "ka": "Farfale-ს დივნის ანატომია: რატომ ინარჩუნებს არყის ფანერის კარკასი ფორმას წლების განმავლობაში",
+      "ru": "Анатомия дивана Farfale: почему каркас из берёзовой фанеры служит годами",
+      "en": "The anatomy of a Farfale sofa: why a birch-plywood frame lasts for years"
+    },
+    "descr": {
+      "ka": "მზიდი კარკასი არყის ფანერიდან და დამოუკიდებელი ზამბარების სისტემა — სწორედ ამის გამო ვაძლევთ კარკასს ხუთი წლის ოფიციალურ გარანტიას.",
+      "ru": "Несущий каркас из берёзовой фанеры и блок независимых пружин — именно поэтому мы даём на каркас официальную гарантию 5 лет.",
+      "en": "A load-bearing birch-plywood frame and a pocket-spring system underneath — the reason we back every frame with an official 5-year warranty."
+    }
   },
   {
-    "title": "Вечер с дегустацией вин SimplePrive",
-    "descr": "",
-    "date": "2025-10-27",
-    "image": "https://static.tildacdn.com/tild3930-3534-4834-b864-616331643064/bj.jpg",
-    "url": "https://boca.su/news/boca_room_x_simple_prive"
+    "date": "2026-09-21",
+    "image": "assets/images/products/nordic/nordic-01.webp",
+    "title": {
+      "ka": "მიწოდება ბათუმსა და ქუთაისში — კვირაში ორჯერ",
+      "ru": "Доставка в Батуми и Кутаиси — два раза в неделю",
+      "en": "Delivery to Batumi and Kutaisi — twice a week"
+    },
+    "descr": {
+      "ka": "ჩვენი საკუთარი მიწოდების სამსახური კვირაში ორჯერ გადის ბათუმში, ქუთაისსა და რუსთავში. ტრანსპორტირება და ადგილზე აწყობა ფასში შედის.",
+      "ru": "Собственная служба доставки дважды в неделю отправляется в Батуми, Кутаиси и Рустави. Перевозка и сборка на месте включены в стоимость.",
+      "en": "Our own delivery crew departs for Batumi, Kutaisi and Rustavi twice a week. Transport and on-site assembly are included in the price."
+    }
   },
   {
-    "title": "Презентация корпусной мебели NIXI в шоуруме BOCA ROOM",
-    "descr": "",
-    "date": "2025-10-21",
-    "image": "https://static.tildacdn.com/tild6439-3431-4034-a165-373864353462/123.jpg",
-    "url": "https://boca.su/news/nixi_17_10"
-  },
-  {
-    "title": "Диван BOCA FOO-FIVE на выставке художницы Маши Янковской",
-    "descr": "",
-    "date": "2025-10-21",
-    "image": "https://static.tildacdn.com/tild3838-6437-4636-a137-313866386266/yankovskaya.webp",
-    "url": "https://boca.su/news/foo_five_yankovskaya"
-  },
-  {
-    "title": "Вечер инноваций с VITA SMART",
-    "descr": "",
-    "date": "2025-10-03",
-    "image": "https://static.tildacdn.com/tild3564-3537-4764-b264-656666376239/_.jpg",
-    "url": "https://boca.su/news/03_10_25"
-  },
-  {
-    "title": "Совместный проект BOCA ROOM × Британская высшая школа дизайна",
-    "descr": "",
-    "date": "2025-09-23",
-    "image": "https://static.tildacdn.com/tila3562-3731-4633-a333-663433633563/AVA-2.webp",
-    "url": "https://boca.su/news/boca_x_britishdesign"
+    "date": "2026-09-02",
+    "image": "assets/images/showroom/showroom-street.webp",
+    "title": {
+      "ka": "როგორ ავირჩიოთ დივანი ერთი ვიზიტით შოურუმში",
+      "ru": "Как выбрать диван за один визит в шоурум",
+      "en": "How to choose a sofa in a single showroom visit"
+    },
+    "descr": {
+      "ka": "გაიზომეთ ოთახი, მოისინჯეთ სამ-ოთხი მოდელი და შეადარეთ ქსოვილის ნიმუშები — კონსულტანტი ერთი ვიზიტის ფარგლებში დაგეხმარებათ გადაწყვეტილების მიღებაში.",
+      "ru": "Замерьте комнату, примерьте три-четыре модели и сравните образцы тканей — консультант поможет принять решение за один визит.",
+      "en": "Measure your room, try three or four models and compare fabric samples — our consultants help you decide within a single visit."
+    }
   }
 ]

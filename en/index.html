@@ -17,8 +17,19 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Farfale — Cool & Comfy | Custom-Made Designer Sofas in Tbilisi | Vake Showroom">
   <meta property="og:description" content="Cool & Comfy. Style, Comfort, Durability. Custom-Made Sofas Crafted for Your Space in Tbilisi (Vake, 2 N. Berdzenishvili St). 100+ European fabrics, 5-year warranty, delivery across Georgia.">
-  <meta property="og:image" content="../assets/images/hero/hero-poster.webp">
+  <meta property="og:image" content="https://farfale.ge/assets/images/hero/hero-poster.webp">
   <meta property="og:url" content="https://farfale.ge/en/">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="ka_GE">
+  <meta property="og:locale:alternate" content="ru_RU">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Farfale — Cool & Comfy | Custom-Made Designer Sofas in Tbilisi | Vake Showroom">
+  <meta name="twitter:description" content="Cool & Comfy. Style, Comfort, Durability. Custom-Made Sofas Crafted for Your Space in Tbilisi (Vake, 2 N. Berdzenishvili St). 100+ European fabrics, 5-year warranty, delivery across Georgia.">
+  <meta name="twitter:image" content="https://farfale.ge/assets/images/hero/hero-poster.webp">
+  <link rel="icon" href="../assets/icons/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="../assets/icons/favicon-48.png" type="image/png" sizes="48x48">
+  <link rel="apple-touch-icon" href="../assets/icons/apple-touch-icon.png">
+  <link rel="preload" as="image" href="../assets/images/hero/hero-poster.webp" fetchpriority="high">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
@@ -29,9 +40,17 @@
   "@type": "FurnitureStore",
   "name": "Farfale Living Georgia",
   "image": "https://farfale.ge/assets/images/hero/hero-poster.webp",
+  "logo": "https://farfale.ge/assets/icons/favicon-512.png",
   "telephone": "+995555123456",
+  "email": "hello@farfale.ge",
   "url": "https://farfale.ge/en/",
   "priceRange": "3600 - 15000 GEL",
+  "currenciesAccepted": "GEL",
+  "sameAs": [
+    "https://www.instagram.com/farfale.ge",
+    "https://t.me/farfale_ge",
+    "https://wa.me/995555123456"
+  ],
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "N. Berdzenishvili 2",
@@ -134,7 +153,7 @@
       <div class="container header__inner">
         <div class="header__left">
           <a href="../en/index.html" class="logo" aria-label="Farfale">
-            <span class="logo__brand-title">farfale</span>
+            <img src="../assets/images/logo/farfale-logo.jpg" alt="Farfale" class="logo__img">
           </a>
           <nav class="header__desktop-menu" aria-label="Navigation">
             <a href="../en/index.html#catalog" class="nav-link">Collections</a>
@@ -173,7 +192,7 @@
     <div class="mobile-menu__content">
       <div class="mobile-menu__top">
         <a href="../en/index.html" class="logo" aria-label="Farfale">
-          <span class="logo__brand-title">farfale</span>
+          <img src="../assets/images/logo/farfale-logo.jpg" alt="Farfale" class="logo__img">
         </a>
         <button class="close-btn" id="closeDrawerBtn" aria-label="Close menu">&times;</button>
       </div>
@@ -227,7 +246,7 @@
   <!-- 1. Hero Section -->
   <section class="hero" id="hero">
     <div class="hero__video-wrapper">
-      <video class="hero__video" autoplay loop muted playsinline poster="../assets/images/hero/hero-poster.webp">
+      <video class="hero__video" autoplay loop muted playsinline preload="metadata" poster="../assets/images/hero/hero-poster.webp">
         <source src="../assets/images/hero/hero-video.mp4" type="video/mp4">
       </video>
       <div class="hero__overlay"></div>
@@ -574,6 +593,65 @@
     </div>
   </section>
 
+  <!-- 6.5 Journal: own news, cases & guides (GEO content) -->
+  <section class="section" id="journal">
+    <div class="container">
+      <div class="section-header" style="text-align: center; margin-bottom: 40px;">
+        <span class="consult-tag" style="margin: 0 auto 12px auto;">FARFALE JOURNAL</span>
+        <h2 class="section-title">Journal: news, cases and guides</h2>
+        <p class="section-subtitle" style="color: var(--color-text-muted);">Production, fabrics and real projects — facts and figures from the Farfale workshop</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+        
+        <article style="background: #ffffff; border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden;">
+          <img src="../assets/images/showroom/showroom-interior.webp" alt="New European fabric samples have arrived at our Vake showroom" style="width: 100%; height: 200px; object-fit: cover; display: block;" loading="lazy">
+          <div style="padding: 20px 22px;">
+            <time datetime="2026-11-01" style="font-size: 0.78rem; letter-spacing: 0.6px; text-transform: uppercase; color: var(--color-text-muted);">November 1, 2026</time>
+            <h3 style="margin: 10px 0; font-size: 1.05rem; line-height: 1.35;">New European fabric samples have arrived at our Vake showroom</h3>
+            <p style="font-size: 0.9rem; line-height: 1.6; color: var(--color-text-muted); margin: 0;">Over 100 textures — velvet, bouclé, micro-corduroy and chenille. Touch and compare every sample in person at our Berdzenishvili 2 showroom, open daily 11:00–20:00.</p>
+          </div>
+        </article>
+        
+        <article style="background: #ffffff; border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden;">
+          <img src="../assets/images/products/cloud/cloud-01.webp" alt="CLOUD LOUNGE in a Vake penthouse: an 18 m² living room case" style="width: 100%; height: 200px; object-fit: cover; display: block;" loading="lazy">
+          <div style="padding: 20px 22px;">
+            <time datetime="2026-10-18" style="font-size: 0.78rem; letter-spacing: 0.6px; text-transform: uppercase; color: var(--color-text-muted);">October 18, 2026</time>
+            <h3 style="margin: 10px 0; font-size: 1.05rem; line-height: 1.35;">CLOUD LOUNGE in a Vake penthouse: an 18 m² living room case</h3>
+            <p style="font-size: 0.9rem; line-height: 1.6; color: var(--color-text-muted); margin: 0;">A five-module configuration in bouclé, produced in 28 working days. Every module is freestanding, so the layout can be rearranged at any time.</p>
+          </div>
+        </article>
+        
+        <article style="background: #ffffff; border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden;">
+          <img src="../assets/images/quality/anatomy-sofa-ge.webp" alt="The anatomy of a Farfale sofa: why a birch-plywood frame lasts for years" style="width: 100%; height: 200px; object-fit: cover; display: block;" loading="lazy">
+          <div style="padding: 20px 22px;">
+            <time datetime="2026-10-05" style="font-size: 0.78rem; letter-spacing: 0.6px; text-transform: uppercase; color: var(--color-text-muted);">October 5, 2026</time>
+            <h3 style="margin: 10px 0; font-size: 1.05rem; line-height: 1.35;">The anatomy of a Farfale sofa: why a birch-plywood frame lasts for years</h3>
+            <p style="font-size: 0.9rem; line-height: 1.6; color: var(--color-text-muted); margin: 0;">A load-bearing birch-plywood frame and a pocket-spring system underneath — the reason we back every frame with an official 5-year warranty.</p>
+          </div>
+        </article>
+        
+        <article style="background: #ffffff; border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden;">
+          <img src="../assets/images/products/nordic/nordic-01.webp" alt="Delivery to Batumi and Kutaisi — twice a week" style="width: 100%; height: 200px; object-fit: cover; display: block;" loading="lazy">
+          <div style="padding: 20px 22px;">
+            <time datetime="2026-09-21" style="font-size: 0.78rem; letter-spacing: 0.6px; text-transform: uppercase; color: var(--color-text-muted);">September 21, 2026</time>
+            <h3 style="margin: 10px 0; font-size: 1.05rem; line-height: 1.35;">Delivery to Batumi and Kutaisi — twice a week</h3>
+            <p style="font-size: 0.9rem; line-height: 1.6; color: var(--color-text-muted); margin: 0;">Our own delivery crew departs for Batumi, Kutaisi and Rustavi twice a week. Transport and on-site assembly are included in the price.</p>
+          </div>
+        </article>
+        
+        <article style="background: #ffffff; border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden;">
+          <img src="../assets/images/showroom/showroom-street.webp" alt="How to choose a sofa in a single showroom visit" style="width: 100%; height: 200px; object-fit: cover; display: block;" loading="lazy">
+          <div style="padding: 20px 22px;">
+            <time datetime="2026-09-02" style="font-size: 0.78rem; letter-spacing: 0.6px; text-transform: uppercase; color: var(--color-text-muted);">September 2, 2026</time>
+            <h3 style="margin: 10px 0; font-size: 1.05rem; line-height: 1.35;">How to choose a sofa in a single showroom visit</h3>
+            <p style="font-size: 0.9rem; line-height: 1.6; color: var(--color-text-muted); margin: 0;">Measure your room, try three or four models and compare fabric samples — our consultants help you decide within a single visit.</p>
+          </div>
+        </article>
+        
+      </div>
+    </div>
+  </section>
+
   <!-- 7. Flagship Showroom Showcase on Homepage -->
   <section class="section showrooms-section" id="showrooms">
     <div class="container">
@@ -758,6 +836,9 @@
         <h4 class="footer__heading">Contacts</h4>
         <p class="footer__contact-item">
           <strong>+995 555 12 34 56</strong>
+        </p>
+        <p class="footer__contact-item">
+          <a href="mailto:hello@farfale.ge" style="color: inherit;">hello@farfale.ge</a>
         </p>
         <p class="footer__contact-item">
           11:00 — 20:00
