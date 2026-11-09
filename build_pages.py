@@ -276,7 +276,7 @@ def get_footer(lang, depth=0):
       </div>
 
       <div class="footer__col">
-        <h4 class="footer__heading">{t['nav']['showroom']} & SEO</h4>
+        <h4 class="footer__heading">{t['nav']['info']}</h4>
         <ul class="footer__links">
           <li><a href="{showroom_url}">{t['nav']['showroom']}</a></li>
           <li><a href="{delivery_url}">{t['nav']['delivery']}</a></li>
@@ -550,8 +550,8 @@ def generate_homepage(lang, depth=1):
   <!-- 3. Quality & Sofa Anatomy Section -->
   <section class="quality-section" id="quality">
     <div class="container">
-      <div class="section-header" style="text-align: center; margin-bottom: 56px;">
-        <span class="consult-tag" style="margin: 0 auto 12px auto;">{t['quality']['badge']}</span>
+      <div class="section-header section-header--center" style="margin-bottom: 56px;">
+        <span class="consult-tag">{t['quality']['badge']}</span>
         <h2 class="section-title" style="font-size: 2.2rem;">{t['quality']['title']}</h2>
         <p class="section-subtitle" style="max-width: 720px; margin: 12px auto 0 auto; color: var(--color-text-muted);">
           {t['quality']['subtitle']}
@@ -628,8 +628,8 @@ def generate_homepage(lang, depth=1):
   <!-- 5. How to Order Process -->
   <section class="process-section" id="process">
     <div class="container">
-      <div class="section-header" style="text-align: center;">
-        <span class="consult-tag" style="margin: 0 auto 12px auto;">{t['process']['badge']}</span>
+      <div class="section-header section-header--center">
+        <span class="consult-tag">{t['process']['badge']}</span>
         <h2 class="section-title">{t['process']['title']}</h2>
         <p class="section-subtitle" style="color: var(--color-text-muted);">{t['process']['subtitle']}</p>
       </div>
@@ -683,8 +683,8 @@ def generate_homepage(lang, depth=1):
   <!-- 6.5 Journal: own news, cases & guides (GEO content) -->
   <section class="section" id="journal">
     <div class="container">
-      <div class="section-header" style="text-align: center; margin-bottom: 40px;">
-        <span class="consult-tag" style="margin: 0 auto 12px auto;">{t['journal']['badge']}</span>
+      <div class="section-header section-header--center" style="margin-bottom: 40px;">
+        <span class="consult-tag">{t['journal']['badge']}</span>
         <h2 class="section-title">{t['journal']['title']}</h2>
         <p class="section-subtitle" style="color: var(--color-text-muted);">{t['journal']['subtitle']}</p>
       </div>
@@ -697,8 +697,8 @@ def generate_homepage(lang, depth=1):
   <!-- 7. Flagship Showroom Showcase on Homepage -->
   <section class="section showrooms-section" id="showrooms">
     <div class="container">
-      <div class="section-header" style="text-align: center; margin-bottom: 40px;">
-        <span class="consult-tag" style="margin: 0 auto 12px auto;">{t['showroomPage']['h1']}</span>
+      <div class="section-header section-header--center" style="margin-bottom: 40px;">
+        <span class="consult-tag">{t['showroomPage']['h1']}</span>
         <h2 class="section-title">{t['showroomPage']['title']}</h2>
         <p class="section-subtitle" style="color: var(--color-text-muted);">
           {t['showroomPage']['address']} • {t['showroomPage']['hours']}
@@ -747,8 +747,8 @@ def generate_homepage(lang, depth=1):
   <!-- 8. FAQ Section with Schema.org -->
   <section class="faq-section" id="faq">
     <div class="container">
-      <div class="section-header" style="text-align: center;">
-        <span class="consult-tag" style="margin: 0 auto 12px auto;">FAQ</span>
+      <div class="section-header section-header--center">
+        <span class="consult-tag">FAQ</span>
         <h2 class="section-title">{t['faq']['title']}</h2>
         <p class="section-subtitle" style="color: var(--color-text-muted);">{t['faq']['subtitle']}</p>
       </div>
@@ -1022,7 +1022,7 @@ def generate_delivery_page(lang):
 
   <section class="section">
     <div class="container">
-      <div class="section-header" style="text-align: center; max-width: 800px; margin: 0 auto 48px auto;">
+      <div class="section-header section-header--center" style="max-width: 800px; margin: 0 auto 48px auto;">
         <span class="consult-tag">{t['nav']['delivery']}</span>
         <h1 class="section-title">{dp['h1']}</h1>
         <p class="section-subtitle" style="color: var(--color-text-muted); margin-top: 12px;">{dp['intro']}</p>

@@ -12,7 +12,8 @@
       "portfolio": "ინტერიერები",
       "showroom": "შოურუმი ვაკეში",
       "delivery": "მიწოდება და აწყობა",
-      "contacts": "კონტაქტები"
+      "contacts": "კონტაქტები",
+      "info": "ინფორმაცია"
     },
     "topBar": "შოურუმი ვაკეში: თბილისი, ნ. ბერძენიშვილის 2 • დივანები შეკვეთით 25 დღიდან • მიწოდება მთელ საქართველოში",
     "hero": {
@@ -173,7 +174,8 @@
       "portfolio": "Интерьеры",
       "showroom": "Шоурум в Ваке",
       "delivery": "Доставка и сборка",
-      "contacts": "Контакты"
+      "contacts": "Контакты",
+      "info": "Информация"
     },
     "topBar": "Шоурум в Ваке: Тбилиси, ул. Н. Бердзенишвили 2 • Диваны на заказ от 25 дней • Доставка по всей Грузии",
     "hero": {
@@ -334,7 +336,8 @@
       "portfolio": "Interiors",
       "showroom": "Vake Showroom",
       "delivery": "Delivery & Assembly",
-      "contacts": "Contacts"
+      "contacts": "Contacts",
+      "info": "Information"
     },
     "topBar": "Showroom in Vake: Tbilisi, 2 N. Berdzenishvili St • Custom Sofas from 25 Days • Delivery Across Georgia",
     "hero": {
