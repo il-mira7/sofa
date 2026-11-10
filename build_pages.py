@@ -258,7 +258,7 @@ def get_footer(lang, depth=0):
           <span style="font-size: 0.85rem; color: #888;">{addr_sub}</span>
         </div>
         <div class="footer__socials">
-          <a href="https://www.instagram.com/farfale.ge" target="_blank" rel="noopener" class="footer__soc-link">Instagram</a>
+          <a href="{site_data['contacts']['instagram']}" target="_blank" rel="noopener" class="footer__soc-link">Instagram</a>
           <a href="{site_data['contacts']['whatsapp']}" target="_blank" rel="noopener" class="footer__soc-link">WhatsApp</a>
           <a href="{site_data['contacts']['telegram']}" target="_blank" rel="noopener" class="footer__soc-link">Telegram</a>
         </div>
@@ -341,7 +341,7 @@ def generate_homepage(lang, depth=1):
         "name": "Farfale Living Georgia",
         "image": f"{DOMAIN}/assets/images/hero/hero-poster.webp",
         "logo": f"{DOMAIN}/assets/icons/favicon-512.png",
-        "telephone": site_data['contacts']['phoneRaw'],
+        "telephone": site_data['contacts']['phone'],
         "email": site_data['contacts']['email'],
         "url": curr_url,
         "priceRange": "3600 - 15000 GEL",
@@ -535,7 +535,7 @@ def generate_homepage(lang, depth=1):
       <div class="section-header">
         <div>
           <h2 class="section-title">{t['nav']['catalog']}</h2>
-          <span class="section-count">{len(products)} {t['hero']['ctaModels'].lower()}</span>
+          <span class="section-count">{len(products)} {'მოდელი' if lang == 'ka' else ('models' if lang == 'en' else 'моделей')}</span>
         </div>
         <div class="catalog-controls">
           <span class="catalog-hint">{t['hero']['statTime']} • GEL (₾)</span>
@@ -817,7 +817,7 @@ def generate_showroom_page(lang):
         "name": f"Farfale Living Showroom — {sp['h1']}",
         "image": f"{DOMAIN}/assets/images/showroom/showroom-street.webp",
         "logo": f"{DOMAIN}/assets/icons/favicon-512.png",
-        "telephone": site_data['contacts']['phoneRaw'],
+        "telephone": site_data['contacts']['phone'],
         "email": site_data['contacts']['email'],
         "url": curr_url,
         "sameAs": [

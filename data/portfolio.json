@@ -9,8 +9,8 @@
     "ka": "ცოცხალი ფოტოები ჩვენი მომხმარებლების ბინებიდან თბილისსა და ბათუმში. თვალი ადევნეთ ახალ პროექტებს ჩვენს Instagram-ზე",
     "en": "Authentic photographs from our clients' residences in Tbilisi and Batumi. Follow our latest custom installations on Instagram"
   },
-  "instagramLink": "https://www.instagram.com/farfale.ge",
-  "instagramHandle": "@farfale.ge",
+  "instagramLink": "https://www.instagram.com/farfalle_living",
+  "instagramHandle": "@farfalle_living",
   "projects": [
     {
       "id": "project-01",
@@ -125,6 +125,82 @@
         "en": "Tbilisi, Dighomi"
       },
       "image": "assets/images/portfolio/interior-09.webp"
+    },
+    {
+      "id": "project-07",
+      "title": {
+        "ru": "Терраса с видом на город",
+        "ka": "ტერასა ქალაქის ხედით",
+        "en": "City-View Terrace"
+      },
+      "model": {
+        "ru": "Cube Lounge на террасе",
+        "ka": "Cube Lounge ტერასაზე",
+        "en": "Cube Lounge on the terrace"
+      },
+      "location": {
+        "ru": "Тбилиси, Ваке",
+        "ka": "თბილისი, ვაკე",
+        "en": "Tbilisi, Vake"
+      },
+      "image": "assets/images/portfolio/interior-07.webp"
+    },
+    {
+      "id": "project-08",
+      "title": {
+        "ru": "Гостиная с деревянными панелями",
+        "ka": "მისაღები ოთახი ხის პანელებით",
+        "en": "Wood-Panelled Living Room"
+      },
+      "model": {
+        "ru": "Cloud Lounge в букле",
+        "ka": "Cloud Lounge ბუკლეში",
+        "en": "Cloud Lounge in bouclé"
+      },
+      "location": {
+        "ru": "Тбилиси, Сабуртало",
+        "ka": "თბილისი, საბურთალო",
+        "en": "Tbilisi, Saburtalo"
+      },
+      "image": "assets/images/portfolio/interior-08.webp"
+    },
+    {
+      "id": "project-09",
+      "title": {
+        "ru": "Классическая гостиная в Ваке",
+        "ka": "კლასიკური მისაღები ვაკეში",
+        "en": "Classic Living Room in Vake"
+      },
+      "model": {
+        "ru": "Cloud Lounge в рогожке",
+        "ka": "Cloud Lounge როგოჟკაში",
+        "en": "Cloud Lounge in textured weave"
+      },
+      "location": {
+        "ru": "Тбилиси, Ваке",
+        "ka": "თბილისი, ვაკე",
+        "en": "Tbilisi, Vake"
+      },
+      "image": "assets/images/portfolio/interior-09.webp"
+    },
+    {
+      "id": "project-10",
+      "title": {
+        "ru": "Семейный остров для отдыха",
+        "ka": "საოჯახო კუნძულ-დივანი",
+        "en": "Family Island Sofa"
+      },
+      "model": {
+        "ru": "Curve Organic в букле",
+        "ka": "Curve Organic ბუკლეში",
+        "en": "Curve Organic in bouclé"
+      },
+      "location": {
+        "ru": "Батуми",
+        "ka": "ბათუმი",
+        "en": "Batumi"
+      },
+      "image": "assets/images/portfolio/interior-10.webp"
     }
   ]
 }

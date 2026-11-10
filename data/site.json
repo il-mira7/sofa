@@ -8,13 +8,13 @@
     "instagramBio": "Cool & Comfy | Style Comfort Durability | Custom-Made Sofas Crafted for Your Space | Vake, Tbilisi N. Berdzenishvili 2"
   },
   "contacts": {
-    "phone": "+995 555 12 34 56",
-    "phoneRaw": "+995555123456",
-    "whatsapp": "https://wa.me/995555123456",
-    "telegram": "https://t.me/farfale_ge",
-    "instagram": "https://www.instagram.com/farfale.ge",
-    "instagramHandle": "@farfale.ge",
-    "email": "hello@farfale.ge",
+    "phone": "+995 599 29 80 68",
+    "phoneRaw": "995599298068",
+    "whatsapp": "https://wa.me/995599298068",
+    "telegram": "https://t.me/+995599298068",
+    "instagram": "https://www.instagram.com/farfalle_living",
+    "instagramHandle": "@farfalle_living",
+    "email": "rukhadzenatia12@gmail.com",
     "address": "Vake, Tbilisi, N. Berdzenishvili 2",
     "addressGe": "ვაკე, თბილისი, ნ. ბერძენიშვილის ქუჩა 2",
     "hoursWeekdays": "11:00 — 20:00",
@@ -37,10 +37,22 @@
     "ctaWhatsApp": "Обсудить в WhatsApp",
     "ctaShowroom": "Записаться в шоурум",
     "stats": [
-      { "val": "5 лет", "label": "гарантия на каркас" },
-      { "val": "от 25 дн.", "label": "срок изготовления" },
-      { "val": "100+", "label": "коллекций тканей" },
-      { "val": "Любые", "label": "модули и размеры" }
+      {
+        "val": "5 лет",
+        "label": "гарантия на каркас"
+      },
+      {
+        "val": "от 25 дн.",
+        "label": "срок изготовления"
+      },
+      {
+        "val": "100+",
+        "label": "коллекций тканей"
+      },
+      {
+        "val": "Любые",
+        "label": "модули и размеры"
+      }
     ]
   },
   "quality": {

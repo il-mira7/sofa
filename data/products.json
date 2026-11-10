@@ -69,9 +69,21 @@
           "en": "Modules 105×105 cm, ottomans 105×80 cm. Fully custom dimensions available."
         },
         "popular_fabrics": {
-          "ru": ["Крупный вельвет (Corduroy)", "Премиальный шенилл", "Букле"],
-          "ka": ["ფაქტურული კორდუროი (Corduroy)", "პრემიუმ შენილი", "ბუკლე"],
-          "en": ["Wide-Wale Corduroy", "Premium Chenille", "Textured Bouclé"]
+          "ru": [
+            "Крупный вельвет (Corduroy)",
+            "Премиальный шенилл",
+            "Букле"
+          ],
+          "ka": [
+            "ფაქტურული კორდუროი (Corduroy)",
+            "პრემიუმ შენილი",
+            "ბუკლე"
+          ],
+          "en": [
+            "Wide-Wale Corduroy",
+            "Premium Chenille",
+            "Textured Bouclé"
+          ]
         },
         "images": [
           "assets/images/products/cloud/cloud-01.webp",
@@ -84,7 +96,16 @@
           "assets/images/products/cloud/cloud-08.webp",
           "assets/images/products/cloud/cloud-09.webp",
           "assets/images/products/cloud/cloud-10.webp",
-          "assets/images/products/cloud/cloud-11.webp"
+          "assets/images/products/cloud/cloud-11.webp",
+          "assets/images/products/cloud/cloud-12.webp",
+          "assets/images/products/cloud/cloud-13.webp",
+          "assets/images/products/cloud/cloud-14.webp",
+          "assets/images/products/cloud/cloud-15.webp",
+          "assets/images/products/cloud/cloud-16.webp",
+          "assets/images/products/cloud/cloud-17.webp",
+          "assets/images/products/cloud/cloud-18.webp",
+          "assets/images/products/cloud/cloud-19.webp",
+          "assets/images/products/cloud/cloud-20.webp"
         ]
       },
       {
@@ -154,9 +175,21 @@
           "en": "240×115×78 cm / 280×120×78 cm (or customized to your room)"
         },
         "popular_fabrics": {
-          "ru": ["Фактурное букле (Bouclé)", "Мягкий шенилл", "Шерстяная рогожка"],
-          "ka": ["ფაქტურული ბუკლე (Bouclé)", "რბილი შენილი", "მატყლის როგოჟკა"],
-          "en": ["Textured Bouclé", "Soft Chenille", "Wool-Weave Rogozhka"]
+          "ru": [
+            "Фактурное букле (Bouclé)",
+            "Мягкий шенилл",
+            "Шерстяная рогожка"
+          ],
+          "ka": [
+            "ფაქტურული ბუკლე (Bouclé)",
+            "რბილი შენილი",
+            "მატყლის როგოჟკა"
+          ],
+          "en": [
+            "Textured Bouclé",
+            "Soft Chenille",
+            "Wool-Weave Rogozhka"
+          ]
         },
         "images": [
           "assets/images/products/curve/curve-01.webp",
@@ -169,7 +202,12 @@
           "assets/images/products/curve/curve-08.webp",
           "assets/images/products/curve/curve-09.webp",
           "assets/images/products/curve/curve-10.webp",
-          "assets/images/products/curve/curve-11.webp"
+          "assets/images/products/curve/curve-11.webp",
+          "assets/images/products/curve/curve-12.webp",
+          "assets/images/products/curve/curve-13.webp",
+          "assets/images/products/curve/curve-14.webp",
+          "assets/images/products/curve/curve-15.webp",
+          "assets/images/products/curve/curve-16.webp"
         ]
       },
       {
@@ -239,9 +277,21 @@
           "en": "Straight: 220–260 cm; Corner: 280×175 cm (custom dimensions in 5 cm steps)"
         },
         "popular_fabrics": {
-          "ru": ["Рогожка меланж", "Шенилл плотного плетения", "Велюр антикоготь"],
-          "ka": ["მელანჟის როგოჟკა", "მკვრივი შენილი", "ანტივანდალური ველვეტი"],
-          "en": ["Melange Weave", "Heavyweight Chenille", "Pet-Friendly Velvet"]
+          "ru": [
+            "Рогожка меланж",
+            "Шенилл плотного плетения",
+            "Велюр антикоготь"
+          ],
+          "ka": [
+            "მელანჟის როგოჟკა",
+            "მკვრივი შენილი",
+            "ანტივანდალური ველვეტი"
+          ],
+          "en": [
+            "Melange Weave",
+            "Heavyweight Chenille",
+            "Pet-Friendly Velvet"
+          ]
         },
         "images": [
           "assets/images/products/nordic/nordic-01.webp",
@@ -324,13 +374,29 @@
           "en": "Backrest Module: 96×96×67 cm, Ottoman: 96×96×40 cm"
         },
         "popular_fabrics": {
-          "ru": ["Итальянский велюр", "Натуральная кожа Semi-Aniline", "Букле"],
-          "ka": ["იტალიური ველვეტი", "ნატურალური ტყავი Semi-Aniline", "ბუკლე"],
-          "en": ["Italian Velvet", "Semi-Aniline Full Leather", "Bouclé"]
+          "ru": [
+            "Итальянский велюр",
+            "Натуральная кожа Semi-Aniline",
+            "Букле"
+          ],
+          "ka": [
+            "იტალიური ველვეტი",
+            "ნატურალური ტყავი Semi-Aniline",
+            "ბუკლე"
+          ],
+          "en": [
+            "Italian Velvet",
+            "Semi-Aniline Full Leather",
+            "Bouclé"
+          ]
         },
         "images": [
           "assets/images/products/camaleonda/camaleonda-01.webp",
-          "assets/images/products/camaleonda/camaleonda-02.webp"
+          "assets/images/products/camaleonda/camaleonda-02.webp",
+          "assets/images/products/camaleonda/camaleonda-03.webp",
+          "assets/images/products/camaleonda/camaleonda-04.webp",
+          "assets/images/products/camaleonda/camaleonda-05.webp",
+          "assets/images/products/camaleonda/camaleonda-06.webp"
         ]
       },
       {
@@ -400,14 +466,309 @@
           "en": "Mattress 90×200 cm + trundle 90×190 cm (or bespoke dimensions)"
         },
         "popular_fabrics": {
-          "ru": ["Мягкая экокожа", "Велюр Soft Touch", "Шенилл"],
-          "ka": ["რბილი ეკოტყავი", "ველვეტი Soft Touch", "შენილი"],
-          "en": ["Soft Eco-Leather", "Soft Touch Velvet", "Textured Chenille"]
+          "ru": [
+            "Мягкая экокожа",
+            "Велюр Soft Touch",
+            "Шенилл"
+          ],
+          "ka": [
+            "რბილი ეკოტყავი",
+            "ველვეტი Soft Touch",
+            "შენილი"
+          ],
+          "en": [
+            "Soft Eco-Leather",
+            "Soft Touch Velvet",
+            "Textured Chenille"
+          ]
         },
         "images": [
           "assets/images/products/daybed/daybed-01.webp",
           "assets/images/products/daybed/daybed-02.webp",
-          "assets/images/products/daybed/daybed-03.webp"
+          "assets/images/products/daybed/daybed-03.webp",
+          "assets/images/products/daybed/daybed-04.webp",
+          "assets/images/products/daybed/daybed-05.webp",
+          "assets/images/products/daybed/daybed-06.webp",
+          "assets/images/products/daybed/daybed-07.webp"
+        ]
+      },
+      {
+        "id": "cube-modular",
+        "slug": "cube",
+        "title": "CUBE LOUNGE",
+        "category": "modular",
+        "categoryName": {
+          "ru": "Модульные диваны",
+          "ka": "მოდულური დივნები",
+          "en": "Modular Sofas"
+        },
+        "badge": {
+          "ru": "Новинка • Модульная геометрия",
+          "ka": "ახალი • მოდულური გეომეტრია",
+          "en": "New • Modular Geometry"
+        },
+        "tagline": {
+          "ru": "Чёткая форма, мягкое содержание",
+          "ka": "მკაფიო ფორმა, რბილი შინაარსი",
+          "en": "Crisp form, soft substance"
+        },
+        "price_from_gel": 3900,
+        "price_formatted_gel": {
+          "ru": "от 3 900 ₾",
+          "ka": "3 900 ₾-დან",
+          "en": "from 3,900 ₾"
+        },
+        "lead_time": {
+          "ru": "от 25 дней",
+          "ka": "25 დღიდან",
+          "en": "from 25 days"
+        },
+        "warranty": {
+          "ru": "5 лет",
+          "ka": "5 წელი",
+          "en": "5 years"
+        },
+        "description": {
+          "ru": "Модульный диван с выраженной кубической геометрией и неожиданно глубокой, мягкой посадкой. Плотные подушки-блоки, широкие подлокотники и низкий силуэт: минимализм, в котором комфортно проводить вечера. Собирается из независимых модулей под вашу планировку.",
+          "ka": "მოდულური დივანი გამოხატული კუბური გეომეტრიით და მოულოდნელად ღრმა, რბილი დასაჯდომით. მკვრივი ბლოკ-ბალიშები, ფართო სავარძლები და დაბალი სილუეტი: მინიმალიზმი, რომელშიც საღამოების გატარება სასიამოვნოა. აწყობა დამოუკიდებელი მოდულებისგან თქვენი ოთახის გეგმარების მიხედვით.",
+          "en": "A modular sofa with crisp cubic geometry and a surprisingly deep, soft sit. Firm block cushions, wide armrests and a low silhouette — minimalism you can actually lounge in. Assembles from freestanding modules to match your floor plan."
+        },
+        "features": {
+          "ru": [
+            "Кубические модули — любые конфигурации и перестановки",
+            "Плотная посадка: держит форму годами",
+            "Широкие подлокотники-полки",
+            "Съёмные чехлы, стирка в машинке"
+          ],
+          "ka": [
+            "კუბური მოდულები — ნებისმიერი კონფიგურაცია და გადანაწყობა",
+            "მკვრივი დასაჯდომი: წლების განმავლობაში ინარჩუნებს ფორმას",
+            "ფართო თარო-სავარძლები",
+            "მოსახსნელი გადასაკრავები, რეცხვა მანქანაში"
+          ],
+          "en": [
+            "Cubic modules — any layout, endless rearranging",
+            "Firm sit that keeps its shape for years",
+            "Extra-wide shelf-style armrests",
+            "Removable machine-washable covers"
+          ]
+        },
+        "dimensions_standard": {
+          "ru": "Модули 90×90 см, глубина посадки 65 см. Любые размеры под заказ.",
+          "ka": "მოდულები 90×90 სმ, დასაჯდომი სიღრმე 65 სმ. ნებისმიერი ზომა შეკვეთით.",
+          "en": "Modules 90×90 cm, seat depth 65 cm. Fully custom dimensions available."
+        },
+        "popular_fabrics": {
+          "ru": [
+            "Рогожка",
+            "Премиальный шенилл",
+            "Букле"
+          ],
+          "ka": [
+            "როგოჟკა",
+            "პრემიუმ შენილი",
+            "ბუკლე"
+          ],
+          "en": [
+            "Textured weave",
+            "Premium Chenille",
+            "Bouclé"
+          ]
+        },
+        "images": [
+          "assets/images/products/cube/cube-01.webp",
+          "assets/images/products/cube/cube-02.webp",
+          "assets/images/products/cube/cube-03.webp",
+          "assets/images/products/cube/cube-04.webp",
+          "assets/images/products/cube/cube-05.webp",
+          "assets/images/products/cube/cube-06.webp",
+          "assets/images/products/cube/cube-07.webp",
+          "assets/images/products/cube/cube-08.webp"
+        ]
+      },
+      {
+        "id": "verde-iconic",
+        "slug": "verde",
+        "title": "VERDE TUFTED",
+        "category": "iconic",
+        "categoryName": {
+          "ru": "Иконы дизайна",
+          "ka": "დიზაინის იკონები",
+          "en": "Design Icons"
+        },
+        "badge": {
+          "ru": "Новинка • Зелёная икона 70-х",
+          "ka": "ახალი • 70-იანების მწვანე იკონა",
+          "en": "New • Green 70s Icon"
+        },
+        "tagline": {
+          "ru": "Стёганые блоки в духе Camaleonda",
+          "ka": "შეკრული ბლოკები Camaleonda-ს სულით",
+          "en": "Tufted blocks in the Camaleonda spirit"
+        },
+        "price_from_gel": 5200,
+        "price_formatted_gel": {
+          "ru": "от 5 200 ₾",
+          "ka": "5 200 ₾-დან",
+          "en": "from 5,200 ₾"
+        },
+        "lead_time": {
+          "ru": "от 25 дней",
+          "ka": "25 დღიდან",
+          "en": "from 25 days"
+        },
+        "warranty": {
+          "ru": "5 лет",
+          "ka": "5 წელი",
+          "en": "5 years"
+        },
+        "description": {
+          "ru": "Диван-конструктор в духе великого Camaleonda: стёганые блоки на ремнях с крючками, которые можно переставлять, добавлять и разделять. Насыщенный зелёный вельвет и характерный ретро-силуэт — центральная фигура любой гостиной.",
+          "ka": "კონსტრუქტორ-დივანი დიდებული Camaleonda-ს სულისკვეთებით: კაუჭიან ქამრებზე შეკრული ბლოკები, რომლებიც შეგიძლიათ გადაანაწყოთ, დაამატოთ და გაყოთ. ღრმა მწვანე ველვეტი და დამახასიათებელი რეტრო სილუეტი — ნებისმიერი მისაღები ოთახის ცენტრალური ფიგურა.",
+          "en": "A build-your-own sofa in the spirit of the great Camaleonda: tufted blocks on hook belts you can rearrange, extend and split. Deep green velvet and a signature retro silhouette — the centerpiece of any living room."
+        },
+        "features": {
+          "ru": [
+            "Блоки соединяются ремнями с крючками — без инструментов",
+            "Стёганые подушки с пуговичной утяжкой",
+            "Модули 90×90 см: покупайте частями",
+            "Плотный велвет с антивандальной пропиткой"
+          ],
+          "ka": [
+            "ბლოკები უერთდება კაუჭიანი ქამრებით — ხელსაწყოების გარეშე",
+            "ღილებიანი შეკრული ბალიშები",
+            "მოდულები 90×90 სმ: შეიძლება ნაწილ-ნაწილ",
+            "მკვრივი ველვეტი ანტივანდალური დამუშავებით"
+          ],
+          "en": [
+            "Blocks connect via hook belts — no tools needed",
+            "Button-tufted cushions",
+            "90×90 cm modules: buy in parts",
+            "Dense velvet with anti-scratch finish"
+          ]
+        },
+        "dimensions_standard": {
+          "ru": "Модуль 90×90 см, пуф 90×90 см. Высота спинки 45 см.",
+          "ka": "მოდული 90×90 სმ, პუფი 90×90 სმ. საზურგის სიმაღლე 45 სმ.",
+          "en": "Module 90×90 cm, ottoman 90×90 cm. Backrest height 45 cm."
+        },
+        "popular_fabrics": {
+          "ru": [
+            "Велвет антивандальный",
+            "Плотный шенилл",
+            "Микрофибра"
+          ],
+          "ka": [
+            "ანტივანდალური ველვეტი",
+            "მკვრივი შენილი",
+            "მიკროფიბრა"
+          ],
+          "en": [
+            "Anti-scratch velvet",
+            "Dense chenille",
+            "Microfibre"
+          ]
+        },
+        "images": [
+          "assets/images/products/verde/verde-01.webp",
+          "assets/images/products/verde/verde-02.webp",
+          "assets/images/products/verde/verde-03.webp",
+          "assets/images/products/verde/verde-04.webp",
+          "assets/images/products/verde/verde-05.webp",
+          "assets/images/products/verde/verde-06.webp",
+          "assets/images/products/verde/verde-07.webp",
+          "assets/images/products/verde/verde-08.webp"
+        ]
+      },
+      {
+        "id": "graphite-corner",
+        "slug": "graphite",
+        "title": "GRAPHITE LOFT",
+        "category": "corner",
+        "categoryName": {
+          "ru": "Угловые диваны",
+          "ka": "კუთხური დივნები",
+          "en": "Corner Sofas"
+        },
+        "badge": {
+          "ru": "Новинка • Для вечера и кино",
+          "ka": "ახალი • საღამოსა და კინოსთვის",
+          "en": "New • Movie-Night Pick"
+        },
+        "tagline": {
+          "ru": "Глубокий угловой модуль для тёмных интерьеров",
+          "ka": "ღრმა კუთხური მოდული მუქი ინტერიერებისთვის",
+          "en": "Deep corner module for moody interiors"
+        },
+        "price_from_gel": 5600,
+        "price_formatted_gel": {
+          "ru": "от 5 600 ₾",
+          "ka": "5 600 ₾-დან",
+          "en": "from 5,600 ₾"
+        },
+        "lead_time": {
+          "ru": "от 25 дней",
+          "ka": "25 დღიდან",
+          "en": "from 25 days"
+        },
+        "warranty": {
+          "ru": "5 лет",
+          "ka": "5 წელი",
+          "en": "5 years"
+        },
+        "description": {
+          "ru": "Большой угловой модуль для тех, кто любит вечерние киносеансы и приглушённый свет. Графитовая обивка непривередлива в уходе и идеально играет в тёмных интерьерах с деревом и латунью. Глубокая посадка, широкая секция-шезлонг и мягкий поворотный блок опционально.",
+          "ka": "დიდი კუთხური მოდული მათთვის, ვისაც უყვარს საღამოს კინოსეანსები და ბუნდოვანი განათება. გრაფიტული შემოსავალი არ ბინძურდება და იდეალურად ერგება მუქ, ხისა და ლატუნის ინტერიერებს. ღრმა დასაჯდომი, ფართო შეზლონგ-სექცია და, სურვილის შემთხვევაში, მბრუნავი რბილი ბლოკი.",
+          "en": "A generous corner module for evening movie marathons and low light. The graphite upholstery is easy to live with and shines in dark interiors with wood and brass. Deep sit, wide chaise section and an optional soft swivel block."
+        },
+        "features": {
+          "ru": [
+            "Правый и левый угол — под вашу планировку",
+            "Секция-шезлонг: «растянуться во весь рост»",
+            "Усиленный каркас — держит даже большую компанию",
+            "Ткань с высокой стойкостью к истиранию"
+          ],
+          "ka": [
+            "მარჯვენა და მარცხენა კუთხე — თქვენი გეგმარების მიხედვით",
+            "შეზლონგ-სექცია „მთელი ტანად გაწოლისთვის“",
+            "გაძლიერებული კარკასი — დიდ კომპანიასაც იტანს",
+            "მაღალი ცვეთამედეგობის ქსოვილი"
+          ],
+          "en": [
+            "Left or right corner — built to your layout",
+            "Chaise section for stretching out fully",
+            "Reinforced frame that hosts the whole crew",
+            "High-abrasion-resistance fabric"
+          ]
+        },
+        "dimensions_standard": {
+          "ru": "Угловая композиция от 240×170 см. Глубина посадки 75 см.",
+          "ka": "კუთხური კომპოზიცია 240×170 სმ-დან. დასაჯდომი სიღრმე 75 სმ.",
+          "en": "Corner layout from 240×170 cm. Seat depth 75 cm."
+        },
+        "popular_fabrics": {
+          "ru": [
+            "Графитовый вельвет",
+            "Тёмный шенилл",
+            "Флок антивандальный"
+          ],
+          "ka": [
+            "გრაფიტული ველვეტი",
+            "მუქი შენილი",
+            "ანტივანდალური ფლოკი"
+          ],
+          "en": [
+            "Graphite velvet",
+            "Dark chenille",
+            "Anti-scratch flocked fabric"
+          ]
+        },
+        "images": [
+          "assets/images/products/graphite/graphite-01.webp",
+          "assets/images/products/graphite/graphite-02.webp",
+          "assets/images/products/graphite/graphite-03.webp",
+          "assets/images/products/graphite/graphite-04.webp",
+          "assets/images/products/graphite/graphite-05.webp"
         ]
       }
     ]
