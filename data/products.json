@@ -410,14 +410,14 @@
           "en": "Beds & Daybeds"
         },
         "badge": {
-          "ru": "2-в-1: Диван и кровать",
-          "ka": "2-1-ში: დივანი და საწოლი",
-          "en": "2-in-1: Sofa & Bed"
+          "ru": "Для ежедневного сна",
+          "ka": "ყოველდღიური ძილისთვის",
+          "en": "For Everyday Sleep"
         },
         "tagline": {
-          "ru": "Мягкая кушетка с выкатным вторым спальным местом",
-          "ka": "რბილი კუშეტკა გამოსაგორებელი მეორე საძილე ადგილით",
-          "en": "Upholstered daybed with pull-out secondary guest bed"
+          "ru": "Кровать-кушетка с мягкими бортами — для сна и отдыха",
+          "ka": "რბილი მხარეებით საწოლ-კუშეტკა — ძილისა და დასვენებისთვის",
+          "en": "Upholstered bed-daybed for sleep and lounging"
         },
         "price_from_gel": 3600,
         "price_formatted_gel": {

@@ -68,6 +68,11 @@
   padding: 36px;
 }
 
+/* Grid items must be allowed to shrink below the image intrinsic width */
+.modal__grid > * {
+  min-width: 0;
+}
+
 .modal__gallery {
   display: flex;
   flex-direction: column;
@@ -90,10 +95,9 @@
 }
 
 /* Product pages embed the modal gallery as a permanent section:
-   give it a portrait box so most photos fit almost fully. */
+   show each photo in full at its natural ratio (no crop, no bands). */
 .section .modal__main-img {
   height: auto;
-  aspect-ratio: 4 / 5;
 }
 
 .modal__badge-tag {

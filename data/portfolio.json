@@ -182,25 +182,6 @@
         "en": "Tbilisi, Vake"
       },
       "image": "assets/images/portfolio/interior-09.webp"
-    },
-    {
-      "id": "project-10",
-      "title": {
-        "ru": "Семейный остров для отдыха",
-        "ka": "საოჯახო კუნძულ-დივანი",
-        "en": "Family Island Sofa"
-      },
-      "model": {
-        "ru": "Curve Organic в букле",
-        "ka": "Curve Organic ბუკლეში",
-        "en": "Curve Organic in bouclé"
-      },
-      "location": {
-        "ru": "Батуми",
-        "ka": "ბათუმი",
-        "en": "Batumi"
-      },
-      "image": "assets/images/portfolio/interior-10.webp"
     }
   ]
 }

@@ -363,3 +363,38 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* ==========================================================================
+   Product Hero Card (embedded gallery section)
+   ========================================================================== */
+
+.product-hero {
+  padding-top: 20px;
+  padding-bottom: 56px;
+}
+
+.product-hero .modal__grid {
+  padding: 32px;
+}
+
+/* Mobile: compact card, natural photos, smaller thumbs */
+@media (max-width: 768px) {
+  .product-hero {
+    padding-top: 12px;
+    padding-bottom: 32px;
+  }
+
+  .product-hero .modal__grid {
+    padding: 16px;
+    gap: 20px;
+  }
+
+  .modal__thumbs {
+    gap: 8px;
+  }
+
+  .modal__thumb {
+    width: 56px;
+    height: 56px;
+  }
+}
