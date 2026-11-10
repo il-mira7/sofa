@@ -8,9 +8,9 @@
         "title": "CLOUD LOUNGE",
         "category": "modular",
         "categoryName": {
-          "ru": "Модульные диваны",
-          "ka": "მოდულური დივნები",
-          "en": "Modular Sofas"
+          "ru": "Модульные",
+          "ka": "მოდულური",
+          "en": "Modular"
         },
         "badge": {
           "ru": "Бестселлер • Vetsak-вайб",
@@ -113,9 +113,9 @@
         "title": "CURVE ORGANIC",
         "category": "curved",
         "categoryName": {
-          "ru": "Изогнутые диваны",
-          "ka": "რკალისებრი დივნები",
-          "en": "Curved Sofas"
+          "ru": "Округлые",
+          "ka": "მომრგვალებული",
+          "en": "Rounded"
         },
         "badge": {
           "ru": "Дизайн-тренд • Сканди",
@@ -216,7 +216,7 @@
         "category": "nordic",
         "categoryName": {
           "ru": "Прямые и угловые",
-          "ka": "სწორი და კუთხის",
+          "ka": "სწორი და კუთხური",
           "en": "Straight & Corner"
         },
         "badge": {
@@ -317,9 +317,9 @@
         "title": "BELLINI TUFTED",
         "category": "iconic",
         "categoryName": {
-          "ru": "Дизайнерские иконы",
-          "ka": "დიზაინერული აიკონიკი",
-          "en": "Design Icons"
+          "ru": "Стёганые",
+          "ka": "კაპიტონე",
+          "en": "Tufted"
         },
         "badge": {
           "ru": "Культовый дизайн 70-х",
@@ -417,9 +417,9 @@
         "title": "DAYBED SLUMBER",
         "category": "beds",
         "categoryName": {
-          "ru": "Кровати и кушетки",
-          "ka": "საწოლები და კუშეტკები",
-          "en": "Beds & Daybeds"
+          "ru": "Кровати",
+          "ka": "საწოლები",
+          "en": "Beds"
         },
         "badge": {
           "ru": "Для ежедневного сна",
@@ -510,9 +510,9 @@
         "title": "CUBE LOUNGE",
         "category": "modular",
         "categoryName": {
-          "ru": "Модульные диваны",
-          "ka": "მოდულური დივნები",
-          "en": "Modular Sofas"
+          "ru": "Модульные",
+          "ka": "მოდულური",
+          "en": "Modular"
         },
         "badge": {
           "ru": "Модульная геометрия",
@@ -608,9 +608,9 @@
         "title": "VERDE TUFTED",
         "category": "iconic",
         "categoryName": {
-          "ru": "Иконы дизайна",
-          "ka": "დიზაინის იკონები",
-          "en": "Design Icons"
+          "ru": "Стёганые",
+          "ka": "კაპიტონე",
+          "en": "Tufted"
         },
         "badge": {
           "ru": "Икона 70-х",
@@ -703,9 +703,9 @@
         "title": "GRAPHITE LOFT",
         "category": "loft",
         "categoryName": {
-          "ru": "Лофт-диваны",
-          "ka": "ლოფტ დივნები",
-          "en": "Loft Sofas"
+          "ru": "Лофт",
+          "ka": "ლოფტი",
+          "en": "Loft"
         },
         "badge": {
           "ru": "Для вечера и кино",
