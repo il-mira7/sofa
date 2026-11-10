@@ -613,9 +613,9 @@
           "en": "Design Icons"
         },
         "badge": {
-          "ru": "Зелёная икона 70-х",
-          "ka": "70-იანების მწვანე იკონა",
-          "en": "Green 70s Icon"
+          "ru": "Икона 70-х",
+          "ka": "70-იანების იკონა",
+          "en": "70s Icon"
         },
         "tagline": {
           "ru": "Стёганые блоки в духе Camaleonda",
@@ -701,11 +701,11 @@
         "id": "graphite-corner",
         "slug": "graphite",
         "title": "GRAPHITE LOFT",
-        "category": "corner",
+        "category": "loft",
         "categoryName": {
-          "ru": "Угловые диваны",
-          "ka": "კუთხური დივნები",
-          "en": "Corner Sofas"
+          "ru": "Лофт-диваны",
+          "ka": "ლოფტ დივნები",
+          "en": "Loft Sofas"
         },
         "badge": {
           "ru": "Для вечера и кино",
@@ -713,9 +713,9 @@
           "en": "Movie-Night Pick"
         },
         "tagline": {
-          "ru": "Глубокий угловой модуль для тёмных интерьеров",
-          "ka": "ღრმა კუთხური მოდული მუქი ინტერიერებისთვის",
-          "en": "Deep corner module for moody interiors"
+          "ru": "Глубокий модуль для тёмных интерьеров",
+          "ka": "ღრმა მოდული მუქი ინტერიერებისთვის",
+          "en": "Deep module for moody interiors"
         },
         "price_from_gel": 5600,
         "price_formatted_gel": {
@@ -734,34 +734,34 @@
           "en": "5 years"
         },
         "description": {
-          "ru": "Большой угловой модуль для тех, кто любит вечерние киносеансы и приглушённый свет. Графитовая обивка непривередлива в уходе и идеально играет в тёмных интерьерах с деревом и латунью. Глубокая посадка, широкая секция-шезлонг и мягкий поворотный блок опционально.",
-          "ka": "დიდი კუთხური მოდული მათთვის, ვისაც უყვარს საღამოს კინოსეანსები და ბუნდოვანი განათება. გრაფიტული შემოსავალი არ ბინძურდება და იდეალურად ერგება მუქ, ხისა და ლატუნის ინტერიერებს. ღრმა დასაჯდომი, ფართო შეზლონგ-სექცია და, სურვილის შემთხვევაში, მბრუნავი რბილი ბლოკი.",
-          "en": "A generous corner module for evening movie marathons and low light. The graphite upholstery is easy to live with and shines in dark interiors with wood and brass. Deep sit, wide chaise section and an optional soft swivel block."
+          "ru": "Большой диван для тех, кто любит вечерние киносеансы и приглушённый свет. Графитовая обивка непривередлива в уходе и идеально играет в тёмных интерьерах с деревом и латунью. Глубокая посадка и модульные секции — соберём композицию под вашу комнату.",
+          "ka": "დიდი დივანი მათთვის, ვისაც უყვარს საღამოს კინოსეანსები და ბუნდოვანი განათება. გრაფიტული შემოსავალი არ ბინძურდება და იდეალურად ერგება მუქ, ხისა და ლატუნის ინტერიერებს. ღრმა დასაჯდომი და მოდულური სექციები — კომპოზიციას შევადგენთ თქვენი ოთახის მიხედვით.",
+          "en": "A generous sofa for evening movie marathons and low light. The graphite upholstery is easy to live with and shines in dark interiors with wood and brass. Deep sit and modular sections — we will build the layout around your room."
         },
         "features": {
           "ru": [
-            "Правый и левый угол — под вашу планировку",
-            "Секция-шезлонг: «растянуться во весь рост»",
+            "Прямые и модульные секции — соберём под вашу планировку",
+            "Глубокая посадка: «растянуться во весь рост»",
             "Усиленный каркас — держит даже большую компанию",
             "Ткань с высокой стойкостью к истиранию"
           ],
           "ka": [
-            "მარჯვენა და მარცხენა კუთხე — თქვენი გეგმარების მიხედვით",
-            "შეზლონგ-სექცია „მთელი ტანად გაწოლისთვის“",
+            "პირდაპირი და მოდულური სექციები — შევადგენთ თქვენი გეგმარების მიხედვით",
+            "ღრმა დასაჯდომი: „მთელი ტანად გაწოლისთვის“",
             "გაძლიერებული კარკასი — დიდ კომპანიასაც იტანს",
             "მაღალი ცვეთამედეგობის ქსოვილი"
           ],
           "en": [
-            "Left or right corner — built to your layout",
-            "Chaise section for stretching out fully",
+            "Straight and modular sections — built around your layout",
+            "Deep sit for stretching out fully",
             "Reinforced frame that hosts the whole crew",
             "High-abrasion-resistance fabric"
           ]
         },
         "dimensions_standard": {
-          "ru": "Угловая композиция от 240×170 см. Глубина посадки 75 см.",
-          "ka": "კუთხური კომპოზიცია 240×170 სმ-დან. დასაჯდომი სიღრმე 75 სმ.",
-          "en": "Corner layout from 240×170 cm. Seat depth 75 cm."
+          "ru": "Композиции от 240×170 см. Глубина посадки 75 см.",
+          "ka": "კომპოზიციები 240×170 სმ-დან. დასაჯდომი სიღრმე 75 სმ.",
+          "en": "Layouts from 240×170 cm. Seat depth 75 cm."
         },
         "popular_fabrics": {
           "ru": [
