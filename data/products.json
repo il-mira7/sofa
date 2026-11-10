@@ -88,7 +88,6 @@
         "images": [
           "assets/images/products/cloud/cloud-01.webp",
           "assets/images/products/cloud/cloud-02.webp",
-          "assets/images/products/cloud/cloud-03.webp",
           "assets/images/products/cloud/cloud-04.webp",
           "assets/images/products/cloud/cloud-05.webp",
           "assets/images/products/cloud/cloud-06.webp",
@@ -96,7 +95,6 @@
           "assets/images/products/cloud/cloud-08.webp",
           "assets/images/products/cloud/cloud-09.webp",
           "assets/images/products/cloud/cloud-10.webp",
-          "assets/images/products/cloud/cloud-11.webp",
           "assets/images/products/cloud/cloud-12.webp",
           "assets/images/products/cloud/cloud-13.webp",
           "assets/images/products/cloud/cloud-14.webp",
@@ -105,7 +103,8 @@
           "assets/images/products/cloud/cloud-17.webp",
           "assets/images/products/cloud/cloud-18.webp",
           "assets/images/products/cloud/cloud-19.webp",
-          "assets/images/products/cloud/cloud-20.webp"
+          "assets/images/products/cloud/cloud-20.webp",
+          "assets/images/products/cloud/verde-06.webp"
         ]
       },
       {
@@ -203,11 +202,11 @@
           "assets/images/products/curve/curve-09.webp",
           "assets/images/products/curve/curve-10.webp",
           "assets/images/products/curve/curve-11.webp",
-          "assets/images/products/curve/curve-12.webp",
-          "assets/images/products/curve/curve-13.webp",
-          "assets/images/products/curve/curve-14.webp",
-          "assets/images/products/curve/curve-15.webp",
-          "assets/images/products/curve/curve-16.webp"
+          "assets/images/products/curve/cube-05.webp",
+          "assets/images/products/curve/cube-06.webp",
+          "assets/images/products/curve/cube-07.webp",
+          "assets/images/products/curve/nordic-28.webp",
+          "assets/images/products/curve/nordic-29.webp"
         ]
       },
       {
@@ -294,17 +293,22 @@
           ]
         },
         "images": [
-          "assets/images/products/nordic/nordic-01.webp",
-          "assets/images/products/nordic/nordic-02.webp",
           "assets/images/products/nordic/nordic-03.webp",
-          "assets/images/products/nordic/nordic-04.webp",
           "assets/images/products/nordic/nordic-05.webp",
           "assets/images/products/nordic/nordic-06.webp",
           "assets/images/products/nordic/nordic-07.webp",
+          "assets/images/products/nordic/nordic-08.webp",
+          "assets/images/products/nordic/nordic-10.webp",
           "assets/images/products/nordic/nordic-11.webp",
+          "assets/images/products/nordic/nordic-12.webp",
+          "assets/images/products/nordic/nordic-13.webp",
           "assets/images/products/nordic/nordic-14.webp",
+          "assets/images/products/nordic/nordic-15.webp",
           "assets/images/products/nordic/nordic-18.webp",
-          "assets/images/products/nordic/nordic-21.webp"
+          "assets/images/products/nordic/nordic-19.webp",
+          "assets/images/products/nordic/nordic-26.webp",
+          "assets/images/products/nordic/nordic-27.webp",
+          "assets/images/products/nordic/curve-12.webp"
         ]
       },
       {
@@ -396,7 +400,15 @@
           "assets/images/products/camaleonda/camaleonda-03.webp",
           "assets/images/products/camaleonda/camaleonda-04.webp",
           "assets/images/products/camaleonda/camaleonda-05.webp",
-          "assets/images/products/camaleonda/camaleonda-06.webp"
+          "assets/images/products/camaleonda/camaleonda-06.webp",
+          "assets/images/products/camaleonda/camaleonda-07.webp",
+          "assets/images/products/camaleonda/cube-01.webp",
+          "assets/images/products/camaleonda/cube-04.webp",
+          "assets/images/products/camaleonda/verde-07.webp",
+          "assets/images/products/camaleonda/curve-13.webp",
+          "assets/images/products/camaleonda/curve-14.webp",
+          "assets/images/products/camaleonda/curve-15.webp",
+          "assets/images/products/camaleonda/curve-16.webp"
         ]
       },
       {
@@ -576,14 +588,18 @@
           ]
         },
         "images": [
-          "assets/images/products/cube/cube-01.webp",
           "assets/images/products/cube/cube-02.webp",
           "assets/images/products/cube/cube-03.webp",
-          "assets/images/products/cube/cube-04.webp",
-          "assets/images/products/cube/cube-05.webp",
-          "assets/images/products/cube/cube-06.webp",
-          "assets/images/products/cube/cube-07.webp",
-          "assets/images/products/cube/cube-08.webp"
+          "assets/images/products/cube/nordic-02.webp",
+          "assets/images/products/cube/nordic-16.webp",
+          "assets/images/products/cube/nordic-17.webp",
+          "assets/images/products/cube/nordic-20.webp",
+          "assets/images/products/cube/nordic-21.webp",
+          "assets/images/products/cube/nordic-22.webp",
+          "assets/images/products/cube/nordic-23.webp",
+          "assets/images/products/cube/nordic-24.webp",
+          "assets/images/products/cube/nordic-25.webp",
+          "assets/images/products/cube/nordic-04.webp"
         ]
       },
       {
@@ -675,9 +691,10 @@
           "assets/images/products/verde/verde-03.webp",
           "assets/images/products/verde/verde-04.webp",
           "assets/images/products/verde/verde-05.webp",
-          "assets/images/products/verde/verde-06.webp",
-          "assets/images/products/verde/verde-07.webp",
-          "assets/images/products/verde/verde-08.webp"
+          "assets/images/products/verde/verde-08.webp",
+          "assets/images/products/verde/cloud-03.webp",
+          "assets/images/products/verde/cloud-11.webp",
+          "assets/images/products/verde/verde-06.webp"
         ]
       },
       {
@@ -768,7 +785,8 @@
           "assets/images/products/graphite/graphite-02.webp",
           "assets/images/products/graphite/graphite-03.webp",
           "assets/images/products/graphite/graphite-04.webp",
-          "assets/images/products/graphite/graphite-05.webp"
+          "assets/images/products/graphite/graphite-05.webp",
+          "assets/images/products/graphite/graphite-06.webp"
         ]
       }
     ]

@@ -1,61 +1,47 @@
 # Карта фотографий сайта
 
+> Пересортировано Ильмирой 10.11: папки коллекций приведены к внутренней
+> классификации (дутые/модульные/округлые/прямые/лофт/кровати).
+> Часть файлов носит «старые» имена (например `cube/nordic-02.webp`) —
+> это нормально: путь = где лежит, имя = история файла.
+
 ## Где что лежит
 
-| Папка | Что это |
-|---|---|
-| `photo/new/` | ваши исходники как есть (только на диске, в git не входят) |
-| `assets/images/products/<коллекция>/` | фото товаров на сайте (webp) |
-| `assets/images/portfolio/` | интерьеры из раздела «Интерьеры» |
-| `data/products.json` | список фото каждой коллекции = порядок в галерее |
+| Папка | Коллекция | Фото |
+|---|---|---|
+| `assets/images/products/cloud/` | Cloud Lounge (лаунж-остров) | 19 |
+| `assets/images/products/cube/` | Cube Lounge (модульные прямые) | 12 |
+| `assets/images/products/curve/` | Curve Organic (округлые) | 16 |
+| `assets/images/products/nordic/` | Nordic Line & Corner (прямые) | 16 |
+| `assets/images/products/camaleonda/` | Bellini Tufted + дутые стёганые | 14 |
+| `assets/images/products/verde/` | Verde Tufted (зелёные стёганые) | 9 |
+| `assets/images/products/graphite/` | Graphite Loft (лофт, тёмные) | 6 |
+| `assets/images/products/daybed/` | Daybed Slumber (кровати) | 7 |
+| `assets/images/portfolio/` | раздел «Интерьеры» | 10 |
+| `photo/` и `photo/new/` | исходники (только на диске, в git не входят) | — |
 
-Коллекции: `cloud`, `curve`, `nordic`, `camaleonda` (это Bellini), `daybed`, `cube`, `verde`, `graphite`.
+Порядок фото в галерее = список `images` в `data/products.json`
+(первый элемент = главное фото).
 
-## Откуда какое фото взято (photo/new → сайт)
+## Новые фото (папка photo/, корень — ещё не на сайте)
 
-### Cube Lounge
-cube-01 ← IG692 (белый модуль + пёс, терраса) · cube-02 ← IG524 · cube-03 ← IG281 ·
-cube-04 ← photo_46 · cube-05 ← photo_50 · cube-06 ← photo_51 · cube-07 ← photo_57 · cube-08 ← photo_15
+- `779089559_....jpg` — кремовый угловой модуль (чистый кадр)
+- `869840164_....jpg` — девушка на сером угловом модуле
+- файлы с суффиксом `_` — точные дубликаты, можно удалить
+- `photo_1..78_2026-11-02_...jpg` — старая ноябрьская съёмка (78 файлов)
+- `farfale_logo.jpg`, `207806549_....mp4`
 
-### Verde Tufted (зелёная)
-verde-01 ← photo_53 · verde-02 ← photo_54 · verde-03 ← photo_55 · verde-04 ← photo_56 (кресло) ·
-verde-05 ← IG299 (жалюзи) · verde-06 ← photo_1 · verde-07 ← photo_10 · verde-08 ← photo_15
-
-### Graphite Loft (тёмный)
-graphite-01 ← photo_5 · graphite-02 ← photo_6 · graphite-03 ← photo_31 · graphite-04 ← photo_32 · graphite-05 ← photo_33
-
-### Bellini / camaleonda (добавленные)
-camaleonda-03..06 ← photo_34, photo_35, photo_36, photo_37 (решётка/лайтбокс)
-
-### Daybed (добавленные)
-daybed-04 ← photo_7 (белая кровать) · daybed-05 ← IG689 · daybed-06 ← photo_8 · daybed-07 ← photo_9
-
-### Cloud (добавленные)
-cloud-12 ← photo_19 · cloud-13 ← photo_20 · cloud-14 ← photo_21 · cloud-15 ← photo_22 ·
-cloud-16 ← photo_23 · cloud-17 ← photo_24 · cloud-18 ← photo_30 (оранжевая) · cloud-19 ← photo_2 · cloud-20 ← photo_27
-
-### Curve (добавленные)
-curve-12 ← IG179 · curve-13 ← photo_29 (пуф-кресло) · curve-14 ← photo_42 · curve-15 ← photo_48 · curve-16 ← photo_49
-
-### Portfolio (интерьеры)
-interior-07 ← photo_12 (терраса) · interior-08 ← photo_17 (деревянные панели) ·
-interior-09 ← photo_28 (классика) · interior-10 ← photo_4 (мама с ребёнком)
-
-### Не использованы (можно куда-нибудь добавить)
-photo_3 (библиотека) · photo_13, photo_14 (терраса, крупный план) · photo_18, photo_25, photo_26 ·
-photo_38–45 (пёсики/котики крупным планом) · видео 207806549....mp4
+Скажите, в какую коллекцию класть каждый — конвертирую и добавлю.
 
 ## Как самому поправить
 
-**Обрезать/отретушировать:** правьте файл прямо в `assets/images/products/...`,
-сохраняя то же имя (например `verde-03.webp`). Сайт сам показывает фото в
-любой пропорции целиком, так что резать можно как угодно. Сохранилось не в
-webp, а в jpg? Положите рядом и скажите мне — конвертирую.
+**Обрезать/отретушировать:** правьте файл прямо в папке коллекции,
+сохраняя имя. Пропорции любые — сайт показывает фото целиком.
+JPG вместо webp? Положите рядом и скажите мне.
 
-**Пересортировать по коллекциям / поменять порядок в галерее:** порядок
-задаётся списком `images` в `data/products.json` (первый элемент = главное
-фото на карточке и странице). Скажите, что куда — перенесу; или сами
-поменяйте строки местами в json.
+**Порядок/перенос между коллекциями:** список `images` в
+`data/products.json`, первый = главное. Или просто скажите мне.
 
-**После любых правок:** `git add -A && git commit -m "photos" && git push` —
-сайт обновится сам через 1–2 минуты.
+**После правок:** `git add -A && git commit -m "photos" && git push`.
+Если файл переименовали/перенесли — обновите путь в products.json,
+иначе картинка сломается.
