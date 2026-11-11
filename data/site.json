@@ -17,8 +17,6 @@
     "email": "rukhadzenatia12@gmail.com",
     "address": "Vake, Tbilisi, N. Berdzenishvili 2",
     "addressGe": "ვაკე, თბილისი, ნ. ბერძენიშვილის ქუჩა 2",
-    "hoursWeekdays": "11:00 — 20:00",
-    "hoursWeekend": "11:00 — 20:00",
     "city": "Tbilisi",
     "country": "Georgia",
     "geo": {
@@ -33,21 +31,17 @@
   "hero": {
     "badge": "COOL & COMFY • VAKE, TBILISI",
     "title": "ДИЗАЙНЕРСКИЕ ДИВАНЫ НА ЗАКАЗ В ТБИЛИСИ",
-    "subtitle": "Style • Comfort • Durability. Создаем диваны под индивидуальную геометрию вашего пространства. Более 100 фактур европейских тканей, адаптивные модули и пожизненная забота о вашем комфорте.",
+    "subtitle": "Style • Comfort • Durability. Создаем диваны под индивидуальную геометрию вашего пространства. Широкий выбор европейских тканей, адаптивные модули и пожизненная забота о вашем комфорте.",
     "ctaWhatsApp": "Обсудить в WhatsApp",
-    "ctaShowroom": "Записаться в шоурум",
+    "ctaShowroom": "Записаться на просмотр",
     "stats": [
       {
-        "val": "5 лет",
+        "val": "3 года",
         "label": "гарантия на каркас"
       },
       {
         "val": "от 25 дн.",
         "label": "срок изготовления"
-      },
-      {
-        "val": "100+",
-        "label": "коллекций тканей"
       },
       {
         "val": "Любые",
@@ -110,7 +104,7 @@
     ]
   },
   "guarantee": {
-    "warrantyYears": 5,
+    "warrantyYears": 3,
     "productionDays": 25
   }
 }

@@ -4,54 +4,90 @@
     "slug": "new-fabrics-vake",
     "image": "assets/images/showroom/showroom-interior.webp",
     "title": {
-      "ka": "ვაკის შოურუმში ევროპული ქსოვილების ახალი ნიმუშები ჩამოვიდა",
-      "ru": "В шоурум в Ваке приехала новая партия европейских тканей",
-      "en": "New European fabric samples have arrived at our Vake showroom"
+      "ka": "ბერძენიშვილის 2-ის ოფისში ევროპული ქსოვილების ახალი ნიმუშები ჩამოვიდა",
+      "ru": "В офис на Бердзенишвили, 2 приехала новая партия европейских тканей",
+      "en": "New European fabric samples have arrived at our Berdzenishvili 2 office"
     },
     "descr": {
-      "ka": "100-ზე მეტი ფაქტურა — ხავერდი, ბუკლე, მიკრო-კორდი და შენილი. ყოველდღე 11:00–20:00, ბერძენიშვილის 2.",
-      "ru": "Более 100 фактур — велюр, букле, микрокорд и шенилл. Каждый образец можно потрогать в шоуруме на Бердзенишвили, 2.",
-      "en": "Over 100 textures — velvet, bouclé, micro-corduroy and chenille. Touch every sample at our Berdzenishvili 2 showroom."
+      "ka": "ახალი ევროპული ქსოვილები უკვე ბერძენიშვილის 2-ის ოფისში — ხავერდი, ბუკლე, მიკრო-კორდი და შენილი. ნახვა და არჩევა — წინასწარი ჩაწერით.",
+      "ru": "Новые фактуры европейских тканей уже в офисе на Бердзенишвили, 2 — велюр, букле, микрокорд и шенилл. Посмотреть и выбрать можно по предварительной записи.",
+      "en": "New European fabric textures are already at our Berdzenishvili 2 office — velvet, bouclé, micro-corduroy and chenille. View and choose by appointment."
     },
     "content": {
       "ka": [
-        { "p": "ნოემბრის დასაწყისში ვაკეში, ბერძენიშვილის 2-ის შოურუმში ევროპული ქსოვილების ახალი პარტია ჩამოვიდა — 100-ზე მეტი ფაქტურა: ხავერდი, ბუკლე, მიკრო-კორდი და შენილი." },
-        { "h2": "რა ჩამოვიდა" },
-        { "ul": [
-          "ფართო და წვრილი კორდუროი — 30-ზე მეტი ელფერი",
-          "მოცულობითი ბუკლე Cloud და Curve მოდელებისთვის",
-          "გამძლე შენილი ბავშვებისა და ცხოველების მქონე ოჯახებისთვის",
-          "ანტივანდალური ხავერდი"
-        ] },
-        { "h2": "როგორ ნახოთ ცოცხლად" },
-        { "p": "გინახულეთ შოურუმი ვაკეში ყოველდღე 11:00–20:00 — კონსულტანტი დაგეხმარებათ ნიმუშების შედარებაში და არჩეულ ქსოვილზე დივნის ფასის გამოთვლაში." },
-        { "p": "ნიმუშები შეგიძლიათ წაიღოთ სახლში, რომ ფერი შეამოწმოთ სახლის განათებაში." }
+        {
+          "p": "ნოემბრის დასაწყისში ბერძენიშვილის 2-ის ოფისში ევროპული ქსოვილების ახალი პარტია ჩამოვიდა — ხავერდის, ბუკლეს, მიკრო-კორდისა და შენილის ახალი ფაქტურები."
+        },
+        {
+          "h2": "რა ჩამოვიდა"
+        },
+        {
+          "ul": [
+            "ფართო და წვრილი კორდუროი — სხვადასხვა ელფერი",
+            "მოცულობითი ბუკლე Cloud და Curve მოდელებისთვის",
+            "გამძლე შენილი ბავშვებისა და ცხოველების მქონე ოჯახებისთვის",
+            "ანტივანდალური ხავერდი"
+          ]
+        },
+        {
+          "h2": "როგორ ნახოთ ცოცხლად"
+        },
+        {
+          "p": "მოდით ჩვენს ვაკის ოფისში (ბერძენიშვილის 2) წინასწარი ჩაწერით: მოგვწერეთ WhatsApp-ში, და ავირჩით ხელსაყრელი დრო. კონსულტანტი დაგეხმარებათ ნიმუშების შედარებაში და არჩეულ ქსოვილზე დივნის ფასის გამოთვლაში."
+        },
+        {
+          "p": "ნიმუშები შეგიძლიათ წაიღოთ სახლში, რომ ფერი შეამოწმოთ სახლის განათებაში."
+        }
       ],
       "ru": [
-        { "p": "В начале ноября в шоурум на Бердзенишвили, 2 приехала новая партия европейских тканей — больше ста фактур: велюр, букле, микрокорд и шенилл." },
-        { "h2": "Что привезли" },
-        { "ul": [
-          "Крупный и мелкий вельвет-корд — 30+ оттенков",
-          "Объёмное букле для моделей Cloud и Curve",
-          "Износостойкий шенилл для семей с детьми и питомцами",
-          "Антивандальный велюр"
-        ] },
-        { "h2": "Как посмотреть вживую" },
-        { "p": "Приходите в шоурум в Ваке ежедневно с 11:00 до 20:00 — консультант поможет сравнить образцы и сразу посчитает ваш диван на выбранной ткани." },
-        { "p": "Образцы можно взять с собой, чтобы проверить цвет при домашнем освещении." }
+        {
+          "p": "В начале ноября в офис на Бердзенишвили, 2 приехала новая партия европейских тканей — велюр, букле, микрокорд и шенилл."
+        },
+        {
+          "h2": "Что привезли"
+        },
+        {
+          "ul": [
+            "Крупный и мелкий вельвет-корд — разные оттенки",
+            "Объёмное букле для моделей Cloud и Curve",
+            "Износостойкий шенилл для семей с детьми и питомцами",
+            "Антивандальный велюр"
+          ]
+        },
+        {
+          "h2": "Как посмотреть вживую"
+        },
+        {
+          "p": "Приезжайте в наш офис в Ваке (Бердзенишвили, 2) по предварительной записи: напишите нам в WhatsApp, и мы подберём удобное время. Консультант поможет сравнить образцы и сразу посчитает диван на выбранной ткани."
+        },
+        {
+          "p": "Образцы можно взять с собой, чтобы проверить цвет при домашнем освещении."
+        }
       ],
       "en": [
-        { "p": "In early November, a new batch of European fabrics arrived at our Vake showroom — over a hundred textures: velvet, bouclé, micro-corduroy and chenille." },
-        { "h2": "What's new" },
-        { "ul": [
-          "Wide- and narrow-wale corduroy — 30+ shades",
-          "Plush bouclé for the Cloud and Curve models",
-          "Hard-wearing chenille for families with kids and pets",
-          "Anti-scratch performance velvet"
-        ] },
-        { "h2": "See them in person" },
-        { "p": "Visit the Vake showroom daily from 11:00 to 20:00 — our consultant will compare samples with you and price your sofa in the fabric you choose on the spot." },
-        { "p": "You can take samples home to check the colour under your own lighting." }
+        {
+          "p": "In early November, a new batch of European fabrics arrived at our office at 2 Berdzenishvili St — new velvet, bouclé, micro-corduroy and chenille textures."
+        },
+        {
+          "h2": "What's new"
+        },
+        {
+          "ul": [
+            "Wide- and narrow-wale corduroy — in many shades",
+            "Plush bouclé for the Cloud and Curve models",
+            "Hard-wearing chenille for families with kids and pets",
+            "Anti-scratch performance velvet"
+          ]
+        },
+        {
+          "h2": "See them in person"
+        },
+        {
+          "p": "Visit our Vake office (2 Berdzenishvili St) by appointment: message us on WhatsApp and we'll find a convenient time. Our consultant will help you compare samples and price your sofa in the chosen fabric."
+        },
+        {
+          "p": "You can take samples home to check the colour under your own lighting."
+        }
       ]
     }
   },
@@ -71,16 +107,20 @@
   },
   {
     "date": "2026-10-05",
-    "image": "assets/images/quality/anatomy-sofa-ge.webp",
+    "image": {
+      "ka": "assets/images/quality/anatomy-sofa-ge.webp",
+      "ru": "assets/images/quality/anatomy-sofa-ru.webp",
+      "en": "assets/images/quality/anatomy-sofa-en.webp"
+    },
     "title": {
       "ka": "Farfale-ს დივნის ანატომია: რატომ ინარჩუნებს არყის ფანერის კარკასი ფორმას წლების განმავლობაში",
       "ru": "Анатомия дивана Farfale: почему каркас из берёзовой фанеры служит годами",
       "en": "The anatomy of a Farfale sofa: why a birch-plywood frame lasts for years"
     },
     "descr": {
-      "ka": "მზიდი კარკასი არყის ფანერიდან და დამოუკიდებელი ზამბარების სისტემა — სწორედ ამის გამო ვაძლევთ კარკასს ხუთი წლის ოფიციალურ გარანტიას.",
-      "ru": "Несущий каркас из берёзовой фанеры и блок независимых пружин — именно поэтому мы даём на каркас официальную гарантию 5 лет.",
-      "en": "A load-bearing birch-plywood frame and a pocket-spring system underneath — the reason we back every frame with an official 5-year warranty."
+      "ka": "მზიდი კარკასი არყის ფანერიდან და დამოუკიდებელი ზამბარების სისტემა — კარკასზე მოქმედებს ოფიციალური 3 წლიანი გარანტია.",
+      "ru": "Несущий каркас из берёзовой фанеры и блок независимых пружин — на каркас действует официальная гарантия 3 года.",
+      "en": "A load-bearing birch-plywood frame and a pocket-spring system — the frame comes with an official 3-year warranty."
     }
   },
   {
@@ -101,9 +141,9 @@
     "date": "2026-09-02",
     "image": "assets/images/showroom/showroom-street.webp",
     "title": {
-      "ka": "როგორ ავირჩიოთ დივანი ერთი ვიზიტით შოურუმში",
-      "ru": "Как выбрать диван за один визит в шоурум",
-      "en": "How to choose a sofa in a single showroom visit"
+      "ka": "როგორ ავირჩიოთ დივანი ერთი შეხვედრით",
+      "ru": "Как выбрать диван за одну встречу в офисе",
+      "en": "How to choose a sofa in a single office visit"
     },
     "descr": {
       "ka": "გაიზომეთ ოთახი, მოისინჯეთ სამ-ოთხი მოდელი და შეადარეთ ქსოვილის ნიმუშები — კონსულტანტი ერთი ვიზიტის ფარგლებში დაგეხმარებათ გადაწყვეტილების მიღებაში.",

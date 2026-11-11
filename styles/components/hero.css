@@ -82,7 +82,8 @@
   font-weight: 300;
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.9);
-  max-width: 640px;
+  /* 720px so the EN tagline "Style • Comfort • Durability…" fits on one line (~693px at 20px font) */
+  max-width: 720px;
   margin: 0 auto 36px;
 }
 
@@ -92,6 +93,16 @@
   justify-content: center;
   gap: 16px;
   flex-wrap: wrap;
+  /* let the button row exceed the narrow hero text column so all three fit on one line */
+  margin-left: -80px;
+  margin-right: -80px;
+}
+
+@media (max-width: 992px) {
+  .hero__actions {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 .hero__scroll-down {

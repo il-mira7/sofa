@@ -86,7 +86,7 @@
 .btn--hero {
   background-color: #ffffff;
   color: #0a0a0a;
-  padding: 16px 36px;
+  padding: 16px 30px;
   font-weight: 600;
 }
 
@@ -98,7 +98,7 @@
 .btn--outline-hero {
   border: 1px solid rgba(255, 255, 255, 0.6);
   color: #ffffff;
-  padding: 16px 36px;
+  padding: 16px 30px;
   backdrop-filter: blur(4px);
 }
 

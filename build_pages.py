@@ -300,9 +300,6 @@ def get_footer(lang, depth=0):
           <a href="mailto:{site_data['contacts']['email']}" style="color: inherit;">{site_data['contacts']['email']}</a>
         </p>
         <p class="footer__contact-item">
-          {site_data['contacts']['hoursWeekdays']}
-        </p>
-        <p class="footer__contact-item">
           {site_data['contacts']['address']}
         </p>
       </div>
@@ -316,6 +313,13 @@ def get_footer(lang, depth=0):
     </div>
   </footer>
 """
+
+def post_image(item, lang):
+    """Blog post image: either a plain path or a per-language {ka, ru, en} dict."""
+    img = item.get('image')
+    if isinstance(img, dict):
+        return img.get(lang) or next(iter(img.values()))
+    return img
 
 def build_journal_cards(lang, prefix=""):
     """Blog cards (own news, cases & guides — GEO content), shared by /{lang}/blog.html.
@@ -331,7 +335,7 @@ def build_journal_cards(lang, prefix=""):
             close_tag = "</a>"
         cards.append(f"""
         {open_tag}<article style="background: #ffffff; border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; height: 100%;">
-          <img src="{prefix}{item['image']}" alt="{j_title}" style="width: 100%; height: 200px; object-fit: cover; display: block;" loading="lazy">
+          <img src="{prefix}{post_image(item, lang)}" alt="{j_title}" style="width: 100%; height: 200px; object-fit: cover; display: block;" loading="lazy">
           <div style="padding: 20px 22px;">
             <time datetime="{item['date']}" style="font-size: 0.78rem; letter-spacing: 0.6px; text-transform: uppercase; color: var(--color-text-muted);">{format_date(item['date'], lang)}</time>
             <h3 style="margin: 10px 0; font-size: 1.05rem; line-height: 1.35;">{j_title}</h3>
@@ -347,7 +351,7 @@ def generate_blog_page(lang):
     j = t['blog']
     curr_url = f"{DOMAIN}/{lang}/blog.html"
     hreflangs = get_hreflang_tags("blog.html")
-    og_image = f"{DOMAIN}/{blog_data[0]['image']}"
+    og_image = f"{DOMAIN}/{post_image(blog_data[0], lang)}"
 
     blog_schema = {
         "@context": "https://schema.org",
@@ -361,7 +365,7 @@ def generate_blog_page(lang):
                 "@type": "BlogPosting",
                 "headline": get_i18n(item['title'], lang),
                 "datePublished": item['date'],
-                "image": f"{DOMAIN}/{item['image']}",
+                "image": f"{DOMAIN}/{post_image(item, lang)}",
                 "author": {"@type": "Organization", "name": "Farfale Living Georgia"}
             }
             for item in blog_data[:6]
@@ -465,7 +469,7 @@ def generate_blog_post_page(lang, post):
     hreflangs = get_hreflang_tags(f"blog/{slug}.html")
     title = get_i18n(post['title'], lang)
     descr = get_i18n(post['descr'], lang)
-    og_image = f"{DOMAIN}/{post['image']}"
+    og_image = f"{DOMAIN}/{post_image(post, lang)}"
     prefix = "../../"
     wa_text = "გამარჯობა! მინდა ვკითხო" if lang == 'ka' else ("Hello! I have a question" if lang == 'en' else "Здравствуйте! Есть вопрос по диванам")
 
@@ -539,7 +543,7 @@ def generate_blog_post_page(lang, post):
     <div class="container" style="max-width: 860px;">
       <time datetime="{post['date']}" style="display: block; font-size: 0.8rem; letter-spacing: 0.6px; text-transform: uppercase; color: var(--color-text-muted); margin-bottom: 12px;">{format_date(post['date'], lang)}</time>
       <h1 style="font-size: 2rem; line-height: 1.25; margin: 0 0 24px;">{title}</h1>
-      <img src="{prefix}{post['image']}" alt="{title}" style="width: 100%; max-height: 440px; object-fit: cover; border-radius: var(--radius-lg); display: block; margin-bottom: 32px;">
+      <img src="{prefix}{post_image(post, lang)}" alt="{title}" style="width: 100%; max-height: 440px; object-fit: cover; border-radius: var(--radius-lg); display: block; margin-bottom: 32px;">
       <div>
         {content_html}
       </div>
@@ -610,15 +614,7 @@ def generate_homepage(lang, depth=1):
             "@type": "GeoCoordinates",
             "latitude": 41.7118,
             "longitude": 44.7578
-        },
-        "openingHoursSpecification": [
-            {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-                "opens": "11:00",
-                "closes": "20:00"
-            }
-        ]
+        }
     }
 
     # Product cards
@@ -741,16 +737,16 @@ def generate_homepage(lang, depth=1):
       </div>
       <div class="hero__stats">
         <div class="hero__stat-item">
-          <strong>5 {t['hero']['statWarranty'].split()[1] if len(t['hero']['statWarranty'].split())>1 else ''}</strong>
+          <strong>{t['hero']['statWarranty'].split()[0]} {t['hero']['statWarranty'].split()[1] if len(t['hero']['statWarranty'].split())>1 else ''}</strong>
           <span>{t['hero']['statWarranty']}</span>
         </div>
         <div class="hero__stat-item">
           <strong>{t['hero']['statTime']}</strong>
-          <span>{t['hero']['statCustom']}</span>
+          <span>{t['hero']['statTimeLabel']}</span>
         </div>
         <div class="hero__stat-item">
-          <strong>100+</strong>
-          <span>{t['hero']['statFabrics']}</span>
+          <strong>{t['hero']['statSizesStrong']}</strong>
+          <span>{t['hero']['statSizes']}</span>
         </div>
         <div class="hero__stat-item">
           <strong>Vake</strong>
@@ -791,7 +787,7 @@ def generate_homepage(lang, depth=1):
 
       <div class="quality-grid">
         <div class="quality-scheme__box">
-          <img src="{prefix}assets/images/quality/anatomy-sofa-ge.webp" alt="{t['quality']['title']}" class="quality-scheme__img" loading="lazy">
+          <img src="{prefix}assets/images/quality/anatomy-sofa-{'ge' if lang == 'ka' else lang}.webp" alt="{t['quality']['title']}" class="quality-scheme__img" loading="lazy">
           <div class="quality-scheme__caption">
             <span>{t['quality']['schemeCaption']}</span>
           </div>
@@ -918,7 +914,7 @@ def generate_homepage(lang, depth=1):
         <span class="consult-tag">{t['showroomPage']['h1']}</span>
         <h2 class="section-title">{t['showroomPage']['title']}</h2>
         <p class="section-subtitle" style="color: var(--color-text-muted);">
-          {t['showroomPage']['address']} • {t['showroomPage']['hours']}
+          {t['showroomPage']['address']} • {t['showroomPage']['visitShort']}
         </p>
       </div>
 
@@ -926,13 +922,13 @@ def generate_homepage(lang, depth=1):
         <div class="showroom-flagship__grid">
           <div class="showroom-flagship__gallery">
             <div class="showroom-main-photo">
-              <img src="{prefix}assets/images/showroom/showroom-street.webp" alt="Showroom Farfale Vake" id="homeShImg">
+              <img src="{prefix}assets/images/showroom/showroom-street.webp" alt="Farfale office in Vake" id="homeShImg">
             </div>
             <div class="showroom-thumbs">
-              <div class="showroom-thumb-box active" onclick="switchHomeShImg(this, '{prefix}assets/images/showroom/showroom-street.webp')"><img src="{prefix}assets/images/showroom/showroom-street.webp" alt="Showroom exterior"></div>
-              <div class="showroom-thumb-box" onclick="switchHomeShImg(this, '{prefix}assets/images/showroom/showroom-comfort.webp')"><img src="{prefix}assets/images/showroom/showroom-comfort.webp" alt="Showroom comfort"></div>
-              <div class="showroom-thumb-box" onclick="switchHomeShImg(this, '{prefix}assets/images/showroom/showroom-interior.webp')"><img src="{prefix}assets/images/showroom/showroom-interior.webp" alt="Showroom interior"></div>
-              <div class="showroom-thumb-box" onclick="switchHomeShImg(this, '{prefix}assets/images/showroom/showroom-pov.webp')"><img src="{prefix}assets/images/showroom/showroom-pov.webp" alt="Showroom POV"></div>
+              <div class="showroom-thumb-box active" onclick="switchHomeShImg(this, '{prefix}assets/images/showroom/showroom-street.webp')"><img src="{prefix}assets/images/showroom/showroom-street.webp" alt="Office entrance"></div>
+              <div class="showroom-thumb-box" onclick="switchHomeShImg(this, '{prefix}assets/images/showroom/showroom-comfort.webp')"><img src="{prefix}assets/images/showroom/showroom-comfort.webp" alt="Sofa comfort test"></div>
+              <div class="showroom-thumb-box" onclick="switchHomeShImg(this, '{prefix}assets/images/showroom/showroom-interior.webp')"><img src="{prefix}assets/images/showroom/showroom-interior.webp" alt="Office interior"></div>
+              <div class="showroom-thumb-box" onclick="switchHomeShImg(this, '{prefix}assets/images/showroom/showroom-pov.webp')"><img src="{prefix}assets/images/showroom/showroom-pov.webp" alt="Office POV"></div>
             </div>
           </div>
           <div class="showroom-flagship__info">
@@ -943,7 +939,7 @@ def generate_homepage(lang, depth=1):
             </div>
             <p class="showroom-desc">{t['showroomPage']['desc']}</p>
             <div class="showroom-details-list">
-              <div class="detail-row"><span>🕒</span> <div>{t['showroomPage']['hours']}</div></div>
+              <div class="detail-row"><span>📋</span> <div>{t['showroomPage']['visit']}</div></div>
               <div class="detail-row"><span>🚗</span> <div>{t['showroomPage']['parking']}</div></div>
               <div class="detail-row"><span>🚇</span> <div>{t['showroomPage']['metro']}</div></div>
             </div>
@@ -1031,7 +1027,7 @@ def generate_showroom_page(lang):
     local_schema = {
         "@context": "https://schema.org",
         "@type": "FurnitureStore",
-        "name": f"Farfale Living Showroom — {sp['h1']}",
+        "name": f"Farfale Living Office — {sp['h1']}",
         "image": f"{DOMAIN}/assets/images/showroom/showroom-street.webp",
         "logo": f"{DOMAIN}/assets/icons/favicon-512.png",
         "telephone": site_data['contacts']['phone'],
@@ -1056,7 +1052,7 @@ def generate_showroom_page(lang):
             "latitude": 41.7118,
             "longitude": 44.7578
         },
-        "openingHours": "Mo-Su 11:00-20:00"
+        
     }
 
     breadcrumb_schema = {
@@ -1118,13 +1114,13 @@ def generate_showroom_page(lang):
         <div class="showroom-flagship__grid">
           <div class="showroom-flagship__gallery">
             <div class="showroom-main-photo">
-              <img src="../assets/images/showroom/showroom-street.webp" alt="Showroom Farfale Vake" id="shMainImg">
+              <img src="../assets/images/showroom/showroom-street.webp" alt="Farfale office in Vake" id="shMainImg">
             </div>
             <div class="showroom-thumbs">
-              <div class="showroom-thumb-box active" onclick="switchPageShImg(this, '../assets/images/showroom/showroom-street.webp')"><img src="../assets/images/showroom/showroom-street.webp" alt="Showroom exterior"></div>
-              <div class="showroom-thumb-box" onclick="switchPageShImg(this, '../assets/images/showroom/showroom-comfort.webp')"><img src="../assets/images/showroom/showroom-comfort.webp" alt="Showroom comfort"></div>
-              <div class="showroom-thumb-box" onclick="switchPageShImg(this, '../assets/images/showroom/showroom-interior.webp')"><img src="../assets/images/showroom/showroom-interior.webp" alt="Showroom interior"></div>
-              <div class="showroom-thumb-box" onclick="switchPageShImg(this, '../assets/images/showroom/showroom-pov.webp')"><img src="../assets/images/showroom/showroom-pov.webp" alt="Showroom POV"></div>
+              <div class="showroom-thumb-box active" onclick="switchPageShImg(this, '../assets/images/showroom/showroom-street.webp')"><img src="../assets/images/showroom/showroom-street.webp" alt="Office entrance"></div>
+              <div class="showroom-thumb-box" onclick="switchPageShImg(this, '../assets/images/showroom/showroom-comfort.webp')"><img src="../assets/images/showroom/showroom-comfort.webp" alt="Sofa comfort test"></div>
+              <div class="showroom-thumb-box" onclick="switchPageShImg(this, '../assets/images/showroom/showroom-interior.webp')"><img src="../assets/images/showroom/showroom-interior.webp" alt="Office interior"></div>
+              <div class="showroom-thumb-box" onclick="switchPageShImg(this, '../assets/images/showroom/showroom-pov.webp')"><img src="../assets/images/showroom/showroom-pov.webp" alt="Office POV"></div>
             </div>
           </div>
           <div class="showroom-flagship__info">
@@ -1135,7 +1131,7 @@ def generate_showroom_page(lang):
             </div>
             <p class="showroom-desc">{sp['desc']}</p>
             <div class="showroom-details-list">
-              <div class="detail-row"><span>🕒</span> <div>{sp['hours']}</div></div>
+              <div class="detail-row"><span>📋</span> <div>{sp['visit']}</div></div>
               <div class="detail-row"><span>🚗</span> <div>{sp['parking']}</div></div>
               <div class="detail-row"><span>🚇</span> <div>{sp['metro']}</div></div>
             </div>
@@ -1287,7 +1283,7 @@ def generate_product_page(lang, product):
     prod_t = t.get('productPage', {})
     spec_dim_label = prod_t.get('specDimensions', 'Размеры:')
     spec_warr_label = prod_t.get('specWarranty', 'Гарантия:')
-    spec_sh_label = prod_t.get('specShowroom', 'Шоурум:')
+    spec_sh_label = prod_t.get('specShowroom', 'Где посмотреть:')
     brand_tag = prod_t.get('brandTag', 'FARFALE LIVING • GEORGIA')
     warr_val = prod_t.get('warrantyVal', f'{warranty} официальная гарантия')
     sh_val = prod_t.get('showroomVal', 'Vake, N. Berdzenishvili 2')
