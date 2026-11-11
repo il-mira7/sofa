@@ -110,9 +110,21 @@
     grid-template-columns: 1fr;
   }
 
+  /* Mobile footer: two columns (link lists side by side), brand and contacts full width */
   .footer__inner {
-    grid-template-columns: 1fr;
-    gap: 32px;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 24px;
+  }
+
+  .footer__col--brand,
+  .footer__col--contacts {
+    grid-column: 1 / -1;
+  }
+
+  .footer__bottom-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
   }
 }
 

@@ -123,6 +123,7 @@ def get_header(lang, current_page="", depth=0):
 
     showroom_url = f"{prefix}{lang}/tbilisi-showroom.html" if depth > 0 else f"{lang}/tbilisi-showroom.html"
     delivery_url = f"{prefix}{lang}/delivery-georgia.html" if depth > 0 else f"{lang}/delivery-georgia.html"
+    blog_url = f"{prefix}{lang}/blog.html" if depth > 0 else f"{lang}/blog.html"
 
     return f"""
   <!-- Top Announcement Bar -->
@@ -152,6 +153,7 @@ def get_header(lang, current_page="", depth=0):
             <a href="{home_url}#quality" class="nav-link">{t['nav']['quality']}</a>
             <a href="{home_url}#process" class="nav-link">{t['nav']['process']}</a>
             <a href="{home_url}#portfolio" class="nav-link">{t['nav']['portfolio']}</a>
+            <a href="{blog_url}" class="nav-link">{t['nav']['blog']}</a>
             <a href="{showroom_url}" class="nav-link">{t['nav']['showroom']}</a>
             <a href="{delivery_url}" class="nav-link">{t['nav']['delivery']}</a>
             <a href="{home_url}#contacts" class="nav-link">{t['nav']['contacts']}</a>
@@ -198,6 +200,7 @@ def get_header(lang, current_page="", depth=0):
         <a href="{home_url}#quality" class="mobile-nav-link">{t['nav']['quality']}</a>
         <a href="{home_url}#process" class="mobile-nav-link">{t['nav']['process']}</a>
         <a href="{home_url}#portfolio" class="mobile-nav-link">{t['nav']['portfolio']}</a>
+        <a href="{blog_url}" class="mobile-nav-link">{t['nav']['blog']}</a>
         <a href="{showroom_url}" class="mobile-nav-link" style="color: #bda27e; font-weight: 600;">{t['nav']['showroom']}</a>
         <a href="{delivery_url}" class="mobile-nav-link">{t['nav']['delivery']}</a>
         <a href="{home_url}#contacts" class="mobile-nav-link">{t['nav']['contacts']}</a>
@@ -241,6 +244,7 @@ def get_footer(lang, depth=0):
     home_url = f"{prefix}{lang}/index.html" if depth > 0 else f"{lang}/index.html"
     showroom_url = f"{prefix}{lang}/tbilisi-showroom.html" if depth > 0 else f"{lang}/tbilisi-showroom.html"
     delivery_url = f"{prefix}{lang}/delivery-georgia.html" if depth > 0 else f"{lang}/delivery-georgia.html"
+    blog_url = f"{prefix}{lang}/blog.html" if depth > 0 else f"{lang}/blog.html"
     prod_prefix = f"{prefix}{lang}/products" if depth > 0 else f"{lang}/products"
     
     addr_main = t.get('footerAddress', {}).get('main', 'Тбилиси, Ваке, ул. Н. Бердзенишвили 2')
@@ -280,6 +284,7 @@ def get_footer(lang, depth=0):
         <ul class="footer__links">
           <li><a href="{showroom_url}">{t['nav']['showroom']}</a></li>
           <li><a href="{delivery_url}">{t['nav']['delivery']}</a></li>
+          <li><a href="{blog_url}">{t['nav']['blog']}</a></li>
           <li><a href="{home_url}#quality">{t['nav']['quality']}</a></li>
           <li><a href="{home_url}#portfolio">{t['nav']['portfolio']}</a></li>
           <li><a href="{home_url}#process">{t['nav']['process']}</a></li>
@@ -311,6 +316,248 @@ def get_footer(lang, depth=0):
     </div>
   </footer>
 """
+
+def build_journal_cards(lang, prefix=""):
+    """Blog cards (own news, cases & guides — GEO content), shared by /{lang}/blog.html.
+    Posts with a slug are rendered as links to their page: {prefix}blog/{slug}.html"""
+    cards = []
+    for item in blog_data[:6]:
+        j_title = get_i18n(item['title'], lang)
+        j_descr = get_i18n(item['descr'], lang)
+        post_link = f"blog/{item['slug']}.html" if item.get('slug') else ""
+        open_tag, close_tag = ("", "")
+        if post_link:
+            open_tag = f'<a href="{post_link}" class="blog-card-link" style="display: block; text-decoration: none; color: inherit;">'
+            close_tag = "</a>"
+        cards.append(f"""
+        {open_tag}<article style="background: #ffffff; border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; height: 100%;">
+          <img src="{prefix}{item['image']}" alt="{j_title}" style="width: 100%; height: 200px; object-fit: cover; display: block;" loading="lazy">
+          <div style="padding: 20px 22px;">
+            <time datetime="{item['date']}" style="font-size: 0.78rem; letter-spacing: 0.6px; text-transform: uppercase; color: var(--color-text-muted);">{format_date(item['date'], lang)}</time>
+            <h3 style="margin: 10px 0; font-size: 1.05rem; line-height: 1.35;">{j_title}</h3>
+            <p style="font-size: 0.9rem; line-height: 1.6; color: var(--color-text-muted); margin: 0;">{j_descr}</p>
+          </div>
+        </article>{close_tag}
+        """)
+    return cards
+
+def generate_blog_page(lang):
+    t = translations[lang]
+    bp = t['blogPage']
+    j = t['blog']
+    curr_url = f"{DOMAIN}/{lang}/blog.html"
+    hreflangs = get_hreflang_tags("blog.html")
+    og_image = f"{DOMAIN}/{blog_data[0]['image']}"
+
+    blog_schema = {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": bp['h1'],
+        "url": curr_url,
+        "inLanguage": lang,
+        "publisher": {"@type": "Organization", "name": "Farfale Living Georgia"},
+        "blogPost": [
+            {
+                "@type": "BlogPosting",
+                "headline": get_i18n(item['title'], lang),
+                "datePublished": item['date'],
+                "image": f"{DOMAIN}/{item['image']}",
+                "author": {"@type": "Organization", "name": "Farfale Living Georgia"}
+            }
+            for item in blog_data[:6]
+        ]
+    }
+
+    breadcrumb_schema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Farfale",
+                "item": f"{DOMAIN}/{lang}/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": bp['h1'],
+                "item": curr_url
+            }
+        ]
+    }
+
+    journal_cards_html = build_journal_cards(lang, prefix="../")
+
+    html = f"""<!DOCTYPE html>
+<html lang="{lang}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{bp['title']}</title>
+  <meta name="description" content="{bp['desc']}">
+  <link rel="canonical" href="{curr_url}">
+{hreflangs}
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{bp['title']}">
+  <meta property="og:description" content="{bp['desc']}">
+{social_meta(lang, bp['title'], bp['desc'], og_image, curr_url)}
+{favicon_links(1)}
+  <link rel="stylesheet" href="../styles/main.css">
+  <script type="application/ld+json">
+{json.dumps(blog_schema, ensure_ascii=False, indent=2)}
+  </script>
+  <script type="application/ld+json">
+{json.dumps(breadcrumb_schema, ensure_ascii=False, indent=2)}
+  </script>
+</head>
+<body>
+{get_header(lang, "blog.html", depth=1)}
+
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <div class="container">
+      <ol class="breadcrumbs__list">
+        <li class="breadcrumbs__item"><a href="index.html">Farfale</a></li>
+        <li class="breadcrumbs__sep">/</li>
+        <li class="breadcrumbs__item active">{t['nav']['blog']}</li>
+      </ol>
+    </div>
+  </nav>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header section-header--center" style="margin-bottom: 40px;">
+        <span class="consult-tag">{j['badge']}</span>
+        <h1 class="section-title">{j['title']}</h1>
+        <p class="section-subtitle" style="color: var(--color-text-muted);">{j['subtitle']}</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+        {"".join(journal_cards_html)}
+      </div>
+    </div>
+  </section>
+
+{get_footer(lang, depth=1)}
+</body>
+</html>
+"""
+    return html
+
+def render_post_blocks(blocks):
+    """Render blog.json content blocks: {"h2"}, {"p"}, {"ul": [...]}."""
+    html = []
+    for b in blocks:
+        if 'h2' in b:
+            html.append(f'<h2 style="font-size: 1.35rem; line-height: 1.3; margin: 32px 0 14px;">{b["h2"]}</h2>')
+        elif 'p' in b:
+            html.append(f'<p style="font-size: 1rem; line-height: 1.75; color: var(--color-text-muted); margin: 0 0 16px;">{b["p"]}</p>')
+        elif 'ul' in b:
+            lis = "".join(f'<li style="margin-bottom: 8px;">{x}</li>' for x in b['ul'])
+            html.append(f'<ul style="font-size: 1rem; line-height: 1.7; color: var(--color-text-muted); margin: 0 0 16px; padding-left: 22px;">{lis}</ul>')
+    return "\n      ".join(html)
+
+def generate_blog_post_page(lang, post):
+    t = translations[lang]
+    bp = t['blogPage']
+    j = t['blog']
+    slug = post['slug']
+    curr_url = f"{DOMAIN}/{lang}/blog/{slug}.html"
+    hreflangs = get_hreflang_tags(f"blog/{slug}.html")
+    title = get_i18n(post['title'], lang)
+    descr = get_i18n(post['descr'], lang)
+    og_image = f"{DOMAIN}/{post['image']}"
+    prefix = "../../"
+    wa_text = "გამარჯობა! მინდა ვკითხო" if lang == 'ka' else ("Hello! I have a question" if lang == 'en' else "Здравствуйте! Есть вопрос по диванам")
+
+    post_schema = {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": title,
+        "description": descr,
+        "datePublished": post['date'],
+        "image": og_image,
+        "mainEntityOfPage": curr_url,
+        "inLanguage": lang,
+        "author": {"@type": "Organization", "name": "Farfale Living Georgia"},
+        "publisher": {
+            "@type": "Organization",
+            "name": "Farfale Living Georgia",
+            "logo": {"@type": "ImageObject", "url": f"{DOMAIN}/assets/icons/favicon-512.png"}
+        }
+    }
+
+    breadcrumb_schema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Farfale", "item": f"{DOMAIN}/{lang}/"},
+            {"@type": "ListItem", "position": 2, "name": j['title'], "item": f"{DOMAIN}/{lang}/blog.html"},
+            {"@type": "ListItem", "position": 3, "name": title, "item": curr_url}
+        ]
+    }
+
+    content_html = render_post_blocks(post.get('content', {}).get(lang, []))
+
+    html = f"""<!DOCTYPE html>
+<html lang="{lang}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{title} — Farfale</title>
+  <meta name="description" content="{descr}">
+  <link rel="canonical" href="{curr_url}">
+{hreflangs}
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="{title}">
+  <meta property="og:description" content="{descr}">
+{social_meta(lang, title, descr, og_image, curr_url)}
+{favicon_links(2)}
+  <link rel="stylesheet" href="../../styles/main.css">
+  <script type="application/ld+json">
+{json.dumps(post_schema, ensure_ascii=False, indent=2)}
+  </script>
+  <script type="application/ld+json">
+{json.dumps(breadcrumb_schema, ensure_ascii=False, indent=2)}
+  </script>
+</head>
+<body>
+{get_header(lang, f"blog/{slug}.html", depth=2)}
+
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <div class="container">
+      <ol class="breadcrumbs__list">
+        <li class="breadcrumbs__item"><a href="../index.html">Farfale</a></li>
+        <li class="breadcrumbs__sep">/</li>
+        <li class="breadcrumbs__item"><a href="../blog.html">{t['nav']['blog']}</a></li>
+        <li class="breadcrumbs__sep">/</li>
+        <li class="breadcrumbs__item active">{title}</li>
+      </ol>
+    </div>
+  </nav>
+
+  <article class="section" style="padding-top: 24px;">
+    <div class="container" style="max-width: 860px;">
+      <time datetime="{post['date']}" style="display: block; font-size: 0.8rem; letter-spacing: 0.6px; text-transform: uppercase; color: var(--color-text-muted); margin-bottom: 12px;">{format_date(post['date'], lang)}</time>
+      <h1 style="font-size: 2rem; line-height: 1.25; margin: 0 0 24px;">{title}</h1>
+      <img src="{prefix}{post['image']}" alt="{title}" style="width: 100%; max-height: 440px; object-fit: cover; border-radius: var(--radius-lg); display: block; margin-bottom: 32px;">
+      <div>
+        {content_html}
+      </div>
+
+      <div style="margin-top: 40px; padding: 28px; background: #ffffff; border: 1px solid var(--color-border); border-radius: var(--radius-lg); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px;">
+        <strong style="font-size: 1.05rem;">{bp['postCtaTitle']}</strong>
+        <a href="https://wa.me/{site_data['contacts']['phoneRaw']}?text={wa_text}" target="_blank" rel="noopener" class="btn btn--whatsapp">{bp['postCta']}</a>
+      </div>
+
+      <p style="margin-top: 28px;"><a href="../blog.html" style="color: var(--color-text-muted);">← {t['nav']['blog']}</a></p>
+    </div>
+  </article>
+
+{get_footer(lang, depth=2)}
+</body>
+</html>
+"""
+    return html
 
 def generate_homepage(lang, depth=1):
     t = translations[lang]
@@ -421,22 +668,6 @@ def generate_homepage(lang, depth=1):
             <p class="portfolio-card__meta">{proj_model}</p>
           </div>
         </div>
-        """)
-
-    # Journal cards (own news, cases & guides — GEO content)
-    journal_cards_html = []
-    for item in blog_data[:6]:
-        j_title = get_i18n(item['title'], lang)
-        j_descr = get_i18n(item['descr'], lang)
-        journal_cards_html.append(f"""
-        <article style="background: #ffffff; border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden;">
-          <img src="{prefix}{item['image']}" alt="{j_title}" style="width: 100%; height: 200px; object-fit: cover; display: block;" loading="lazy">
-          <div style="padding: 20px 22px;">
-            <time datetime="{item['date']}" style="font-size: 0.78rem; letter-spacing: 0.6px; text-transform: uppercase; color: var(--color-text-muted);">{format_date(item['date'], lang)}</time>
-            <h3 style="margin: 10px 0; font-size: 1.05rem; line-height: 1.35;">{j_title}</h3>
-            <p style="font-size: 0.9rem; line-height: 1.6; color: var(--color-text-muted); margin: 0;">{j_descr}</p>
-          </div>
-        </article>
         """)
 
     # FAQ HTML
@@ -669,27 +900,13 @@ def generate_homepage(lang, depth=1):
             {t['portfolio']['subtitle']}
           </p>
         </div>
-        <a href="https://www.instagram.com/farfale.ge" target="_blank" rel="noopener" class="portfolio-insta-btn">
+        <a href="{portfolio_data['instagramLink']}" target="_blank" rel="noopener" class="portfolio-insta-btn">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
           {t['portfolio']['btn']}
         </a>
       </div>
       <div class="portfolio-grid">
         {"".join(portfolio_cards_html)}
-      </div>
-    </div>
-  </section>
-
-  <!-- 6.5 Journal: own news, cases & guides (GEO content) -->
-  <section class="section" id="journal">
-    <div class="container">
-      <div class="section-header section-header--center" style="margin-bottom: 40px;">
-        <span class="consult-tag">{t['journal']['badge']}</span>
-        <h2 class="section-title">{t['journal']['title']}</h2>
-        <p class="section-subtitle" style="color: var(--color-text-muted);">{t['journal']['subtitle']}</p>
-      </div>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
-        {"".join(journal_cards_html)}
       </div>
     </div>
   </section>
@@ -1334,7 +1551,8 @@ def generate_sitemap(all_urls):
 def main():
     print("Rebuilding full multi-language static site with all atmospheric sections...")
     
-    sitemap_paths = ["", "tbilisi-showroom.html", "delivery-georgia.html"]
+    sitemap_paths = ["", "tbilisi-showroom.html", "delivery-georgia.html", "blog.html"]
+    sitemap_paths += [f"blog/{p['slug']}.html" for p in blog_data if p.get('slug')]
     for p in products:
         sitemap_paths.append(f"products/{p['slug']}.html")
 
@@ -1355,6 +1573,16 @@ def main():
         # 3. Delivery page
         with open(os.path.join(lang_dir, "delivery-georgia.html"), "w", encoding="utf-8") as f:
             f.write(generate_delivery_page(lang))
+
+        # 3.5 Blog page + individual posts (posts with a slug in data/blog.json)
+        blog_dir = os.path.join(lang_dir, "blog")
+        os.makedirs(blog_dir, exist_ok=True)
+        with open(os.path.join(lang_dir, "blog.html"), "w", encoding="utf-8") as f:
+            f.write(generate_blog_page(lang))
+        for post in blog_data:
+            if post.get('slug'):
+                with open(os.path.join(blog_dir, f"{post['slug']}.html"), "w", encoding="utf-8") as f:
+                    f.write(generate_blog_post_page(lang, post))
 
         # 4. Product pages
         for p in products:

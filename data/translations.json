@@ -13,7 +13,8 @@
       "showroom": "შოურუმი ვაკეში",
       "delivery": "მიწოდება და აწყობა",
       "contacts": "კონტაქტები",
-      "info": "ინფორმაცია"
+      "info": "ინფორმაცია",
+      "blog": "ბლოგი"
     },
     "topBar": "შოურუმი ვაკეში: თბილისი, ნ. ბერძენიშვილის 2 • დივანები შეკვეთით 25 დღიდან • მიწოდება მთელ საქართველოში",
     "hero": {
@@ -51,15 +52,10 @@
       "t4": "უმკერო რადიუსი"
     },
     "portfolio": {
-      "badge": "INSTAGRAM @FARFALE.GE",
+      "badge": "INSTAGRAM @FARFALE_LIVING",
       "title": "Farfale რეალურ ინტერიერებში",
       "subtitle": "ცოცხალი ფოტოები ჩვენი მომხმარებლების ბინებიდან თბილისსა და ბათუმში",
       "btn": "მთელი Instagram-ის ნახვა"
-    },
-    "journal": {
-      "badge": "FARFALE-ს ჟურნალი",
-      "title": "ჟურნალი: სიახლეები, ქეისები და გაიდები",
-      "subtitle": "წარმოება, ქსოვილები და რეალური პროექტები — ფაქტები და ციფრები Farfale-ს სახელოსნოდან"
     },
     "process": {
       "badge": "ინდივიდუალური წარმოება",
@@ -159,6 +155,18 @@
     "footerAddress": {
       "main": "ვაკე, თბილისი, ნ. ბერძენიშვილის ქუჩა 2",
       "sub": "Vake, Tbilisi, N. Berdzenishvili St 2"
+    },
+    "blogPage": {
+      "title": "Farfale-ს ბლოგი — სიახლეები, ქეისები და გაიდები",
+      "desc": "წარმოება, ქსოვილები და რეალური პროექტები — ფაქტები და ციფრები Farfale-ს სახელოსნოდან. ახალი ტექსტილები, მიწოდება და მოდელები.",
+      "h1": "Farfale-ს ბლოგი",
+      "postCta": "კითხვა WhatsApp-ში",
+      "postCtaTitle": "გაქვთ კითხვა? გიპასუხებთ WhatsApp-ში"
+    },
+    "blog": {
+      "badge": "FARFALE-ს ბლოგი",
+      "title": "ბლოგი: სიახლეები, ქეისები და გაიდები",
+      "subtitle": "წარმოება, ქსოვილები და რეალური პროექტები — ფაქტები და ციფრები Farfale-ს სახელოსნოდან"
     }
   },
   "ru": {
@@ -175,7 +183,8 @@
       "showroom": "Шоурум в Ваке",
       "delivery": "Доставка и сборка",
       "contacts": "Контакты",
-      "info": "Информация"
+      "info": "Информация",
+      "blog": "Блог"
     },
     "topBar": "Шоурум в Ваке: Тбилиси, ул. Н. Бердзенишвили 2 • Диваны на заказ от 25 дней • Доставка по всей Грузии",
     "hero": {
@@ -213,15 +222,10 @@
       "t4": "Бесшовный радиус"
     },
     "portfolio": {
-      "badge": "INSTAGRAM @FARFALE.GE",
+      "badge": "INSTAGRAM @FARFALE_LIVING",
       "title": "Farfale в реальных интерьерах",
       "subtitle": "Живые фотографии из квартир и домов наших клиентов в Тбилиси и Батуми",
       "btn": "Смотреть весь Instagram"
-    },
-    "journal": {
-      "badge": "ЖУРНАЛ FARFALE",
-      "title": "Журнал: новости, кейсы и гайды",
-      "subtitle": "Производство, ткани и реальные проекты — факты и цифры из мастерской Farfale"
     },
     "process": {
       "badge": "ИНДИВИДУАЛЬНОЕ ПРОИЗВОДСТВО",
@@ -321,6 +325,18 @@
     "footerAddress": {
       "main": "Тбилиси, Ваке, ул. Н. Бердзенишвили 2",
       "sub": "ვაკე, თბილისი, ნ. ბერძენიშვილის ქუჩა 2"
+    },
+    "blogPage": {
+      "title": "Блог Farfale — новости, кейсы и гайды о диванах",
+      "desc": "Производство, ткани и реальные проекты — факты и цифры из мастерской Farfale. Новые ткани, доставка и модели диванов.",
+      "h1": "Блог Farfale",
+      "postCta": "Задать вопрос в WhatsApp",
+      "postCtaTitle": "Остались вопросы? Ответим в WhatsApp"
+    },
+    "blog": {
+      "badge": "БЛОГ FARFALE",
+      "title": "Блог: новости, кейсы и гайды",
+      "subtitle": "Производство, ткани и реальные проекты — факты и цифры из мастерской Farfale"
     }
   },
   "en": {
@@ -337,7 +353,8 @@
       "showroom": "Vake Showroom",
       "delivery": "Delivery & Assembly",
       "contacts": "Contacts",
-      "info": "Information"
+      "info": "Information",
+      "blog": "Blog"
     },
     "topBar": "Showroom in Vake: Tbilisi, 2 N. Berdzenishvili St • Custom Sofas from 25 Days • Delivery Across Georgia",
     "hero": {
@@ -375,15 +392,10 @@
       "t4": "Seamless Radius"
     },
     "portfolio": {
-      "badge": "INSTAGRAM @FARFALE.GE",
+      "badge": "INSTAGRAM @FARFALE_LIVING",
       "title": "Farfale in Real Living Spaces",
       "subtitle": "Real photographs from our clients' homes in Tbilisi and Batumi",
       "btn": "Explore our Instagram"
-    },
-    "journal": {
-      "badge": "FARFALE JOURNAL",
-      "title": "Journal: news, cases and guides",
-      "subtitle": "Production, fabrics and real projects — facts and figures from the Farfale workshop"
     },
     "process": {
       "badge": "BESPOKE PRODUCTION",
@@ -483,6 +495,18 @@
     "footerAddress": {
       "main": "Vake, Tbilisi, 2 N. Berdzenishvili St",
       "sub": "ვაკე, თბილისი, ნ. ბერძენიშვილის ქუჩა 2"
+    },
+    "blogPage": {
+      "title": "Farfale Blog — sofa news, cases and guides",
+      "desc": "Production, fabrics and real projects — facts and figures from the Farfale workshop. New fabrics, delivery and sofa models.",
+      "h1": "Farfale Blog",
+      "postCta": "Ask a question on WhatsApp",
+      "postCtaTitle": "Questions? We answer on WhatsApp"
+    },
+    "blog": {
+      "badge": "FARFALE BLOG",
+      "title": "Blog: news, cases and guides",
+      "subtitle": "Production, fabrics and real projects — facts and figures from the Farfale workshop"
     }
   }
 }

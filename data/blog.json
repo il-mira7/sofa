@@ -1,6 +1,7 @@
 [
   {
     "date": "2026-11-01",
+    "slug": "new-fabrics-vake",
     "image": "assets/images/showroom/showroom-interior.webp",
     "title": {
       "ka": "ვაკის შოურუმში ევროპული ქსოვილების ახალი ნიმუშები ჩამოვიდა",
@@ -8,9 +9,50 @@
       "en": "New European fabric samples have arrived at our Vake showroom"
     },
     "descr": {
-      "ka": "100-ზე მეტი ფაქტურა — ხავერდი, ბუკლე, მიკრო-კორდი და შენილი. ყველა ნიმუშს შეგიძლიათ შეეხოთ და შეადაროთ შოურუმში, ბერძენიშვილის ქუჩა 2-ში, ყოველდღე 11:00–20:00.",
-      "ru": "Более 100 фактур — велюр, букле, микрокорду и шенилл. Каждый образец можно потрогать и сравнить вживую в шоуруме на ул. Бердзенишвили, 2, ежедневно с 11:00 до 20:00.",
-      "en": "Over 100 textures — velvet, bouclé, micro-corduroy and chenille. Touch and compare every sample in person at our Berdzenishvili 2 showroom, open daily 11:00–20:00."
+      "ka": "100-ზე მეტი ფაქტურა — ხავერდი, ბუკლე, მიკრო-კორდი და შენილი. ყოველდღე 11:00–20:00, ბერძენიშვილის 2.",
+      "ru": "Более 100 фактур — велюр, букле, микрокорд и шенилл. Каждый образец можно потрогать в шоуруме на Бердзенишвили, 2.",
+      "en": "Over 100 textures — velvet, bouclé, micro-corduroy and chenille. Touch every sample at our Berdzenishvili 2 showroom."
+    },
+    "content": {
+      "ka": [
+        { "p": "ნოემბრის დასაწყისში ვაკეში, ბერძენიშვილის 2-ის შოურუმში ევროპული ქსოვილების ახალი პარტია ჩამოვიდა — 100-ზე მეტი ფაქტურა: ხავერდი, ბუკლე, მიკრო-კორდი და შენილი." },
+        { "h2": "რა ჩამოვიდა" },
+        { "ul": [
+          "ფართო და წვრილი კორდუროი — 30-ზე მეტი ელფერი",
+          "მოცულობითი ბუკლე Cloud და Curve მოდელებისთვის",
+          "გამძლე შენილი ბავშვებისა და ცხოველების მქონე ოჯახებისთვის",
+          "ანტივანდალური ხავერდი"
+        ] },
+        { "h2": "როგორ ნახოთ ცოცხლად" },
+        { "p": "გინახულეთ შოურუმი ვაკეში ყოველდღე 11:00–20:00 — კონსულტანტი დაგეხმარებათ ნიმუშების შედარებაში და არჩეულ ქსოვილზე დივნის ფასის გამოთვლაში." },
+        { "p": "ნიმუშები შეგიძლიათ წაიღოთ სახლში, რომ ფერი შეამოწმოთ სახლის განათებაში." }
+      ],
+      "ru": [
+        { "p": "В начале ноября в шоурум на Бердзенишвили, 2 приехала новая партия европейских тканей — больше ста фактур: велюр, букле, микрокорд и шенилл." },
+        { "h2": "Что привезли" },
+        { "ul": [
+          "Крупный и мелкий вельвет-корд — 30+ оттенков",
+          "Объёмное букле для моделей Cloud и Curve",
+          "Износостойкий шенилл для семей с детьми и питомцами",
+          "Антивандальный велюр"
+        ] },
+        { "h2": "Как посмотреть вживую" },
+        { "p": "Приходите в шоурум в Ваке ежедневно с 11:00 до 20:00 — консультант поможет сравнить образцы и сразу посчитает ваш диван на выбранной ткани." },
+        { "p": "Образцы можно взять с собой, чтобы проверить цвет при домашнем освещении." }
+      ],
+      "en": [
+        { "p": "In early November, a new batch of European fabrics arrived at our Vake showroom — over a hundred textures: velvet, bouclé, micro-corduroy and chenille." },
+        { "h2": "What's new" },
+        { "ul": [
+          "Wide- and narrow-wale corduroy — 30+ shades",
+          "Plush bouclé for the Cloud and Curve models",
+          "Hard-wearing chenille for families with kids and pets",
+          "Anti-scratch performance velvet"
+        ] },
+        { "h2": "See them in person" },
+        { "p": "Visit the Vake showroom daily from 11:00 to 20:00 — our consultant will compare samples with you and price your sofa in the fabric you choose on the spot." },
+        { "p": "You can take samples home to check the colour under your own lighting." }
+      ]
     }
   },
   {
