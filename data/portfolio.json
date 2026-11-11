@@ -72,9 +72,9 @@
     {
       "id": "project-04",
       "title": {
-        "ru": "Уютный лаунж с библиотекой",
-        "ka": "მყუდრო ლაუნჯი ბიბლიოთეკით",
-        "en": "Cozy Library Lounge"
+        "ru": "Уютный лаунж в бежевых тонах",
+        "ka": "მყუდრო ლაუნჯი ბეჟ ტონებში",
+        "en": "Cozy Beige Lounge"
       },
       "model": {
         "ru": "Модульный диван в ткани Sand",
@@ -96,28 +96,28 @@
         "en": "Modern Residence with Parquet"
       },
       "model": {
-        "ru": "Угловой Nordic Corner",
-        "ka": "კუთხის Nordic Corner",
-        "en": "Nordic Corner Sectional"
+        "ru": "Cloud Lounge в шоколадном велвете",
+        "ka": "Cloud Lounge შოკოლადის ველვეტში",
+        "en": "Cloud Lounge in chocolate velvet"
       },
       "location": {
         "ru": "Батуми, Новый бульвар",
         "ka": "ბათუმი, ახალი ბულვარი",
         "en": "Batumi, New Boulevard"
       },
-      "image": "assets/images/portfolio/interior-08.webp"
+      "image": "assets/images/portfolio/interior-06.webp"
     },
     {
       "id": "project-06",
       "title": {
-        "ru": "Изумрудный акцент в светлом пространстве",
-        "ka": "ზურმუხტისფერი აქცენტი ნათელ სივრცეში",
-        "en": "Emerald Statement in Bright Interior"
+        "ru": "Стёганый угол в классической гостиной",
+        "ka": "შეკრული კუთხე კლასიკურ მისაღებში",
+        "en": "Tufted Corner in a Classic Living Room"
       },
       "model": {
-        "ru": "Nordic Line в бархате",
-        "ka": "Nordic Line ხავერდში",
-        "en": "Nordic Line in Velvet"
+        "ru": "Bellini Tufted в сером велюре",
+        "ka": "Bellini Tufted ნაცრისფერ ველვეტში",
+        "en": "Bellini Tufted in grey velour"
       },
       "location": {
         "ru": "Тбилиси, Дигоми",
@@ -134,9 +134,9 @@
         "en": "City-View Terrace"
       },
       "model": {
-        "ru": "Cube Lounge на террасе",
-        "ka": "Cube Lounge ტერასაზე",
-        "en": "Cube Lounge on the terrace"
+        "ru": "Verde Modular на террасе",
+        "ka": "Verde Modular ტერასაზე",
+        "en": "Verde Modular on the terrace"
       },
       "location": {
         "ru": "Тбилиси, Ваке",
@@ -167,21 +167,21 @@
     {
       "id": "project-09",
       "title": {
-        "ru": "Классическая гостиная в Ваке",
-        "ka": "კლასიკური მისაღები ვაკეში",
-        "en": "Classic Living Room in Vake"
+        "ru": "Солнечный остров у окна",
+        "ka": "მზიანი კუნძული ფანჯარასთან",
+        "en": "Sunlit Island by the Window"
       },
       "model": {
-        "ru": "Cloud Lounge в рогожке",
-        "ka": "Cloud Lounge როგოჟკაში",
-        "en": "Cloud Lounge in textured weave"
+        "ru": "Cloud Lounge: остров в микровельвете",
+        "ka": "Cloud Lounge: კუნძული მიკროველვეტში",
+        "en": "Cloud Lounge island in micro-corduroy"
       },
       "location": {
         "ru": "Тбилиси, Ваке",
         "ka": "თბილისი, ვაკე",
         "en": "Tbilisi, Vake"
       },
-      "image": "assets/images/portfolio/interior-09.webp"
+      "image": "assets/images/portfolio/interior-05.webp"
     }
   ]
 }

@@ -13,8 +13,8 @@
 | `assets/images/products/cube/` | Cube Lounge (модульные прямые) | 12 |
 | `assets/images/products/curve/` | Curve Organic (округлые) | 16 |
 | `assets/images/products/nordic/` | Nordic Line & Corner (прямые) | 16 |
-| `assets/images/products/camaleonda/` | Bellini Tufted + дутые стёганые | 14 |
-| `assets/images/products/verde/` | Verde Tufted (зелёные стёганые) | 9 |
+| `assets/images/products/camaleonda/` | Bellini Tufted (стёганые) | 14 |
+| `assets/images/products/verde/` | Verde Modular (низкие модульные блоки, оливка/крем) | 9 |
 | `assets/images/products/graphite/` | Graphite Loft (лофт, тёмные) | 6 |
 | `assets/images/products/daybed/` | Daybed Slumber (кровати) | 7 |
 | `assets/images/portfolio/` | раздел «Интерьеры» | 10 |
